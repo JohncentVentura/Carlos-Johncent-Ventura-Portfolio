@@ -2,24 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-#particles canvas{
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+* {
+  scroll-behavior: smooth;
 }
 
-:root {
+.light-theme {
+  --fgClr: #191d2b;
+  --bgClr: #ffffff;
+  --primaryClr: #de7533;
+}
+
+.dark-theme {
   --fgClr: #ffffff;
   --bgClr: #191d2b;
   --primaryClr: #35aa90;
 }
 
-@layer components{
-  h1{
-    @apply hover:text-fgClr;
+@media (prefers-color-scheme: light) {
+  :root {
+    --fgClr: #191d2b;
+    --bgClr: #ffffff;
+    --primaryClr: #de7533;
   }
- 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fgClr: #ffffff;
+    --bgClr: #191d2b;
+    --primaryClr: #35aa90;
+  }
+}
+
+.hid {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@layer components {
+  #particles canvas {
+    @apply absolute -z-10 top-0 left-0;
+  }
+
+  section {
+    @apply grid place-items-center content-center h-screen;
+  }
+
+  h1 {
+    @apply text-fgClr text-3xl font-bold underline hover:text-primaryClr;
+  }
+
+  p {
+    @apply text-fgClr text-2xl hover:text-primaryClr;
+  }
 }

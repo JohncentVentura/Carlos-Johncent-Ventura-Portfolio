@@ -6,9 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-
-
-const ParticlesComponent = (props) => {
+const ParticlesComponent = ({fgClr, bgClr}) => {
 
   const [init, setInit] = useState(false);
   // this should be run only once per application lifetime
@@ -30,12 +28,13 @@ const ParticlesComponent = (props) => {
     console.log(container);
   };
 
+  console.log("fgClr: ",fgClr," / bgClr: ",bgClr)
 
   const options = useMemo(
     () => ({
       background: {
         color: {
-          value: "#191d2b",
+          value: `${bgClr}`, 
         },
       },
       fpsLimit: 120,
@@ -62,10 +61,10 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: `${fgClr}`,
         },
         links: {
-          color: "#FFFFFF",
+          color: `${fgClr}`,
           distance: 150,
           enable: true,
           opacity: 0.3,
@@ -99,11 +98,10 @@ const ParticlesComponent = (props) => {
       },
       detectRetina: true,
     }),
-    [],
+    [fgClr, bgClr],
   );
 
-
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles id="particles" init={particlesLoaded} options={options} />; 
 };
 
 export default ParticlesComponent;
