@@ -1,4 +1,5 @@
-import { Children, useState, useEffect } from "react";
+/* eslint-disable no-unused-vars */
+import { useState, useEffect } from "react";
 import ParticlesComponent from "./components/Particles.jsx";
 import Navbar from "./components/Navbar.jsx";
 
