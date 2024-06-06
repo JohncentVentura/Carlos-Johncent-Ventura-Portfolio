@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <Navbar
-        theme={clrTheme}
+        clrTheme={clrTheme}
         clrThemeCB={() =>
           clrTheme === "light-theme"
             ? setClrTheme("dark-theme")

@@ -28,8 +28,6 @@ const ParticlesComponent = ({fgClr, bgClr}) => {
     console.log(container);
   };
 
-  console.log("fgClr: ",fgClr," / bgClr: ",bgClr)
-
   const options = useMemo(
     () => ({
       background: {
