@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#particles canvas{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --fgClr: #ffffff;
+  --bgClr: #191d2b;
+  --primaryClr: #35aa90;
+}
+
+@layer components{
+  h1{
+    @apply hover:text-fgClr;
+  }
+ 
+}
