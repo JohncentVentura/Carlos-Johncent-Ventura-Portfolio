@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import {
@@ -10,48 +9,49 @@ import {
   FaSun,
   FaRegMoon,
 } from "react-icons/fa";
-//import { ImagePaths } from "./Paths";
 
-const Navbar = ({clrTheme, clrThemeCB}) => {
+import { SectionPaths } from "./Paths";
+
+const Navbar = ({...props}) => {
   return (
     <>
       <nav className="fixed z-10 top-0 left-0 px-4 w-screen h-16 flex justify-center items-center bg-bgClr text-fgClr shadow-lg shadow-primaryClr">
-        <NavbarIcon icon={<FaHome size="25" />}  />
-        <NavbarIcon icon={<FaUserGraduate size="25" />}  />
-        <NavbarIcon icon={<FaCode size="25" />}  />
-        <NavbarIcon icon={<FaBriefcase size="25" />}  />
-        <NavbarIcon icon={<FaEnvelope size="25" />} />
-        {clrTheme === "light-theme" ? (
-          <NavbarButton icon={<FaRegMoon size="25" />} onClick={clrThemeCB} />
+        <NavbarIcon href={`#${SectionPaths.homeSection}`} icon={<FaHome size="25" />} />
+        <NavbarIcon href={`#${SectionPaths.aboutSection}`} icon={<FaUserGraduate size="25" />}  />
+        <NavbarIcon href={`#${SectionPaths.skillSection}`} icon={<FaCode size="25" />}  />
+        <NavbarIcon href={`#${SectionPaths.projectSection}`} icon={<FaBriefcase size="25" />}  />
+        <NavbarIcon href={`#${SectionPaths.contactSection}`} icon={<FaEnvelope size="25" />} />
+        {document.body.className.match("light-theme") ? (
+          <NavbarButton icon={<FaRegMoon size="25" />} onClick={props.onClickClrThemeBtn} />
         ) : (
-          <NavbarButton icon={<FaSun size="25" />} onClick={clrThemeCB} />
+          <NavbarButton icon={<FaSun size="25" />} onClick={props.onClickClrThemeBtn} />
         )}  
       </nav>
     </>
   );
 };
 
-const NavbarIcon = ({ icon, href }) => {
+const NavbarIcon = ({...props}) => {
   return (
     <>
       <a
         className="relative flex justify-center items-center w-20 h-full hover:bg-primaryClr"
-        href={href}
+        href={props.href}
       >
-        {icon}
+        {props.icon}
       </a>
     </>
   );
 };
 
-const NavbarButton = ({ icon, onClick }) => {
+const NavbarButton = ({...props}) => {
   return (
     <>
       <button
         className="relative flex justify-center items-center w-20 h-full hover:bg-primaryClr"
-        onClick={onClick}
+        onClick={props.onClick}
       >
-        {icon}
+        {props.icon}
       </button>
     </>
   );

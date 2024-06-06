@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
-}
-
 .light-theme {
   --fgClr: #191d2b;
   --bgClr: #ffffff;
-  --primaryClr: #de7533;
+  --primaryClr: #1974c2;
 }
 
 .dark-theme {
@@ -22,7 +18,7 @@
   :root {
     --fgClr: #191d2b;
     --bgClr: #ffffff;
-    --primaryClr: #de7533;
+    --primaryClr: #1974c2;
   }
 }
 
@@ -34,33 +30,26 @@
   }
 }
 
-.hid {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
+#hero{
+  animation: hero 5s infinite;
 }
 
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+@keyframes hero{
+  0% { filter: drop-shadow(0 0 0 rgba(0,0,0,0))}
+  50% { filter: drop-shadow(1px 1px 20px var(--primaryClr)) }
 }
 
 @layer components {
   #particles canvas {
-    @apply absolute -z-10 top-0 left-0;
+    @apply absolute -z-10;
   }
 
-  section {
-    @apply grid place-items-center content-center h-screen;
+  section{
+    @apply relative w-[98vw] h-screen
   }
 
-  h1 {
-    @apply text-fgClr text-3xl font-bold underline hover:text-primaryClr;
+  div{
+    @apply text-fgClr hover:text-primaryClr;
   }
-
-  p {
-    @apply text-fgClr text-2xl hover:text-primaryClr;
-  }
+  
 }
