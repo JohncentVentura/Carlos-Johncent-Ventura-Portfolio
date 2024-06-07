@@ -1,4 +1,8 @@
-/* To push to git repo
+/* 
+// To run project
+npm run start
+
+// To push to git repo
 npm run build
 git add .
 git commit
@@ -43,24 +47,24 @@ function App() {
 
     setFgClr(getComputedStyle(document.body).getPropertyValue("--fgClr"));
     setBgClr(getComputedStyle(document.body).getPropertyValue("--bgClr"));
-    setPrimaryClr(
-      getComputedStyle(document.body).getPropertyValue("--primaryClr")
-    );
+    setPrimaryClr(getComputedStyle(document.body).getPropertyValue("--primaryClr"));
   }, [clrTheme]);
 
-  // Scroll Animation Effects
-  useEffect(() => {
-    //Lenis
+  //Smooth Scrolling
+  useEffect(()=>{
     const lenis = new Lenis();
     lenis.on("scroll", (e) => {
-      console.log(e);
+      //console.log(e);
     });
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+  });
 
+  /*TEMPLATE: GSAP Scroll Animations
+  useEffect(() => {
     //GSAP, SplitType
     gsap.registerPlugin(ScrollTrigger);
     const splitTypes = document.querySelectorAll(".gsap");
@@ -68,13 +72,13 @@ function App() {
       //Creates individual div elements with a class of "char", as children of each char element
       const text = new SplitType(char, { types: "chars" });
 
-      /* text.chars is where the effects will take place, 2nd argument are the effects
+      // text.chars is where the effects will take place, 2nd argument are the effects
       gsap.from(text.chars, {
         scrollTrigger: {
           trigger: char,
           start: "top 80%",
           end: "top 20%",
-          scrub: false, //If true, tied to scroll position not time
+          scrub: true, //If true, tied to scroll position not time
           markers: false,
         },
         //Effects
@@ -85,9 +89,8 @@ function App() {
         stagger: 0.1, //FX: The FX will delay base on stagger value
         duration: 1, //FX: If scrub is false, duration of time
       });
-      */
 
-      /* gsap.fromTo sample
+      //gsap.fromTo sample
       gsap.fromTo(
         text.chars,
         {
@@ -112,23 +115,61 @@ function App() {
           y: 0,
         }
       );
-      */
-    
+
+      let tl = gsap.timeline({
+        scrollTrigger:{
+          trigger: '.gsap',
+          start: 'top center', //start effect related to viewport at '<marker start position> <marker scroller-start position>'
+          end: '900% center', //complete effect related to viewport at '<marker end position> <marker scroller-end position>'
+          scrub: true, //How to activate effect, if true then use scroll, if false then use time
+          markers: true, //Shows scroller-start & scroller-end in screen
+          //toggleActions: 'play play reverse reverse' //onEnter onLeave onEnterBack onLeaveBack
+        },
+      });
+  
+      tl.to('.gsap', {
+        x: 800,
+      });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: char,
+            start: "-500% center",
+            end: "bottom center",
+            scrub: false,
+            markers: true,
+          },
+        })
+        .fromTo(
+          text.chars,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            duration: 4,
+            stagger: 0.4,
+          }
+        );
 
     });
   });
+  //*/
+
 
   return (
     <>
       <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
       <Navbar
-        onClickClrThemeBtn={() =>
+        clrTheme={clrTheme}
+        clrThemeOnClick={() =>
           clrTheme === "light-theme"
             ? setClrTheme("dark-theme")
             : setClrTheme("light-theme")
         }
       />
-      <Home id={SectionPaths.homeSection}/>
+      <Home id={SectionPaths.homeSection} fg={fgClr} primaryClr={primaryClr}/>
       <hr />
       <About id={SectionPaths.aboutSection}/>
       <hr />
@@ -137,23 +178,6 @@ function App() {
       <Project id={SectionPaths.projectSection}/>
       <hr />
       <Contact id={SectionPaths.contactSection}/>
-    </>
-  );
-}
-
-export const Div = ({className, children, ...props }) => {
-  return (
-    <>  
-      {(className === undefined) ? (
-        <div className="gsap" {...props}>
-        {children}
-      </div>
-      ):(
-        <div className={`gsap ${className}`} {...props}>
-        {children}
-      </div>
-      )}
-      
     </>
   );
 }

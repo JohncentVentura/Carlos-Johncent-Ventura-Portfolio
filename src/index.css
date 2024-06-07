@@ -4,52 +4,48 @@
 
 .light-theme {
   --fgClr: #191d2b;
-  --bgClr: #ffffff;
-  --primaryClr: #1974c2;
+  --bgClr: #e6e6e6;
+  --primaryClr: #3f4493;
 }
 
 .dark-theme {
-  --fgClr: #ffffff;
+  --fgClr: #e6e6e6;
   --bgClr: #191d2b;
   --primaryClr: #35aa90;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --fgClr: #191d2b;
-    --bgClr: #ffffff;
-    --primaryClr: #1974c2;
-  }
+.clip-path{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fgClr: #ffffff;
-    --bgClr: #191d2b;
-    --primaryClr: #35aa90;
-  }
+nav, #hero{
+  animation: glowing-drop-shadow 5s infinite;
 }
 
-#hero{
-  animation: hero 5s infinite;
-}
-
-@keyframes hero{
+@keyframes glowing-drop-shadow{
   0% { filter: drop-shadow(0 0 0 rgba(0,0,0,0))}
   50% { filter: drop-shadow(1px 1px 20px var(--primaryClr)) }
 }
 
 @layer components {
+  *{
+    @apply box-border overflow-hidden;
+  }
+
   #particles canvas {
-    @apply absolute -z-10;
+    @apply absolute -z-50;
   }
 
   section{
-    @apply relative w-[98vw] h-screen
+    @apply relative w-screen h-[250vh]
   }
 
-  div{
-    @apply text-fgClr hover:text-primaryClr;
+  a, div{
+    @apply relative text-fgClr;
+  }
+  
+  .char{
+    @apply relative hover:text-primaryClr;
   }
   
 }
