@@ -29,7 +29,11 @@ nav, #hero{
 
 @layer components {
   *{
-    @apply box-border overflow-hidden;
+    @apply box-border ;
+  }
+
+  body{
+    @apply overflow-x-hidden;
   }
 
   #particles canvas {
@@ -37,7 +41,7 @@ nav, #hero{
   }
 
   section{
-    @apply relative w-screen h-[250vh]
+    @apply relative w-screen;
   }
 
   a, div{
