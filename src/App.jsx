@@ -19,6 +19,8 @@ import SplitType from "split-type";
 import Navbar from "./components/Navbar.jsx";
 import ParticlesComponent from "./components/Particles.jsx";
 import { SectionPaths } from "./components/Paths.jsx";
+import sfx from "./components/ScrollEffects";
+import { PageDivider } from "./components/Shapes";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Skill from "./pages/Skill.jsx";
@@ -27,9 +29,15 @@ import Contact from "./pages/Contact.jsx";
 
 function App() {
   const [clrTheme, setClrTheme] = useState("");
-  const [fgClr, setFgClr] = useState(getComputedStyle(document.body).getPropertyValue("--fgClr"));
-  const [bgClr, setBgClr] = useState(getComputedStyle(document.body).getPropertyValue("--bgClr"));
-  const [primaryClr, setPrimaryClr] = useState(getComputedStyle(document.body).getPropertyValue("--primaryClr"));
+  const [fgClr, setFgClr] = useState(
+    getComputedStyle(document.body).getPropertyValue("--fgClr")
+  );
+  const [bgClr, setBgClr] = useState(
+    getComputedStyle(document.body).getPropertyValue("--bgClr")
+  );
+  const [primaryClr, setPrimaryClr] = useState(
+    getComputedStyle(document.body).getPropertyValue("--primaryClr")
+  );
 
   //Color Theme
   useEffect(() => {
@@ -47,20 +55,24 @@ function App() {
 
     setFgClr(getComputedStyle(document.body).getPropertyValue("--fgClr"));
     setBgClr(getComputedStyle(document.body).getPropertyValue("--bgClr"));
-    setPrimaryClr(getComputedStyle(document.body).getPropertyValue("--primaryClr"));
+    setPrimaryClr(
+      getComputedStyle(document.body).getPropertyValue("--primaryClr")
+    );
   }, [clrTheme]);
 
-  //Smooth Scrolling
-  useEffect(()=>{
+  //Smooth Scrolling & Scrolling Effects
+  useEffect(() => {
     const lenis = new Lenis();
-    lenis.on("scroll", (e) => {
-      //console.log(e);
-    });
+    //lenis.on("scroll", (e) => console.log(e));
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+
+    sfx.Init();
+    sfx.SetEffect(".openPage", (elem) => sfx.OpenPage(elem));
+    sfx.SetEffect(".closePage", (elem) => sfx.ClosePage(elem));
   });
 
   /*TEMPLATE: GSAP Scroll Animations
@@ -157,47 +169,6 @@ function App() {
   });
   //*/
 
-  /*
-  useEffect(() => {
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-    });
-
-    const resize = (e) => {
-      let Xt;
-      const w = window.innerWidth + window.outerWidth;
-      const h = window.innerHeight + window.outerHeight;
-      if (
-        Xt.dataStorage.get(window, "xtEventDelayWidth") === w && // when width changes
-        (matchMedia("(hover: none)").matches ||
-          Xt.dataStorage.get(window, "xtEventDelayHeight") === h) // when height changes not touch
-      ) {
-        // only width no height because it changes on scroll on mobile
-        return;
-      }
-      // save
-      Xt.dataStorage.set(
-        window,
-        `eventDelaySaveTimeout`,
-        setTimeout(() => {
-          Xt.dataStorage.set(window, "xtEventDelayWidth", w);
-          Xt.dataStorage.set(window, "xtEventDelayHeight", h);
-        }, Xt[`${e.type}Delay`])
-      );
-
-      Xt.eventDelay({
-        e,
-        ns: "xtScrolltriggerRerfreshFix",
-        func: () => {
-          ScrollTrigger.refresh();
-        },
-      });
-    };
-    window.removeEventListener("resize", resize);
-    window.addEventListener("resize", resize);
-  });
-  */
-
   return (
     <>
       <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
@@ -209,63 +180,21 @@ function App() {
             : setClrTheme("light-theme")
         }
       />
-      <Home id={SectionPaths.homeSection} fg={fgClr} primaryClr={primaryClr}/>
+      <Home id={SectionPaths.homeSection} fg={fgClr} primaryClr={primaryClr} />
+
+      <PageDivider>
+        About Me
+      </PageDivider>
+
+      <About id={SectionPaths.aboutSection} />
       <hr />
-      <About id={SectionPaths.aboutSection}/>
+      <Skill id={SectionPaths.skillSection} />
       <hr />
-      <Skill id={SectionPaths.skillSection}/>
+      <Project id={SectionPaths.projectSection} />
       <hr />
-      <Project id={SectionPaths.projectSection}/>
-      <hr />
-      <Contact id={SectionPaths.contactSection}/>
+      <Contact id={SectionPaths.contactSection} />
     </>
   );
-};
-
-function UseEffects() {
-  const GSAPTimelineScrollerPosition = "60%";
-
-  function CreateGsapTimeline({
-    trigger,
-    start,
-    end,
-    scrub,
-    markers,
-    toggleActions,
-  }) {
-    if (scrub === undefined) scrub = true;
-    return gsap.timeline({
-      scrollTrigger: {
-        trigger: trigger,
-        start: start || `top ${GSAPTimelineScrollerPosition}`,
-        end: end || `bottom ${GSAPTimelineScrollerPosition}`,
-        scrub: scrub,
-        markers: markers || false,
-        toggleActions: toggleActions || "play play reverse reverse",
-      },
-    });
-  }
-
-  function SetEffect(className, callback) {
-    return document.querySelectorAll(className).forEach(callback);
-  }
-
-  SetEffect(".changePage", (elem) => ChangePage(elem));
-
-  function ChangePage(elem) {
-    CreateGsapTimeline({ trigger: elem.parentElement, markers: false }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-      }
-    );
-  }
-
-};
-
-
+}
 
 export default App;

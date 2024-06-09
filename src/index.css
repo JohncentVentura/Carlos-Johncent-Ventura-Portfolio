@@ -14,7 +14,7 @@
   --primaryClr: #35aa90;
 }
 
-.clip-path{
+.rhombus{
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
@@ -29,7 +29,11 @@ nav, #hero{
 
 @layer components {
   *{
-    @apply box-border ;
+    @apply box-border;
+  }
+  
+  body, #root{
+    @apply relative overflow-x-hidden;
   }
 
   #particles canvas {
@@ -37,7 +41,7 @@ nav, #hero{
   }
 
   section{
-    @apply relative h-screen;
+    @apply relative mt-[30vh] pt-[30vh] w-screen h-[200vh];
   }
 
   a, div{

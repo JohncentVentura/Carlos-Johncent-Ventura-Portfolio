@@ -15,7 +15,7 @@ import { SectionPaths } from "./Paths";
 const Navbar = ({...props}) => {
   return (
     <>
-      <nav className="fixed z-10 top-0 left-0 px-4 w-screen h-16 flex justify-center items-center bg-bgClr text-fgClr ">
+      <nav className="fixed z-50 top-0 left-0 w-screen h-16 flex justify-center items-center bg-bgClr text-fgClr ">
         <NavbarLink href={`#${SectionPaths.homeSection}`} icon={<FaHome size="25" />} />
         <NavbarLink href={`#${SectionPaths.aboutSection}`} icon={<FaUserGraduate size="25" />}  />
         <NavbarLink href={`#${SectionPaths.skillSection}`} icon={<FaCode size="25" />}  />

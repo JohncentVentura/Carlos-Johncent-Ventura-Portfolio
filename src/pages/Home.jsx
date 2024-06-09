@@ -2,14 +2,30 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 
 import { ImagePaths } from "../components/Paths";
+import sfx from "../components/ScrollEffects";
+import { SmRhombus, LgRhombus } from "../components/Shapes";
 
 const Home = ({ ...props }) => {
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.refresh();
-  useEffect(() => UseEffects());
+  useEffect(() => {
+    sfx.Init();
+    sfx.SetEffect(".div1", (elem) => sfx.AutoStaggerText(elem));
+    sfx.SetEffect(".div2", (elem) => sfx.StaggerText(elem));
+    sfx.SetEffect(".clipShow", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".div3", (elem) => sfx.FadeInText(elem));
+    sfx.SetEffect(".clipLeftToRight", (elem) => sfx.ShapeLeftToRight(elem));
+    sfx.SetEffect(".div4", (elem) => sfx.StaggerTextRightToLeft(elem));
+    sfx.SetEffect(".div5", (elem) => sfx.StaggerTextLeftToRight(elem));
+    sfx.SetEffect(".clipRightToLeft", (elem) => sfx.ShapeRightToLeft(elem));
+    sfx.SetEffect(".clipLeftToRight2", (elem) => sfx.ShapeLeftToRight(elem));
+    sfx.SetEffect(".div6", (elem) => sfx.StaggerTextRightToLeft(elem));
+    sfx.SetEffect(".div7", (elem) => sfx.StaggerTextLeftToRight(elem));
+    sfx.SetEffect(".clipRightToLeft2", (elem) => sfx.ShapeRightToLeft(elem));
+    sfx.SetEffect(".div8", (elem) => sfx.StaggerTextFromY(elem));
+    sfx.SetEffect(".clipShow2", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".clipShow3", (elem) => sfx.ShapeShowCenter(elem));
+  });
 
   return (
     <>
@@ -22,7 +38,7 @@ const Home = ({ ...props }) => {
           I'm Carlos Johncent Ventura,
         </div>
 
-        <LgRhombus parentClass={"pt-[5vh]"} clipPathClass={"clipShow"}>
+        <LgRhombus parentClass={"pt-[5vh] flex justify-center items-center"} mainClass={"clipShow"}>
           <img
             src={ImagePaths.hero}
             alt={ImagePaths.hero}
@@ -37,7 +53,7 @@ const Home = ({ ...props }) => {
         <div className="flex justify-evenly items-center">
           <LgRhombus
             parentClass={"mt-[20vh]"}
-            clipPathClass={"clipLeftToRight"}
+            mainClass={"clipLeftToRight"}
           >
             <img
               src={ImagePaths.hero}
@@ -58,7 +74,7 @@ const Home = ({ ...props }) => {
 
           <LgRhombus
             parentClass={"mt-[20vh]"}
-            clipPathClass={"clipRightToLeft"}
+            mainClass={"clipRightToLeft"}
           >
             <img
               src={ImagePaths.hero}
@@ -71,7 +87,7 @@ const Home = ({ ...props }) => {
         <div className="flex justify-evenly items-center">
           <LgRhombus
             parentClass={"mt-[20vh]"}
-            clipPathClass={"clipLeftToRight2"}
+            mainClass={"clipLeftToRight2"}
           >
             <img
               src={ImagePaths.hero}
@@ -92,7 +108,7 @@ const Home = ({ ...props }) => {
 
           <LgRhombus
             parentClass={"mt-[20vh]"}
-            clipPathClass={"clipRightToLeft2"}
+            mainClass={"clipRightToLeft2"}
           >
             <img
               src={ImagePaths.hero}
@@ -106,10 +122,10 @@ const Home = ({ ...props }) => {
           And still learning more, but for now...
         </div>
 
-        <div className="mt-[50vh] h-[100vh] flex justify-center items-center">
+        <div className="mt-[50vh] h-[60vh] flex justify-center items-center">
           <LgRhombus
             parentClass={"absolute top-0 "}
-            clipPathClass={"clipShow2"}
+            mainClass={"clipShow2"}
           >
             <img
               src={ImagePaths.hero}
@@ -130,19 +146,19 @@ const Home = ({ ...props }) => {
           <div className="absolute top-0 w-[50vw] flex justify-evenly items-center">
             <SmRhombus
               parentClass={"mt-[15vh] pt-[30vh]"}
-              clipPathClass={"clipShow3"}
+              mainClass={"clipShow3"}
             ></SmRhombus>
             <SmRhombus
               parentClass={"mt-[15vh] pt-[30vh]"}
-              clipPathClass={"clipShow3"}
+              mainClass={"clipShow3"}
             ></SmRhombus>
             <SmRhombus
               parentClass={"mt-[15vh] pt-[30vh]"}
-              clipPathClass={"clipShow3"}
+              mainClass={"clipShow3"}
             ></SmRhombus>
             <SmRhombus
               parentClass={"mt-[15vh] pt-[30vh]"}
-              clipPathClass={"clipShow3"}
+              mainClass={"clipShow3"}
             ></SmRhombus>
           </div>
         </div>
@@ -151,36 +167,33 @@ const Home = ({ ...props }) => {
   );
 };
 
-const SmRhombus = ({ parentClass, clipPathClass, children }) => {
-  return (
-    <>
-      <div className={`${parentClass} flex justify-center items-center`}>
-        <div
-          className={`${clipPathClass} clip-path md:w-36 md:h-36 w-8 h-8 bg-primaryClr flex justify-center items-center`}
-        >
-          {children}
-        </div>
-      </div>
-    </>
-  );
-};
 
-const LgRhombus = ({ parentClass, clipPathClass, children }) => {
-  return (
-    <>
-      <div className={`${parentClass} flex justify-center items-center`}>
-        <div
-          className={`${clipPathClass} clip-path w-80 h-80 bg-primaryClr flex justify-center items-center`}
-        >
-          {children}
-        </div>
-      </div>
-    </>
-  );
-};
 
+export default Home;
+
+/*
 function UseEffects() {
   const GSAPTimelineScrollerPosition = "60%";
+
+  function SetEffect(className, callback) {
+    return document.querySelectorAll(className).forEach(callback);
+  }
+
+  SetEffect(".div1", (elem) => AutoStaggerText(elem));
+  SetEffect(".div2", (elem) => StaggerText(elem));
+  SetEffect(".clipShow", (elem) => ShapeShow(elem));
+  SetEffect(".div3", (elem) => FadeInText(elem));
+  SetEffect(".clipLeftToRight", (elem) => ShapeLeftToRight(elem));
+  SetEffect(".div4", (elem) => StaggerTextRightToLeft(elem));
+  SetEffect(".div5", (elem) => StaggerTextLeftToRight(elem));
+  SetEffect(".clipRightToLeft", (elem) => ShapeRightToLeft(elem));
+  SetEffect(".clipLeftToRight2", (elem) => ShapeLeftToRight(elem));
+  SetEffect(".div6", (elem) => StaggerTextRightToLeft(elem));
+  SetEffect(".div7", (elem) => StaggerTextLeftToRight(elem));
+  SetEffect(".clipRightToLeft2", (elem) => ShapeRightToLeft(elem));
+  SetEffect(".div8", (elem) => StaggerTextFromY(elem));
+  SetEffect(".clipShow2", (elem) => ShapeShow(elem));
+  SetEffect(".clipShow3", (elem) => ShapeShowCenter(elem));
 
   function CreateGsapTimeline({
     trigger,
@@ -202,26 +215,6 @@ function UseEffects() {
       },
     });
   }
-
-  function SetEffect(className, callback) {
-    return document.querySelectorAll(className).forEach(callback);
-  }
-
-  SetEffect(".div1", (elem) => AutoStaggerText(elem));
-  SetEffect(".div2", (elem) => StaggerText(elem));
-  SetEffect(".clipShow", (elem) => ShapeShow(elem));
-  SetEffect(".div3", (elem) => FadeInText(elem));
-  SetEffect(".clipLeftToRight", (elem) => ShapeLeftToRight(elem));
-  SetEffect(".div4", (elem) => StaggerTextRightToLeft(elem));
-  SetEffect(".div5", (elem) => StaggerTextLeftToRight(elem));
-  SetEffect(".clipRightToLeft", (elem) => ShapeRightToLeft(elem));
-  SetEffect(".clipLeftToRight2", (elem) => ShapeLeftToRight(elem));
-  SetEffect(".div6", (elem) => StaggerTextRightToLeft(elem));
-  SetEffect(".div7", (elem) => StaggerTextLeftToRight(elem));
-  SetEffect(".clipRightToLeft2", (elem) => ShapeRightToLeft(elem));
-  SetEffect(".div8", (elem) => StaggerTextFromY(elem));
-  SetEffect(".clipShow2", (elem) => ShapeShow(elem));
-  SetEffect(".clipShow3", (elem) => ShapeShowCenter(elem));
 
   function AutoStaggerText(char) {
     CreateGsapTimeline({ trigger: char, scrub: false, markers: false }).fromTo(
@@ -373,5 +366,4 @@ function UseEffects() {
     );
   }
 }
-
-export default Home;
+*/
