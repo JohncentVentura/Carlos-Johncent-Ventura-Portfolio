@@ -106,7 +106,7 @@ const Home = ({ ...props }) => {
           And still learning more, but for now...
         </div>
 
-        <div className="mt-[50vh] h-[105vh] flex justify-center items-center">
+        <div className="mt-[50vh] h-[100vh] flex justify-center items-center">
           <LgRhombus
             parentClass={"absolute top-0 "}
             clipPathClass={"clipShow2"}
@@ -156,7 +156,7 @@ const SmRhombus = ({ parentClass, clipPathClass, children }) => {
     <>
       <div className={`${parentClass} flex justify-center items-center`}>
         <div
-          className={`${clipPathClass} clip-path w-36 h-36 bg-primaryClr flex justify-center items-center`}
+          className={`${clipPathClass} clip-path md:w-36 md:h-36 w-8 h-8 bg-primaryClr flex justify-center items-center`}
         >
           {children}
         </div>
