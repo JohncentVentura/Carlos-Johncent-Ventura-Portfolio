@@ -8,64 +8,13 @@ import { ImagePaths } from "../components/Paths";
 import { rule } from "postcss";
 
 const Home = ({ ...props }) => {
-  /*
-  useEffect(() => {
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-    });
-
-    const resize = (e) => {
-      let Xt;
-      const w = window.innerWidth + window.outerWidth;
-      const h = window.innerHeight + window.outerHeight;
-      if (
-        Xt.dataStorage.get(window, "xtEventDelayWidth") === w && // when width changes
-        (matchMedia("(hover: none)").matches ||
-          Xt.dataStorage.get(window, "xtEventDelayHeight") === h) // when height changes not touch
-      ) {
-        // only width no height because it changes on scroll on mobile
-        return;
-      }
-      // save
-      Xt.dataStorage.set(
-        window,
-        `eventDelaySaveTimeout`,
-        setTimeout(() => {
-          Xt.dataStorage.set(window, "xtEventDelayWidth", w);
-          Xt.dataStorage.set(window, "xtEventDelayHeight", h);
-        }, Xt[`${e.type}Delay`])
-      );
-
-      Xt.eventDelay({
-        e,
-        ns: "xtScrolltriggerRerfreshFix",
-        func: () => {
-          ScrollTrigger.refresh();
-        },
-      });
-    };
-    window.removeEventListener("resize", resize);
-    window.addEventListener("resize", resize);
-  });
-  */
-
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.refresh();
   useEffect(() => UseEffects());
 
   return (
     <>
       <section id={props.id} className="">
-        {/*
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-end">
-          <img
-            src={ImagePaths.hero}
-            alt={ImagePaths.hero}
-            id="hero"
-            className="relative w-[90vw] h-[90vh] object-contain"
-          />
-        </div>
-        */}
-
         <div className="div1 pt-[40vh] pb-[25vh] text-center text-5xl">
           Hello!
         </div>
@@ -255,7 +204,9 @@ function UseEffects() {
     });
   }
 
-  function SetEffect(className, callback) { return document.querySelectorAll(className).forEach(callback); }
+  function SetEffect(className, callback) {
+    return document.querySelectorAll(className).forEach(callback);
+  }
 
   SetEffect(".div1", (elem) => AutoStaggerText(elem));
   SetEffect(".div2", (elem) => StaggerText(elem));

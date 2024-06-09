@@ -157,6 +157,46 @@ function App() {
   });
   //*/
 
+  /*
+  useEffect(() => {
+    ScrollTrigger.config({
+      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+    });
+
+    const resize = (e) => {
+      let Xt;
+      const w = window.innerWidth + window.outerWidth;
+      const h = window.innerHeight + window.outerHeight;
+      if (
+        Xt.dataStorage.get(window, "xtEventDelayWidth") === w && // when width changes
+        (matchMedia("(hover: none)").matches ||
+          Xt.dataStorage.get(window, "xtEventDelayHeight") === h) // when height changes not touch
+      ) {
+        // only width no height because it changes on scroll on mobile
+        return;
+      }
+      // save
+      Xt.dataStorage.set(
+        window,
+        `eventDelaySaveTimeout`,
+        setTimeout(() => {
+          Xt.dataStorage.set(window, "xtEventDelayWidth", w);
+          Xt.dataStorage.set(window, "xtEventDelayHeight", h);
+        }, Xt[`${e.type}Delay`])
+      );
+
+      Xt.eventDelay({
+        e,
+        ns: "xtScrolltriggerRerfreshFix",
+        func: () => {
+          ScrollTrigger.refresh();
+        },
+      });
+    };
+    window.removeEventListener("resize", resize);
+    window.addEventListener("resize", resize);
+  });
+  */
 
   return (
     <>
