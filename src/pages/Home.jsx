@@ -8,6 +8,45 @@ import { ImagePaths } from "../components/Paths";
 import { rule } from "postcss";
 
 const Home = ({ ...props }) => {
+  useEffect(() => {
+    ScrollTrigger.config({
+      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+    });
+
+    const resize = (e) => {
+      let Xt;
+      const w = window.innerWidth + window.outerWidth;
+      const h = window.innerHeight + window.outerHeight;
+      if (
+        Xt.dataStorage.get(window, "xtEventDelayWidth") === w && // when width changes
+        (matchMedia("(hover: none)").matches ||
+          Xt.dataStorage.get(window, "xtEventDelayHeight") === h) // when height changes not touch
+      ) {
+        // only width no height because it changes on scroll on mobile
+        return;
+      }
+      // save
+      Xt.dataStorage.set(
+        window,
+        `eventDelaySaveTimeout`,
+        setTimeout(() => {
+          Xt.dataStorage.set(window, "xtEventDelayWidth", w);
+          Xt.dataStorage.set(window, "xtEventDelayHeight", h);
+        }, Xt[`${e.type}Delay`])
+      );
+
+      Xt.eventDelay({
+        e,
+        ns: "xtScrolltriggerRerfreshFix",
+        func: () => {
+          ScrollTrigger.refresh();
+        },
+      });
+    };
+    window.removeEventListener("resize", resize);
+    window.addEventListener("resize", resize);
+  });
+
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => UseEffects());
 
@@ -118,7 +157,10 @@ const Home = ({ ...props }) => {
         </div>
 
         <div className="mt-[50vh] h-[105vh] flex justify-center items-center">
-          <LgRhombus parentClass={"absolute top-0 "} clipPathClass={"clipShow2"}>
+          <LgRhombus
+            parentClass={"absolute top-0 "}
+            clipPathClass={"clipShow2"}
+          >
             <img
               src={ImagePaths.hero}
               alt={ImagePaths.hero}
@@ -131,14 +173,27 @@ const Home = ({ ...props }) => {
           </div>
 
           <div className="div8 absolute top-0 pt-[35vh] text-center text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum fuga mollitia laborum placeat sequi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            rerum fuga mollitia laborum placeat sequi.
           </div>
 
           <div className="absolute top-0 w-[50vw] flex justify-evenly items-center">
-            <SmRhombus parentClass={"mt-[15vh] pt-[30vh]"} clipPathClass={"clipShow3"}></SmRhombus>
-            <SmRhombus parentClass={"mt-[15vh] pt-[30vh]"} clipPathClass={"clipShow3"}></SmRhombus>
-            <SmRhombus parentClass={"mt-[15vh] pt-[30vh]"} clipPathClass={"clipShow3"}></SmRhombus>
-            <SmRhombus parentClass={"mt-[15vh] pt-[30vh]"} clipPathClass={"clipShow3"}></SmRhombus>
+            <SmRhombus
+              parentClass={"mt-[15vh] pt-[30vh]"}
+              clipPathClass={"clipShow3"}
+            ></SmRhombus>
+            <SmRhombus
+              parentClass={"mt-[15vh] pt-[30vh]"}
+              clipPathClass={"clipShow3"}
+            ></SmRhombus>
+            <SmRhombus
+              parentClass={"mt-[15vh] pt-[30vh]"}
+              clipPathClass={"clipShow3"}
+            ></SmRhombus>
+            <SmRhombus
+              parentClass={"mt-[15vh] pt-[30vh]"}
+              clipPathClass={"clipShow3"}
+            ></SmRhombus>
           </div>
         </div>
       </section>
@@ -175,6 +230,8 @@ const LgRhombus = ({ parentClass, clipPathClass, children }) => {
 };
 
 function UseEffects() {
+  const GSAPTimelineScrollerPosition = "60%";
+
   function CreateGsapTimeline({
     trigger,
     start,
@@ -187,8 +244,8 @@ function UseEffects() {
     return gsap.timeline({
       scrollTrigger: {
         trigger: trigger,
-        start: start || "top 65%",
-        end: end || "bottom 65%",
+        start: start || `top ${GSAPTimelineScrollerPosition}`,
+        end: end || `bottom ${GSAPTimelineScrollerPosition}`,
         scrub: scrub,
         markers: markers || false,
         toggleActions: toggleActions || "play play reverse reverse",
@@ -231,7 +288,7 @@ function UseEffects() {
   }
 
   function StaggerText(char) {
-    CreateGsapTimeline({ trigger: char, markers: true }).fromTo(
+    CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
         opacity: 0,
@@ -244,7 +301,7 @@ function UseEffects() {
   }
 
   function ShapeShow(elem) {
-    CreateGsapTimeline({ trigger: elem.parentElement, markers: true }).fromTo(
+    CreateGsapTimeline({ trigger: elem.parentElement, markers: false }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
         opacity: 0,
@@ -339,7 +396,7 @@ function UseEffects() {
   }
 
   function StaggerTextFromY(char) {
-    CreateGsapTimeline({ trigger: char, markers: true }).fromTo(
+    CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
         opacity: 0,
@@ -355,7 +412,11 @@ function UseEffects() {
   }
 
   function ShapeShowCenter(elem) {
-    CreateGsapTimeline({ trigger: elem.parentElement, end: "center 65%", markers: true }).fromTo(
+    CreateGsapTimeline({
+      trigger: elem.parentElement,
+      end: `center ${GSAPTimelineScrollerPosition}`,
+      markers: false,
+    }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
         opacity: 0,

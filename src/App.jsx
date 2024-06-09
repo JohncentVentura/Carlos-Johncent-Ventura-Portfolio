@@ -180,6 +180,52 @@ function App() {
       <Contact id={SectionPaths.contactSection}/>
     </>
   );
-}
+};
+
+function UseEffects() {
+  const GSAPTimelineScrollerPosition = "60%";
+
+  function CreateGsapTimeline({
+    trigger,
+    start,
+    end,
+    scrub,
+    markers,
+    toggleActions,
+  }) {
+    if (scrub === undefined) scrub = true;
+    return gsap.timeline({
+      scrollTrigger: {
+        trigger: trigger,
+        start: start || `top ${GSAPTimelineScrollerPosition}`,
+        end: end || `bottom ${GSAPTimelineScrollerPosition}`,
+        scrub: scrub,
+        markers: markers || false,
+        toggleActions: toggleActions || "play play reverse reverse",
+      },
+    });
+  }
+
+  function SetEffect(className, callback) {
+    return document.querySelectorAll(className).forEach(callback);
+  }
+
+  SetEffect(".changePage", (elem) => ChangePage(elem));
+
+  function ChangePage(elem) {
+    CreateGsapTimeline({ trigger: elem.parentElement, markers: false }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+      }
+    );
+  }
+
+};
+
+
 
 export default App;
