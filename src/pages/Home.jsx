@@ -8,6 +8,7 @@ import { ImagePaths } from "../components/Paths";
 import { rule } from "postcss";
 
 const Home = ({ ...props }) => {
+  /*
   useEffect(() => {
     ScrollTrigger.config({
       autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
@@ -46,6 +47,7 @@ const Home = ({ ...props }) => {
     window.removeEventListener("resize", resize);
     window.addEventListener("resize", resize);
   });
+  */
 
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => UseEffects());
@@ -253,9 +255,7 @@ function UseEffects() {
     });
   }
 
-  function SetEffect(className, callback) {
-    return document.querySelectorAll(className).forEach(callback);
-  }
+  function SetEffect(className, callback) { return document.querySelectorAll(className).forEach(callback); }
 
   SetEffect(".div1", (elem) => AutoStaggerText(elem));
   SetEffect(".div2", (elem) => StaggerText(elem));
@@ -336,13 +336,11 @@ function UseEffects() {
         opacity: 0,
         rotate: -360,
         scale: 0,
-        x: -800,
       },
       {
         opacity: 1,
         rotate: 0,
         scale: 1,
-        x: 5,
       }
     );
   }
@@ -352,12 +350,10 @@ function UseEffects() {
       new SplitType(char, { types: "chars" }).chars,
       {
         opacity: 0,
-        x: 800,
       },
       {
         opacity: 1,
         stagger: 0.5,
-        x: 5,
       }
     );
   }
@@ -369,13 +365,11 @@ function UseEffects() {
         opacity: 0,
         rotate: 360,
         scale: 0,
-        x: 800,
       },
       {
         opacity: 1,
         rotate: 0,
         scale: 1,
-        x: 5,
       }
     );
   }
@@ -385,12 +379,10 @@ function UseEffects() {
       new SplitType(char, { types: "chars" }).chars,
       {
         opacity: 0,
-        x: -800,
       },
       {
         opacity: 1,
         stagger: 0.5,
-        x: 5,
       }
     );
   }
@@ -401,7 +393,7 @@ function UseEffects() {
       {
         opacity: 0,
         transformOrigin: "top",
-        y: -100,
+        y: -20,
       },
       {
         opacity: 1,

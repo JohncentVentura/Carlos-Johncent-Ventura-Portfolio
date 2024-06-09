@@ -32,16 +32,12 @@ nav, #hero{
     @apply box-border ;
   }
 
-  body{
-    @apply overflow-x-hidden;
-  }
-
   #particles canvas {
     @apply absolute -z-50;
   }
 
   section{
-    @apply relative w-screen;
+    @apply relative;
   }
 
   a, div{
