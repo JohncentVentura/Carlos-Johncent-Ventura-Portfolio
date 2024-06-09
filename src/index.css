@@ -37,7 +37,7 @@ nav, #hero{
   }
 
   section{
-    @apply relative;
+    @apply relative h-screen;
   }
 
   a, div{

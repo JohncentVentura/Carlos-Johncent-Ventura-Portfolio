@@ -5,7 +5,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 import { ImagePaths } from "../components/Paths";
-import { rule } from "postcss";
 
 const Home = ({ ...props }) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +13,7 @@ const Home = ({ ...props }) => {
 
   return (
     <>
-      <section id={props.id} className="">
+      <section id={props.id} className="h-fit">
         <div className="div1 pt-[40vh] pb-[25vh] text-center text-5xl">
           Hello!
         </div>
