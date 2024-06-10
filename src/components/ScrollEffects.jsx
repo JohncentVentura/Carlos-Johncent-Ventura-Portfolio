@@ -5,7 +5,7 @@ import SplitType from "split-type";
 
 //SFX or Scroll Effects
 const sfx = {
-  timelineScrollerPosition: "70%",
+  timelineScrollerPosition: "75%",
   Init() {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();

@@ -36,29 +36,36 @@ const Home = ({ ...props }) => {
     sfx.SetEffect(".spGDandPASkill", (elem) => sfx.ShapeShow(elem));
 
     sfx.SetEffect(".txStillLearning", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spWelcome", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".txWelcome", (elem) => sfx.TextStagger(elem));
+    sfx.SetEffect(".spWelcome", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".txWelcomeDesc", (elem) => sfx.TextStagger(elem));
+    sfx.SetEffect(".spWelcomeLink", (elem) => sfx.ShapeShow(elem));
   });
   //*/
 
   return (
     <>
       <section id={props.id} className="mt-[0] pt-[0] h-fit">
-        <LgDiv className="txHello pt-[40vh] pb-[25vh]">Hello!</LgDiv>
+        <LgDiv className="txHello pt-[40vh] pb-[35vh]">Hello!</LgDiv>
 
         <LgDiv className="txImCJV pt-[20vh]">
-          I'm Carlos Johncent Ventura,
+          I'm Carlos 
+        </LgDiv>
+        <LgDiv className="txImCJV">
+          Johncent Ventura
         </LgDiv>
 
         <LgRhombusImg
-          className={"spImCJV pt-[5vh] flex justify-center items-center"}
+          className={"spImCJV flex justify-center items-center lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.cert1}
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
 
-        <LgDiv className={"txJustAnother pt-[10vh]"}>
-          Just another fool chasing the dream of
+        <LgDiv className={"txJustAnother lg:pt-[10vh] pt-[5vh]"}>
+          Just another fool
+        </LgDiv>
+        <LgDiv className={"txJustAnother"}>
+          chasing the dream of
         </LgDiv>
 
         {/********************************************************************************/}
@@ -71,10 +78,13 @@ const Home = ({ ...props }) => {
 
           <div className="flex flex-col justify-center items-center">
             <LgDiv className={"txFrontEnd lg:pt-[20vh] pt-[2.5vh]"}>
-              Front-End Development
+              Front-End 
+            </LgDiv>
+            <LgDiv className={"txFrontEnd"}>
+              Development
             </LgDiv>
 
-            <div className="w-full flex justify-between items-center">
+            <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[50vw] ">
               <SmRhombusImg
                 className={"spFrontEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
@@ -87,99 +97,6 @@ const Home = ({ ...props }) => {
               ></SmRhombusImg>
               <SmRhombusImg
                 className={"spFrontEndSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex lg:flex-row-reverse flex-col justify-evenly items-center">
-          <LgRhombusImg
-            className={"spBackEnd lg:mt-[20vh] mt-[15vh]"}
-            imgSrc={ImagePaths.hero}
-          ></LgRhombusImg>
-
-          <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txBackEnd lg:pt-[20vh] pt-[2.5vh]"}>
-              Back-End Development
-            </LgDiv>
-
-            <div className="w-full flex justify-between items-center">
-              <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex lg:flex-row flex-col justify-evenly items-center">
-          <LgRhombusImg
-            className={"spGameDev lg:mt-[20vh] mt-[15vh]"}
-            imgSrc={ImagePaths.hero}
-          ></LgRhombusImg>
-
-          <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txGameDev lg:pt-[20vh] pt-[2.5vh]"}>
-              Video Game Development
-            </LgDiv>
-
-            <div className="w-full flex justify-between items-center">
-              <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex lg:flex-row-reverse flex-col justify-evenly items-center">
-          <LgRhombusImg
-            className={"spGDandPA lg:mt-[20vh] mt-[15vh]"}
-            imgSrc={ImagePaths.hero}
-          ></LgRhombusImg>
-
-          <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txGDandPA lg:pt-[20vh] pt-[2.5vh]"}>
-              Graphics Design & Pixel Art
-            </LgDiv>
-
-            <div className="w-full flex justify-between items-center">
-              <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
-                href={ExternalPaths.cert1}
-                imgSrc={ImagePaths.html}
-              ></SmRhombusImg>
-              <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -189,46 +106,57 @@ const Home = ({ ...props }) => {
 
         {/********************************************************************************/}
 
-        <LgDiv className="txStillLearning pt-[30vh] ">
-          And still learning more, but for now...
+        <LgDiv className="txStillLearning lg:pt-[20vh] pt-[15vh]">
+          And still learning more,
+        </LgDiv>
+        <LgDiv className="txStillLearning ">
+          but for now...
         </LgDiv>
 
         <div className="flex flex-col justify-center items-center">
-          <LgDiv className={"txWelcome mt-[50vh]"}>
-            WELCOME TO MY PORTFOLIO
+          <LgDiv className={"txWelcome mt-[30vh]"}>
+            WELCOME TO
+          </LgDiv>
+          <LgDiv className={"txWelcome"}>
+            MY PORTFOLIO
           </LgDiv>
 
-          <div className="w-full flex justify-evenly items-center">
-            <SmRhombusImg
-              className={"spWelcome pt-[2.5vh]"}
-              href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
-            <SmRhombusImg
-              className={"spWelcome pt-[2.5vh]"}
-              href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
-            <MdRhombusImg
-              className={"spWelcome pt-[2.5vh]"}
+            <LgRhombusImg 
+            className={"spWelcome pt-[2.5vh]"}
               imgSrc={ImagePaths.hero}
-            ></MdRhombusImg>
+            >
+
+            </LgRhombusImg>
+
+          <SmDiv className={"txWelcomeDesc pt-[2.5vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            rerum fuga mollitia laborum placeat sequi.
+          </SmDiv>
+
+          <div className="flex justify-between items-center xl:w-[40vw] md:w-[50vw] w-[80vw] ">
             <SmRhombusImg
-              className={"spWelcome pt-[2.5vh]"}
+              className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               imgSrc={ImagePaths.html}
             ></SmRhombusImg>
             <SmRhombusImg
-              className={"spWelcome pt-[2.5vh]"}
+              className={"spWelcomeLink pt-[5vh]"}
+              href={ExternalPaths.cert1}
+              imgSrc={ImagePaths.html}
+            ></SmRhombusImg>
+            <SmRhombusImg
+              className={"spWelcomeLink pt-[5vh]"}
+              href={ExternalPaths.cert1}
+              imgSrc={ImagePaths.html}
+            ></SmRhombusImg>
+            <SmRhombusImg
+              className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               imgSrc={ImagePaths.html}
             ></SmRhombusImg>
           </div>
 
-          <SmDiv className={"txWelcomeDesc pt-[2.5vh] w-[70vw]"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            rerum fuga mollitia laborum placeat sequi.
-          </SmDiv>
+          
         </div>
       </section>
     </>

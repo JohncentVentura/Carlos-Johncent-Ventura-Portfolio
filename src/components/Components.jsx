@@ -31,7 +31,7 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
           xl:w-24 xl:h-24 
           lg:w-20 lg:h-20
           sm:w-16 sm:h-16
-          w-14 h-14 
+          w-12 h-12 
           `}
           href={href}
           target="_blank"
@@ -42,37 +42,6 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
             alt={imgSrc}
             className="-rotate-45 w-[75%] h-[75%] object-fill 
             group-hover:-rotate-[225deg] group-hover:transition-all group-hover:duration-[0.4s] group-hover:ease-in-out"
-          />
-        </a>
-      </div>
-    </>
-  );
-};
-
-export const MdRhombusImg = ({ className, href, imgSrc }) => {
-  const sfxString = `${className}`.split(" ")[0];
-  const classString = `${className}`.replace(sfxString, "");
-
-  return (
-    <>
-      <div className={classString}>
-        <a
-          className={`${sfxString} clip-path-border bg-primaryClr flex justify-center items-center group
-          xl:w-96 xl:h-96
-          lg:w-80 lg:h-80 
-          md:w-52 md:h-52
-          sm:w-40 sm:h-40 
-          w-32 h-32 
-          `}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={imgSrc}
-            alt={imgSrc}
-            className="clip-path w-full h-full object-fill bg-bgClr
-          group-hover:bg-primaryClr group-hover:transition-all group-hover:duration-[0.4s] group-hover:ease-in-out"
           />
         </a>
       </div>
@@ -101,8 +70,7 @@ export const LgRhombusImg = ({ className, href, imgSrc }) => {
           <img
             src={imgSrc}
             alt={imgSrc}
-            className="clip-path w-full h-full object-fill bg-bgClr
-          group-hover:bg-primaryClr group-hover:transition-all group-hover:duration-[0.4s] group-hover:ease-in-out"
+            className="clip-path w-full h-full object-fill bg-bgClr group-hover:bg-primaryClr"
           />
         </a>
       </div>
