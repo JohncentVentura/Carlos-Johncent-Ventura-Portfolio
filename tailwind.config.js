@@ -14,6 +14,9 @@ export default {
         primaryClr: "var(--primaryClr)",
         primaryClr2: "var(--primaryClr2)",
       },
+      fontFamily: {
+        mainFont: "var(--mainFont)"
+      }
     },
   },
   plugins: [],

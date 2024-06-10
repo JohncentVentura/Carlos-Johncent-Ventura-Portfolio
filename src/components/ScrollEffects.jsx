@@ -109,7 +109,7 @@ const sfx = {
   ShapeShow(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
@@ -127,7 +127,7 @@ const sfx = {
   ShapeShowToRight(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
@@ -145,7 +145,7 @@ const sfx = {
   ShapeShowToLeft(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
@@ -164,7 +164,7 @@ const sfx = {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
       end: `center ${this.timelineScrollerPosition}`,
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
@@ -183,7 +183,7 @@ const sfx = {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
       //end: `center ${this.timelineScrollerPosition}`,
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
@@ -199,7 +199,7 @@ const sfx = {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
       //start: `center ${this.timelineScrollerPosition}`,   
-      markers: true,
+      markers: false,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {

@@ -20,7 +20,7 @@ import Navbar from "./components/Navbar.jsx";
 import ParticlesComponent from "./components/Particles.jsx";
 import { SectionPaths } from "./components/Paths.jsx";
 import sfx from "./components/ScrollEffects";
-import { PageDivider } from "./components/Shapes";
+import { PageDivider } from "./components/Components.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Skill from "./pages/Skill.jsx";
@@ -81,18 +81,18 @@ function App() {
     window.addEventListener("resize", () => printBreakpoint());
 
     function printBreakpoint() {
-      if (window.innerWidth >= 1400) {
-        console.log("XXL");
-      } else if (window.innerWidth >= 1200) {
-        console.log("XL");
-      } else if (window.innerWidth >= 992) {
-        console.log("LG");
+      if (window.innerWidth >= 1536) {
+        console.log("2xl desktop"); //Desktop
+      } else if (window.innerWidth >= 1280) {
+        console.log("xl laptop"); //Laptop
+      } else if (window.innerWidth >= 1024) {
+        console.log("lg h-tablet"); //Horizontal Tablet
       } else if (window.innerWidth >= 768) {
-        console.log("MD");
-      } else if (window.innerWidth >= 576) {
-        console.log("SM");
+        console.log("md v-tablet"); //Vertical Tablet
+      } else if (window.innerWidth >= 640) {
+        console.log("sm h-phone"); //Horizontal Phone
       } else {
-        console.log("Default");
+        console.log("df v-phone"); //Vertical Phone
       }
     }
   });

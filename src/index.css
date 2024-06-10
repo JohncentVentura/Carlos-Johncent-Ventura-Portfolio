@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --mainFont: "Rubik", serif;
+}
+
 .light-theme {
   --fgClr: #191d2b;
   --bgClr: #e6e6e6;
@@ -54,7 +58,7 @@ nav{
     @apply box-border;
   }
   
-  body, #root{
+  body{
     @apply relative overflow-x-hidden;
   }
 
@@ -63,15 +67,15 @@ nav{
   }
 
   section{
-    @apply relative mt-[30vh] pt-[30vh] w-screen h-[200vh];
+    @apply relative mt-[30vh] px-[5vh] pt-[30vh] w-screen h-[200vh];
   }
 
   a, div{
-    @apply relative text-fgClr;
+    @apply relative text-fgClr font-mainFont;
   }
   
   .char{
-    @apply relative hover:text-primaryClr hover:transition-all hover:duration-[0.4s] hover:ease-in-out;
+    @apply relative hover:text-primaryClr;
   }
 
 }
