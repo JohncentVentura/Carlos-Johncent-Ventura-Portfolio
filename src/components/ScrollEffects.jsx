@@ -5,7 +5,7 @@ import SplitType from "split-type";
 
 //SFX or Scroll Effects
 const sfx = {
-  timelineScrollerPosition: "60%",
+  timelineScrollerPosition: "70%",
   Init() {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
@@ -27,7 +27,7 @@ const sfx = {
     return document.querySelectorAll(className).forEach(callBackEffectFunction);
   },
   //Functions below can be used as callBackEffectFunction in SetEffect()
-  AutoStaggerText(char) {
+  TextAutoStagger(char) {
     this.CreateGsapTimeline({
       trigger: char,
       scrub: false,
@@ -44,7 +44,7 @@ const sfx = {
       }
     );
   },
-  StaggerText(char) {
+  TextStagger(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
@@ -56,26 +56,7 @@ const sfx = {
       }
     );
   },
-  ShapeShow(elem) {
-    this.CreateGsapTimeline({
-      trigger: elem.parentElement,
-      markers: false,
-    }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        opacity: 0,
-        rotate: 360,
-        scale: 0,
-      },
-      {
-        opacity: 1,
-        rotate: 0,
-        scale: 1,
-        zIndex: -0,
-      }
-    );
-  },
-  FadeInText(char) {
+  TextFadeIn(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
@@ -86,25 +67,7 @@ const sfx = {
       }
     );
   },
-  ShapeLeftToRight(elem) {
-    this.CreateGsapTimeline({
-      trigger: elem.parentElement,
-      markers: false,
-    }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        opacity: 0,
-        rotate: -360,
-        scale: 0,
-      },
-      {
-        opacity: 1,
-        rotate: 0,
-        scale: 1,
-      }
-    );
-  },
-  StaggerTextRightToLeft(char) {
+  TextStaggerToLeft(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
@@ -116,25 +79,7 @@ const sfx = {
       }
     );
   },
-  ShapeRightToLeft(elem) {
-    this.CreateGsapTimeline({
-      trigger: elem.parentElement,
-      markers: false,
-    }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        opacity: 0,
-        rotate: 360,
-        scale: 0,
-      },
-      {
-        opacity: 1,
-        rotate: 0,
-        scale: 1,
-      }
-    );
-  },
-  StaggerTextLeftToRight(char) {
+  TextStaggerToRight(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
@@ -146,7 +91,7 @@ const sfx = {
       }
     );
   },
-  StaggerTextFromY(char) {
+  TextStaggerToYBottom(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
       {
@@ -161,22 +106,76 @@ const sfx = {
       }
     );
   },
-  ShapeShowCenter(elem) {
+  ShapeShow(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
-      end: `center ${this.timelineScrollerPosition}`,
-      markers: false,
+      markers: true,
     }).fromTo(
       `.${elem.className.split(" ")[0]}`,
       {
         opacity: 0,
-        rotate: 360,
         scale: 0,
-      },
+        zIndex: -1,
+      },  
       {
         opacity: 1,
-        rotate: 0,
         scale: 1,
+        zIndex: 0,
+      }
+    );
+  },
+  ShapeShowToRight(elem) {
+    this.CreateGsapTimeline({
+      trigger: elem.parentElement,
+      markers: true,
+    }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        opacity: 0,
+        scale: 0,
+        zIndex: -1,
+      },  
+      {
+        opacity: 1,
+        scale: 1,
+        zIndex: 0,
+      }
+    );
+  },
+  ShapeShowToLeft(elem) {
+    this.CreateGsapTimeline({
+      trigger: elem.parentElement,
+      markers: true,
+    }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        opacity: 0,
+        scale: 0,
+        zIndex: -1,
+      },  
+      {
+        opacity: 1,
+        scale: 1,
+        zIndex: 0,
+      }
+    );
+  },
+  ShapeShowToCenter(elem) {
+    this.CreateGsapTimeline({
+      trigger: elem.parentElement,
+      end: `center ${this.timelineScrollerPosition}`,
+      markers: true,
+    }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        opacity: 0,
+        scale: 0,
+        zIndex: -1,
+      },  
+      {
+        opacity: 1,
+        scale: 1,
+        zIndex: 0,
       }
     );
   },
@@ -196,7 +195,6 @@ const sfx = {
       }
     );
   },
-
   ClosePage(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
@@ -213,7 +211,6 @@ const sfx = {
       }
     );
   },
-
 };
 
 export default sfx;

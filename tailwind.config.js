@@ -12,6 +12,7 @@ export default {
         fgClr: "var(--fgClr)",
         bgClr: "var(--bgClr)",
         primaryClr: "var(--primaryClr)",
+        primaryClr2: "var(--primaryClr2)",
       },
     },
   },

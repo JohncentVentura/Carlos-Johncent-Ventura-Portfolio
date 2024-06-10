@@ -75,6 +75,28 @@ function App() {
     sfx.SetEffect(".closePage", (elem) => sfx.ClosePage(elem));
   });
 
+  //Checks Breakpoints
+  useEffect(() => { 
+    printBreakpoint();
+    window.addEventListener("resize", () => printBreakpoint());
+
+    function printBreakpoint() {
+      if (window.innerWidth >= 1400) {
+        console.log("XXL");
+      } else if (window.innerWidth >= 1200) {
+        console.log("XL");
+      } else if (window.innerWidth >= 992) {
+        console.log("LG");
+      } else if (window.innerWidth >= 768) {
+        console.log("MD");
+      } else if (window.innerWidth >= 576) {
+        console.log("SM");
+      } else {
+        console.log("Default");
+      }
+    }
+  });
+
   /*TEMPLATE: GSAP Scroll Animations
   useEffect(() => {
     //GSAP, SplitType
@@ -182,9 +204,7 @@ function App() {
       />
       <Home id={SectionPaths.homeSection} fg={fgClr} primaryClr={primaryClr} />
 
-      <PageDivider>
-        About Me
-      </PageDivider>
+      <PageDivider>About Me</PageDivider>
 
       <About id={SectionPaths.aboutSection} />
       <hr />
