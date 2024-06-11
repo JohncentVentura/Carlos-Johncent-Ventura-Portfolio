@@ -17,11 +17,11 @@ const Navbar = ({...props}) => {
   return (
     <>
       <nav className="fixed z-50 top-0 left-0 w-screen h-16 flex justify-center items-center bg-bgClr text-fgClr ">
-        <NavbarLink href={`#${SectionPaths.homeSection}`} icon={<FaHome size="30" />} />
-        <NavbarLink href={`#${SectionPaths.aboutSection}`} icon={<FaUserGraduate size="30" />}  />
-        <NavbarLink href={`#${SectionPaths.skillSection}`} icon={<FaCode size="30" />}  />
-        <NavbarLink href={`#${SectionPaths.projectSection}`} icon={<FaBriefcase size="30" />}  />
-        <NavbarLink href={`#${SectionPaths.contactSection}`} icon={<FaEnvelope size="30" />} />
+        <NavbarLink href={`${SectionPaths.homeSection}`} icon={<FaHome size="30" />} />
+        <NavbarLink href={`${SectionPaths.aboutSection}`} icon={<FaUserGraduate size="30" />}  />
+        <NavbarLink href={`${SectionPaths.skillSection}`} icon={<FaCode size="30" />}  />
+        <NavbarLink href={`${SectionPaths.projectSection}`} icon={<FaBriefcase size="30" />}  />
+        <NavbarLink href={`${SectionPaths.contactSection}`} icon={<FaEnvelope size="30" />} />
         {(props.clrTheme === "light-theme") ? (
           <NavbarButton icon={<FaMoon size="30" />} onClick={props.clrThemeOnClick} />
         ) : (
@@ -33,11 +33,18 @@ const Navbar = ({...props}) => {
 };
 
 const NavbarLink = ({...props}) => {
+  const sectionScrollToTop = () => {
+    const sectionElement = document.getElementById(`${props.href}`);
+    console.log(sectionElement.getBoundingClientRect().y)
+    window.scrollTo(0, sectionElement.getBoundingClientRect().y + sectionElement.getBoundingClientRect().top)
+  }
+
   return (
     <>
       <a
-        className="relative flex justify-center items-center w-20 h-full hover:bg-primaryClr"
-        href={props.href}
+        className="navlink relative flex justify-center items-center w-20 h-full hover:bg-primaryClr"
+        href={`#${props.href}`}
+        //onClick={sectionScrollToTop}
       >
         {props.icon}
       </a>

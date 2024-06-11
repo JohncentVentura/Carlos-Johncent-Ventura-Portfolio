@@ -111,23 +111,23 @@ function App() {
             : setClrTheme("light-theme")
         }
       />
-      <Home id={SectionPaths.homeSection} fg={fgClr} primaryClr={primaryClr} />
+      <Home id={SectionPaths.homeSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />
       <SectionDiv sfxString1={"sectionOpen1"} sfxString2={"sectionClose1"}>
         ABOUT ME
       </SectionDiv>
-      <About id={SectionPaths.aboutSection} />
+      <About id={SectionPaths.aboutSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
       <SectionDiv sfxString1={"sectionOpen2"} sfxString2={"sectionClose2"}>
         MY SKILLS
       </SectionDiv>
-      <Skill id={SectionPaths.skillSection} />
+      <Skill id={SectionPaths.skillSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
       <SectionDiv sfxString1={"sectionOpen3"} sfxString2={"sectionClose3"}>
         MY PROJECTS
       </SectionDiv>
-      <Project id={SectionPaths.projectSection} />
+      <Project id={SectionPaths.projectSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
       <SectionDiv sfxString1={"sectionOpen4"} sfxString2={"sectionClose4"}>
         CONTACT ME
       </SectionDiv>
-      <Contact id={SectionPaths.contactSection} />
+      <Contact id={SectionPaths.contactSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
     </>
   );
 }

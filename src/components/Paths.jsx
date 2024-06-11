@@ -7,12 +7,14 @@ export const SectionPaths = {
 }
 
 export const ImagePaths = {
-    hero: "/hero.png",
+    hero: "/hero1.png",
     hero2: "/hero 2.png",
+    universityOfLuzon: "/university of luzon.png",
     html: "/HTML.png"
 }
 
 export const ExternalPaths = {
+    freeCodeCamp: "https://www.freecodecamp.org/learn/",
     cert1: "https://www.freecodecamp.org/certification/Johncent-Developer/responsive-web-design",
     cert2: "https://www.freecodecamp.org/certification/Johncent-Developer/javascript-algorithms-and-data-structures",
     cert3: "https://www.freecodecamp.org/certification/Johncent-Developer/front-end-development-libraries",

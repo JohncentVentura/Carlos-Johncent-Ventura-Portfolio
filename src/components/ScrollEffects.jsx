@@ -5,10 +5,16 @@ import SplitType from "split-type";
 
 //SFX or Scroll Effects
 const sfx = {
-  timelineScrollerPosition: "75%",
-  Init() {
+  fgClr: "",
+  bgClr: "",
+  primaryClr: "",
+  timelineScrollerPosition: "70%",
+  Init(fgClr, bgClr, primaryClr) {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
+    this.fgClr = fgClr;
+    this.bgClr = bgClr;
+    this.primaryClr = primaryClr;
   },
   CreateGsapTimeline({ trigger, start, end, scrub, markers, toggleActions }) {
     if (scrub === undefined) scrub = true;
@@ -27,6 +33,36 @@ const sfx = {
     return document.querySelectorAll(className).forEach(callBackEffectFunction);
   },
   //Functions below can be used as callBackEffectFunction in SetEffect()
+  SectionOpen(elem) {
+    this.CreateGsapTimeline({
+      trigger: elem.parentElement,
+      markers: false,
+    }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        scaleY: 0,
+        transformOrigin: 'bottom',
+      },
+      {
+        scaleY: 1,
+      }
+    );
+  },
+  SectionClose(elem) {
+    this.CreateGsapTimeline({
+      trigger: elem.parentElement,  
+      markers: false,
+    }).fromTo(
+      `.${elem.className.split(" ")[0]}`,
+      {
+        scaleY: 1,
+        transformOrigin: 'top',
+      },
+      {
+        scaleY: 0,
+      }
+    );
+  },
   TextAutoStagger(char) {
     this.CreateGsapTimeline({
       trigger: char,
@@ -45,6 +81,18 @@ const sfx = {
       }
     );
   },
+  TextStaggerOpacity(char) {
+    this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
+      new SplitType(char, { types: "chars" }).chars,
+      {
+        opacity: 0.25,
+      },
+      {
+        opacity: 1,
+        stagger: 0.5,
+      }
+    );
+  },
   TextStagger(char) {
     this.CreateGsapTimeline({ trigger: char, markers: false }).fromTo(
       new SplitType(char, { types: "chars" }).chars,
@@ -57,6 +105,7 @@ const sfx = {
       }
     );
   },
+  
   ShapeShow(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
@@ -75,36 +124,7 @@ const sfx = {
       }
     );
   },
-  SectionOpen(elem) {
-    this.CreateGsapTimeline({
-      trigger: elem.parentElement,
-      markers: true,
-    }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        scaleY: 0,
-        transformOrigin: 'bottom',
-      },
-      {
-        scaleY: 1,
-      }
-    );
-  },
-  SectionClose(elem) {
-    this.CreateGsapTimeline({
-      trigger: elem.parentElement,  
-      markers: true,
-    }).fromTo(
-      `.${elem.className.split(" ")[0]}`,
-      {
-        scaleY: 1,
-        transformOrigin: 'top',
-      },
-      {
-        scaleY: 0,
-      }
-    );
-  },
+  
 };
 
 export default sfx;

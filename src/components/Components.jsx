@@ -1,7 +1,7 @@
 export const SectionDiv = ({ sfxString1, sfxString2, children }) => {
   return (
     <>
-      <div className="absolute mt-[1vh]">
+      <div className="absolute z-40 mt-[1vh]">
         <div
           className={`${sfxString1} w-screen h-[50vh] bg-primaryClr flex justify-center items-end`}
         >
@@ -12,7 +12,7 @@ export const SectionDiv = ({ sfxString1, sfxString2, children }) => {
       </div>
 
       <div className="absolute mt-[50vh]">
-        <div className={`${sfxString2} w-screen h-[200vh] bg-primaryClr`}></div>
+        <div className={`${sfxString2} w-screen h-[100vh] bg-primaryClr`}></div>
       </div>
     </>
   );
@@ -31,8 +31,30 @@ export const SmDiv = ({ className, children }) => {
 export const LgDiv = ({ className, children }) => {
   return (
     <>
-      <div className={`${className} text-center lg:text-5xl text-4xl`}>
+      <div
+        className={`${className} text-center lg:text-5xl sm:text-4xl text-3xl`}
+      >
         {children}
+      </div>
+    </>
+  );
+};
+
+export const IconLink = ({ className, href, icon }) => {
+  const sfxString = `${className}`.split(" ")[0];
+  const classString = `${className}`.replace(sfxString, "");
+
+  return (
+    <>
+      <div className={classString}>
+        <a
+          className={`${sfxString} flex justify-center items-center`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {icon}
+        </a>
       </div>
     </>
   );
@@ -125,5 +147,3 @@ export const LgRhombusImg = ({ className, href, imgSrc }) => {
     </>
   );
 };
-
-
