@@ -8,7 +8,7 @@ import {
   SmDiv,
   LgDiv,
   SmRhombusImg,
-  MdRhombusImg,
+  SmRhombusIcon,
   LgRhombusImg,
 } from "../components/Components";
 
@@ -45,18 +45,16 @@ const Home = ({ ...props }) => {
 
   return (
     <>
-      <section id={props.id} className="mt-[0] pt-[0] h-fit">
+      <section id={props.id} className="pt-[0] h-fit">
         <LgDiv className="txHello pt-[40vh] pb-[35vh]">Hello!</LgDiv>
 
-        <LgDiv className="txImCJV pt-[20vh]">
-          I'm Carlos 
-        </LgDiv>
-        <LgDiv className="txImCJV">
-          Johncent Ventura
-        </LgDiv>
+        <LgDiv className="txImCJV pt-[20vh]">I'm Carlos</LgDiv>
+        <LgDiv className="txImCJV">Johncent Ventura</LgDiv>
 
         <LgRhombusImg
-          className={"spImCJV flex justify-center items-center lg:pt-[10vh] pt-[5vh]"}
+          className={
+            "spImCJV flex justify-center items-center lg:pt-[10vh] pt-[5vh]"
+          }
           href={ExternalPaths.cert1}
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
@@ -64,25 +62,21 @@ const Home = ({ ...props }) => {
         <LgDiv className={"txJustAnother lg:pt-[10vh] pt-[5vh]"}>
           Just another fool
         </LgDiv>
-        <LgDiv className={"txJustAnother"}>
-          chasing the dream of
-        </LgDiv>
+        <LgDiv className={"txJustAnother"}>chasing the dream of</LgDiv>
 
         {/*Skills*******************************************************************************/}
 
         <div className="flex lg:flex-row flex-col justify-evenly items-center">
           <LgRhombusImg
-            className={"spFrontEnd lg:mt-[20vh] mt-[15vh]"}
+            className={"spFrontEnd lg:mt-[30vh] mt-[25vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
             <LgDiv className={"txFrontEnd lg:pt-[20vh] pt-[2.5vh]"}>
-              Front-End 
+              Front-End
             </LgDiv>
-            <LgDiv className={"txFrontEnd"}>
-              Development
-            </LgDiv>
+            <LgDiv className={"txFrontEnd"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw] ">
               <SmRhombusImg
@@ -112,11 +106,9 @@ const Home = ({ ...props }) => {
 
           <div className="flex flex-col justify-center items-center">
             <LgDiv className={"txBackEnd lg:pt-[20vh] pt-[2.5vh]"}>
-              Back-End 
+              Back-End
             </LgDiv>
-            <LgDiv className={"txBackEnd"}>
-              Development
-            </LgDiv>
+            <LgDiv className={"txBackEnd"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw] ">
               <SmRhombusImg
@@ -145,12 +137,8 @@ const Home = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txGameDev lg:pt-[20vh] pt-[2.5vh]"}>
-              Game 
-            </LgDiv>
-            <LgDiv className={"txGameDev"}>
-              Development
-            </LgDiv>
+            <LgDiv className={"txGameDev lg:pt-[20vh] pt-[2.5vh]"}>Game</LgDiv>
+            <LgDiv className={"txGameDev"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw] ">
               <SmRhombusImg
@@ -182,9 +170,7 @@ const Home = ({ ...props }) => {
             <LgDiv className={"txGDandPA lg:pt-[20vh] pt-[2.5vh]"}>
               Graphics Design
             </LgDiv>
-            <LgDiv className={"txGDandPA"}>
-              & Pixel Art
-            </LgDiv>
+            <LgDiv className={"txGDandPA"}>& Pixel Art</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw] ">
               <SmRhombusImg
@@ -208,57 +194,51 @@ const Home = ({ ...props }) => {
 
         {/*Skills*******************************************************************************/}
 
-        <LgDiv className="txStillLearning lg:pt-[20vh] pt-[15vh]">
+        <LgDiv className="txStillLearning lg:pt-[30vh] pt-[25vh]">
           & still learning more,
         </LgDiv>
-        <LgDiv className="txStillLearning ">
-          but for now...
-        </LgDiv>
+        <LgDiv className="txStillLearning ">but for now...</LgDiv>
 
         <div className="flex flex-col justify-center items-center">
-          <LgDiv className={"txWelcome mt-[30vh]"}>
-            WELCOME TO
-          </LgDiv>
-          <LgDiv className={"txWelcome"}>
-            MY PORTFOLIO
-          </LgDiv>
+          <LgDiv className={"txWelcome mt-[60vh]"}>WELCOME TO</LgDiv>
+          <LgDiv className={"txWelcome"}>MY PORTFOLIO</LgDiv>
 
-            <LgRhombusImg 
+          <LgRhombusImg
             className={"spWelcome pt-[2.5vh]"}
-              imgSrc={ImagePaths.hero}
-            >
+            imgSrc={ImagePaths.hero}
+          ></LgRhombusImg>
 
-            </LgRhombusImg>
-
-          <SmDiv className={"txWelcomeDesc pt-[2.5vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
+          <SmDiv
+            className={
+              "txWelcomeDesc pt-[2.5vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"
+            }
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             rerum fuga mollitia laborum placeat sequi.
           </SmDiv>
 
           <div className="flex justify-between items-center xl:w-[40vw] md:w-[50vw] w-[80vw] ">
-            <SmRhombusImg
+            <SmRhombusIcon
               className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
-            <SmRhombusImg
+              icon={<FaReact size="50" />}
+            ></SmRhombusIcon>
+            <SmRhombusIcon
               className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
-            <SmRhombusImg
+              icon={<FaReact size="50" />}
+            ></SmRhombusIcon>
+            <SmRhombusIcon
               className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
-            <SmRhombusImg
+              icon={<FaReact size="50" />}
+            ></SmRhombusIcon>
+            <SmRhombusIcon
               className={"spWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
-              imgSrc={ImagePaths.html}
-            ></SmRhombusImg>
+              icon={<FaReact size="50" />}
+            ></SmRhombusIcon>
           </div>
-
-          
         </div>
       </section>
     </>

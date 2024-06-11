@@ -67,15 +67,21 @@ nav{
   }
 
   section{
-    @apply relative mt-[30vh] pt-[30vh] w-screen h-[200vh];
+    @apply relative pt-[100vh] pb-[20vh] w-screen h-[200vh];
   }
 
-  a, div{
+  div{
     @apply relative text-fgClr font-mainFont;
   }
-  
+
   .char{
-    @apply relative hover:text-primaryClr font-mainFont;;
+    @apply relative text-fgClr font-mainFont hover:text-primaryClr;
   }
+  
+  a{
+    @apply relative text-fgClr font-mainFont hover:text-bgClr;
+  }
+  
+
 
 }
