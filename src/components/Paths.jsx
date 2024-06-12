@@ -7,7 +7,7 @@ export const SectionPaths = {
 }
 
 export const ImagePaths = {
-    hero: "/hero1.png",
+    hero: "/hero.png",
     hero2: "/hero 2.png",
     universityOfLuzon: "/university of luzon.png",
     html: "/HTML.png"

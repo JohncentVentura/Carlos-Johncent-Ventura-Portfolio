@@ -70,16 +70,16 @@ nav{
     @apply relative pt-[100vh] pb-[10vh] w-screen h-[200vh];
   }
 
-  div{
-    @apply relative text-fgClr font-mainFont;
+  a, .navlink, div, .char{
+    @apply relative font-mainFont;
   }
 
   a, .char{
-    @apply relative text-fgClr font-mainFont hover:text-primaryClr;
+    @apply text-fgClr hover:text-primaryClr;
   }
 
   .navlink{
-    @apply relative text-fgClr font-mainFont hover:text-bgClr;
+    @apply text-fgClr hover:text-bgClr;
   }
 
 }

@@ -5,7 +5,7 @@ export const SectionDiv = ({ sfxString1, sfxString2, children }) => {
         <div
           className={`${sfxString1} w-screen h-[50vh] bg-primaryClr flex justify-center items-end`}
         >
-          <div className="lg:text-9xl sm:text-8xl text-7xl text-center text-bgClr">
+          <div className="text-center text-bgClr lg:text-9xl sm:text-8xl text-7xl">
             {children}
           </div>
         </div>

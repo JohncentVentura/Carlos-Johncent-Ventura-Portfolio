@@ -16,81 +16,72 @@ const Home = ({ ...props }) => {
   ///*
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
-    sfx.SetEffect(".txHello", (elem) => sfx.TextAutoStagger(elem));
-    sfx.SetEffect(".txImCJV", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spImCJV", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txJustAnother", (elem) => sfx.TextStagger(elem));
-
-    sfx.SetEffect(".spFrontEnd", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txFrontEnd", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spFrontEndSkill", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".spBackEnd", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txBackEnd", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spBackEndSkill", (elem) => sfx.ShapeShow(elem));
-
-    sfx.SetEffect(".spGameDev", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txGameDev", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spGameDevSkill", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".spGDandPA", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txGDandPA", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spGDandPASkill", (elem) => sfx.ShapeShow(elem));
-
-    sfx.SetEffect(".txStillLearning", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".txWelcome", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spWelcome", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".txWelcomeDesc", (elem) => sfx.TextStagger(elem));
-    sfx.SetEffect(".spWelcomeLink", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".txAutoStagger", (elem) => sfx.TextAutoStagger(elem));
+    sfx.SetEffect(".txStagger", (elem) => sfx.TextStagger(elem));
+    sfx.SetEffect(".shHero", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shFrontEnd", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shFrontEndSkill", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shBackEnd", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shBackEndSkill", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGameDev", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGameDevSkill", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGDandPA", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGDandPASkill", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shWelcome", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shWelcomeLink", (elem) => sfx.ShapeShow(elem));
   });
   //*/
 
   return (
     <>
       <section id={props.id} className="pt-[0] h-fit">
-        <LgDiv className="txHello pt-[40vh] pb-[35vh]">Hello!</LgDiv>
+        <LgDiv className="txAutoStagger pt-[40vh] pb-[35vh]">Hello!</LgDiv>
 
-        <LgDiv className="txImCJV pt-[20vh]">I'm Carlos</LgDiv>
-        <LgDiv className="txImCJV">Johncent Ventura</LgDiv>
+        <LgDiv className="txStagger pt-[20vh]">I'm Carlos</LgDiv>
+        <LgDiv className="txStagger">Johncent Ventura</LgDiv>
 
         <LgRhombusImg
           className={
-            "spImCJV flex justify-center items-center lg:pt-[10vh] pt-[5vh]"
+            "shHero flex justify-center items-center lg:pt-[10vh] pt-[5vh]"
           }
           href={ExternalPaths.cert1}
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
 
-        <LgDiv className={"txJustAnother lg:pt-[10vh] pt-[5vh]"}>
+        <LgDiv className={"txStagger lg:pt-[10vh] pt-[5vh]"}>
           Just another fool
         </LgDiv>
-        <LgDiv className={"txJustAnother"}>chasing the dream of</LgDiv>
+        <LgDiv className={"txStagger lg:mb-[20vh] mb-[15vh]"}>
+          chasing the dream of
+        </LgDiv>
 
         {/*Skills*******************************************************************************/}
-            
+
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center xl:gap-[15vh] lg:gap-[10vh]">
           <LgRhombusImg
-            className={"spFrontEnd lg:mt-[30vh] mt-[25vh]"}
+            className={"shFrontEnd lg:mt-[20vh] mt-[15vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txFrontEnd lg:pt-[20vh] pt-[2.5vh]"}>
+            <LgDiv className={"txStagger lg:pt-[20vh] pt-[2vh]"}>
               Front-End
             </LgDiv>
-            <LgDiv className={"txFrontEnd"}>Development</LgDiv>
+            <LgDiv className={"txStagger"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"spFrontEndSkill pt-[5vh]"}
+                className={"shFrontEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spFrontEndSkill pt-[5vh]"}
+                className={"shFrontEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spFrontEndSkill pt-[5vh]"}
+                className={"shFrontEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -100,29 +91,29 @@ const Home = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center xl:gap-[15vh] lg:gap-[10vh]">
           <LgRhombusImg
-            className={"spBackEnd lg:mt-[20vh] mt-[15vh]"}
+            className={"shBackEnd lg:mt-[20vh] mt-[15vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txBackEnd lg:pt-[20vh] pt-[2.5vh]"}>
+            <LgDiv className={"txStagger lg:pt-[20vh] pt-[2vh]"}>
               Back-End
             </LgDiv>
-            <LgDiv className={"txBackEnd"}>Development</LgDiv>
+            <LgDiv className={"txStagger"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
+                className={"shBackEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
+                className={"shBackEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spBackEndSkill pt-[5vh]"}
+                className={"shBackEndSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -132,27 +123,27 @@ const Home = ({ ...props }) => {
 
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center xl:gap-[15vh] lg:gap-[10vh]">
           <LgRhombusImg
-            className={"spGameDev lg:mt-[20vh] mt-[15vh]"}
+            className={"shGameDev lg:mt-[20vh] mt-[15vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txGameDev lg:pt-[20vh] pt-[2.5vh]"}>Game</LgDiv>
-            <LgDiv className={"txGameDev"}>Development</LgDiv>
+            <LgDiv className={"txStagger lg:pt-[20vh] pt-[2vh]"}>Game</LgDiv>
+            <LgDiv className={"txStagger"}>Development</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
+                className={"shGameDevSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
+                className={"shGameDevSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spGameDevSkill pt-[5vh]"}
+                className={"shGameDevSkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -162,29 +153,29 @@ const Home = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center xl:gap-[15vh] lg:gap-[10vh]">
           <LgRhombusImg
-            className={"spGDandPA lg:mt-[20vh] mt-[15vh]"}
+            className={"shGDandPA lg:mt-[20vh] mt-[15vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center">
-            <LgDiv className={"txGDandPA lg:pt-[20vh] pt-[2.5vh]"}>
+            <LgDiv className={"txStagger lg:pt-[20vh] pt-[2vh]"}>
               Graphics Design
             </LgDiv>
-            <LgDiv className={"txGDandPA"}>& Pixel Art</LgDiv>
+            <LgDiv className={"txStagger"}>& Pixel Art</LgDiv>
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
+                className={"shGDandPASkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
+                className={"shGDandPASkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"spGDandPASkill pt-[5vh]"}
+                className={"shGDandPASkill pt-[4vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -194,47 +185,50 @@ const Home = ({ ...props }) => {
 
         {/*Skills*******************************************************************************/}
 
-        <LgDiv className="txStillLearning lg:pt-[30vh] pt-[25vh]">
+        <LgDiv className="txStagger lg:pt-[20vh] pt-[15vh]">
           & still learning more,
         </LgDiv>
-        <LgDiv className="txStillLearning ">but for now...</LgDiv>
+        <LgDiv className="txStagger">but for now...</LgDiv>
 
         <div className="flex flex-col justify-center items-center">
-          <LgDiv className={"txWelcome mt-[60vh]"}>WELCOME TO</LgDiv>
-          <LgDiv className={"txWelcome"}>MY PORTFOLIO</LgDiv>
+          <LgDiv className={"txStagger mt-[60vh]"}>WELCOME TO</LgDiv>
+          <LgDiv className={"txStagger"}>MY PORTFOLIO</LgDiv>
 
           <LgRhombusImg
-            className={"spWelcome pt-[2.5vh]"}
+            className={"shWelcome pt-[2vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <SmDiv
-            className={
-              "txWelcomeDesc pt-[2.5vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"
-            }
+            className={"txStagger pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            rerum fuga mollitia laborum placeat sequi.
+            I know you still don't know me after that introduction,
+          </SmDiv>
+          <SmDiv className={"txStagger xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
+            so you can download my resume, stalk me on Facebook,
+          </SmDiv>
+          <SmDiv className={"txStagger xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
+            commit with me in Github, and criticize my Pinterest.
           </SmDiv>
 
           <div className="flex justify-between items-center xl:w-[40vw] md:w-[50vw] w-[80vw]">
             <SmRhombusIcon
-              className={"spWelcomeLink pt-[5vh]"}
+              className={"shWelcomeLink pt-[4vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"spWelcomeLink pt-[5vh]"}
+              className={"shWelcomeLink pt-[4vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"spWelcomeLink pt-[5vh]"}
+              className={"shWelcomeLink pt-[4vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"spWelcomeLink pt-[5vh]"}
+              className={"shWelcomeLink pt-[4vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
