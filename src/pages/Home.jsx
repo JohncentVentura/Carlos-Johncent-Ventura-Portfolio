@@ -34,7 +34,7 @@ const Home = ({ ...props }) => {
 
   return (
     <>
-      <section id={props.id} className="pt-[0] h-fit">
+      <section id={props.id} className="pt-[0]">
         <LgDiv className="txAutoStagger pt-[40vh] pb-[35vh]">Hello!</LgDiv>
 
         <LgDiv className="txStagger pt-[20vh]">I'm Carlos</LgDiv>
@@ -71,17 +71,17 @@ const Home = ({ ...props }) => {
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"shFrontEndSkill pt-[4vh]"}
+                className={"shFrontEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shFrontEndSkill pt-[4vh]"}
+                className={"shFrontEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shFrontEndSkill pt-[4vh]"}
+                className={"shFrontEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -103,17 +103,17 @@ const Home = ({ ...props }) => {
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"shBackEndSkill pt-[4vh]"}
+                className={"shBackEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shBackEndSkill pt-[4vh]"}
+                className={"shBackEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shBackEndSkill pt-[4vh]"}
+                className={"shBackEndSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -133,17 +133,17 @@ const Home = ({ ...props }) => {
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"shGameDevSkill pt-[4vh]"}
+                className={"shGameDevSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shGameDevSkill pt-[4vh]"}
+                className={"shGameDevSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shGameDevSkill pt-[4vh]"}
+                className={"shGameDevSkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -165,17 +165,17 @@ const Home = ({ ...props }) => {
 
             <div className="flex justify-between items-center xl:w-[30vw] md:w-[40vw] w-[70vw]">
               <SmRhombusImg
-                className={"shGDandPASkill pt-[4vh]"}
+                className={"shGDandPASkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shGDandPASkill pt-[4vh]"}
+                className={"shGDandPASkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
               <SmRhombusImg
-                className={"shGDandPASkill pt-[4vh]"}
+                className={"shGDandPASkill pt-[5vh]"}
                 href={ExternalPaths.cert1}
                 imgSrc={ImagePaths.html}
               ></SmRhombusImg>
@@ -200,35 +200,35 @@ const Home = ({ ...props }) => {
           ></LgRhombusImg>
 
           <SmDiv
-            className={"txStagger pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]"}
+            className={"txStagger pt-[2vh]"}
           >
             I know you still don't know me after that introduction,
           </SmDiv>
-          <SmDiv className={"txStagger xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
-            so you can download my resume, stalk me on Facebook,
+          <SmDiv className={"txStagger"}>
+            so you can download my CV, stalk me on Facebook,
           </SmDiv>
-          <SmDiv className={"txStagger xl:w-[40vw] md:w-[50vw] w-[80vw]"}>
-            commit with me in Github, and criticize my Pinterest.
+          <SmDiv className={"txStagger"}>
+            commit with me in Github, & criticize my Pinterest.
           </SmDiv>
 
-          <div className="flex justify-between items-center xl:w-[40vw] md:w-[50vw] w-[80vw]">
+          <div className="flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[80vw]">
             <SmRhombusIcon
-              className={"shWelcomeLink pt-[4vh]"}
+              className={"shWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"shWelcomeLink pt-[4vh]"}
+              className={"shWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"shWelcomeLink pt-[4vh]"}
+              className={"shWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>
             <SmRhombusIcon
-              className={"shWelcomeLink pt-[4vh]"}
+              className={"shWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}
               icon={<FaReact size="50" />}
             ></SmRhombusIcon>

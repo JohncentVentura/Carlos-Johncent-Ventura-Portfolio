@@ -105,7 +105,6 @@ const sfx = {
       }
     );
   },
-  
   ShapeShow(elem) {
     this.CreateGsapTimeline({
       trigger: elem.parentElement,
@@ -124,7 +123,6 @@ const sfx = {
       }
     );
   },
-  
 };
 
 export default sfx;

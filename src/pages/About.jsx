@@ -55,13 +55,13 @@ const About = ({ ...props }) => {
 
   return (
     <>
-      <section id={props.id} className="h-fit">
+      <section id={props.id} className="">
         <LgRhombusImg
           className={"spUL flex justify-center items-center"}
           imgSrc={ImagePaths.universityOfLuzon}
         ></LgRhombusImg>
 
-        <div className="flex flex-col justify-center items-center">
+
           <SmDiv
             className={`txAbout pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}
           >
@@ -89,7 +89,7 @@ const About = ({ ...props }) => {
           <LgDiv className={"txCert lg:mt-[20vh] pt-[20vh]"}>
             MY CERTIFICATES
           </LgDiv>
-        </div>
+        
 
         {/*Certificates*******************************************************************************/}
 

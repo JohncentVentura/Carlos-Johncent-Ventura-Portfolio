@@ -67,7 +67,7 @@ nav{
   }
 
   section{
-    @apply relative pt-[100vh] pb-[10vh] w-screen h-[200vh];
+    @apply relative pt-[100vh] pb-[10vh] w-screen h-fit flex flex-col justify-center items-center;
   }
 
   a, .navlink, div, .char{

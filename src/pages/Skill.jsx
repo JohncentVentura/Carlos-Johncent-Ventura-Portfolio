@@ -1,34 +1,38 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import { ExternalPaths, ImagePaths } from "../components/Paths";
 import sfx from "../components/ScrollEffects";
 import {
   SmDiv,
   LgDiv,
+  SkillDiv,
+  SkillGrid,
   SmRhombusImg,
   SmRhombusIcon,
   LgRhombusImg,
 } from "../components/Components";
 
 const Skill = ({ ...props }) => {
-  sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
-  sfx.SetEffect(".txStagger", (elem) => sfx.TextStagger(elem));
-  sfx.SetEffect(".shFrontEndSkill1", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shFrontEndSkill2", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shFrontEndSkill3", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shBackEndSkill1", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shGameDevSkill1", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shGDandPASkill1", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shOtherSkill1", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shOtherSkill2", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".shOtherSkill3", (elem) => sfx.ShapeShow(elem));
-  sfx.SetEffect(".txOther", (elem) => sfx.TextStagger(elem));
+  useEffect(() => {
+    sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
+    sfx.SetEffect(".txStagger", (elem) => sfx.TextStagger(elem));
+    sfx.SetEffect(".shFrontEndSkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shFrontEndSkill2", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shFrontEndSkill3", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shBackEndSkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGameDevSkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGDandPASkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shOtherSkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shOtherSkill2", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shOtherSkill3", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".txOther", (elem) => sfx.TextStagger(elem));
+  });
 
   return (
     <>
       <section
         id={props.id}
-        className="w-screen h-fit flex flex-col justify-center items-center"
+        className=""
       >
         <LgDiv className={"txStagger"}>FRONT-END</LgDiv>
         <LgDiv className={"txStagger"}>DEVELOPMENT</LgDiv>
@@ -113,7 +117,7 @@ const Skill = ({ ...props }) => {
             ></SmRhombusImg>
           </SkillDiv>
           <SkillDiv>
-            <SmDiv className={"txStagger lg:pt-[10vh] pt-[6vh]"}>Express</SmDiv>
+            <SmDiv className={"txStagger lg:pt-[10vh] pt-[6vh]"}>Express.js</SmDiv>
             <SmRhombusImg
               className={"shBackEndSkill1 pt-[4vh]"}
               href={ExternalPaths.cert1}
@@ -225,9 +229,7 @@ const Skill = ({ ...props }) => {
         </SkillGrid>
         <SkillGrid>
           <SkillDiv>
-            <SmDiv className={"txStagger lg:pt-[10vh] pt-[6vh]"}>
-              VB
-            </SmDiv>
+            <SmDiv className={"txStagger lg:pt-[10vh] pt-[6vh]"}>VB</SmDiv>
             <SmRhombusImg
               className={"shOtherSkill2 pt-[4vh]"}
               href={ExternalPaths.cert1}
@@ -257,41 +259,33 @@ const Skill = ({ ...props }) => {
         <SmDiv
           className={`txOther mt-[10vh] pt-[10vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}
         >
-          Apart from my developer skills, I'm also knowledgeable in installing and configuring computer
-          hardware and software, basic setup of computer networks, basic setup of computer servers,
-          and maintining computer systems and networks.
+          Apart from my developer skills,
+        </SmDiv>
+        <SmDiv className={`txOther xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          I'm also knowledgeable in...
+        </SmDiv>
+        <SmDiv className={`txOther pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          Installing and configuring
+        </SmDiv>
+        <SmDiv className={`txOther xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          computer hardware and software,
+        </SmDiv>
+        <SmDiv className={`txOther pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          Basic setup of computer networks,
+        </SmDiv>
+        <SmDiv className={`txOther pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          Basic setup of computer servers,
+        </SmDiv>
+        <SmDiv className={`txOther pt-[2vh] xl:w-[40vw] md:w-[50vw] w-[80vw]`}>
+          Maintining computer systems & networks.
         </SmDiv>
       </section>
     </>
   );
 };
 
-const SkillGrid = ({ className, children }) => {
-  return (
-    <>
-      <div
-        className={`${
-          className || ""
-        } grid grid-cols-3 grid-rows-1 xl:w-[50vw] md:w-[60vw] w-[80vw]`}
-      >
-        {children}
-      </div>
-    </>
-  );
-};
 
-const SkillDiv = ({ className, children }) => {
-  return (
-    <>
-      <div
-        className={`${
-          className || ""
-        } flex flex-col justify-center items-center`}
-      >
-        {children}
-      </div>
-    </>
-  );
-};
+
+
 
 export default Skill;

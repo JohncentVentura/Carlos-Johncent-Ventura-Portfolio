@@ -40,21 +40,29 @@ export const LgDiv = ({ className, children }) => {
   );
 };
 
-export const IconLink = ({ className, href, icon }) => {
-  const sfxString = `${className}`.split(" ")[0];
-  const classString = `${className}`.replace(sfxString, "");
-
+export const SkillDiv = ({ className, children }) => {
   return (
     <>
-      <div className={classString}>
-        <a
-          className={`${sfxString} flex justify-center items-center`}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {icon}
-        </a>
+      <div
+        className={`${
+          className || ""
+        } flex flex-col justify-center items-center`}
+      >
+        {children}
+      </div>
+    </>
+  );
+};
+
+export const SkillGrid = ({ className, children }) => {
+  return (
+    <>
+      <div
+        className={`${
+          className || ""
+        } grid grid-cols-3 grid-rows-1 xl:w-[50vw] md:w-[60vw] w-[80vw]`}
+      >
+        {children}
       </div>
     </>
   );
@@ -90,6 +98,54 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
   );
 };
 
+export const LgRhombusImg = ({ className, href, imgSrc }) => {
+  const sfxString = `${className}`.split(" ")[0];
+  const classString = `${className}`.replace(sfxString, "");
+
+  return (
+    <>
+      <div className={classString}>
+        <a
+          className={`${sfxString} clip-path-border bg-primaryClr flex justify-center items-center group
+          xl:w-96 xl:h-96
+          lg:w-72 lg:h-72 
+          sm:w-64 sm:h-64
+          w-56 h-56`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src={imgSrc}
+            alt={imgSrc}
+            className="clip-path w-full h-full object-fill bg-bgClr group-hover:bg-primaryClr"
+          />
+        </a>
+      </div>
+    </>
+  );
+};
+
+export const IconLink = ({ className, href, icon }) => {
+  const sfxString = `${className}`.split(" ")[0];
+  const classString = `${className}`.replace(sfxString, "");
+
+  return (
+    <>
+      <div className={classString}>
+        <a
+          className={`${sfxString} flex justify-center items-center`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {icon}
+        </a>
+      </div>
+    </>
+  );
+};
+
 export const SmRhombusIcon = ({ className, href, icon }) => {
   const sfxString = `${className}`.split(" ")[0];
   const classString = `${className}`.replace(sfxString, "");
@@ -114,34 +170,6 @@ export const SmRhombusIcon = ({ className, href, icon }) => {
           >
             {icon}
           </div>
-        </a>
-      </div>
-    </>
-  );
-};
-
-export const LgRhombusImg = ({ className, href, imgSrc }) => {
-  const sfxString = `${className}`.split(" ")[0];
-  const classString = `${className}`.replace(sfxString, "");
-
-  return (
-    <>
-      <div className={classString}>
-        <a
-          className={`${sfxString} clip-path-border bg-primaryClr flex justify-center items-center group
-          xl:w-96 xl:h-96
-          lg:w-80 lg:h-80 
-          sm:w-80 sm:h-80
-          w-64 h-64`}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={imgSrc}
-            alt={imgSrc}
-            className="clip-path w-full h-full object-fill bg-bgClr group-hover:bg-primaryClr"
-          />
         </a>
       </div>
     </>

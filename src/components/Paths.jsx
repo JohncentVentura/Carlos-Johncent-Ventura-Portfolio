@@ -10,7 +10,8 @@ export const ImagePaths = {
     hero: "/hero.png",
     hero2: "/hero 2.png",
     universityOfLuzon: "/university of luzon.png",
-    html: "/HTML.png"
+    html: "/HTML.png",
+    pulprpg: "/PULP RPG.jpg",
 }
 
 export const ExternalPaths = {

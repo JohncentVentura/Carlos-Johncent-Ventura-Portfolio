@@ -4,7 +4,7 @@ import React from "react";
 const Contact = ({ ...props }) => {
   return (
     <>
-      <section id={props.id}>
+      <section id={props.id} className="">
         <div>Contact</div>
       </section>
     </>
