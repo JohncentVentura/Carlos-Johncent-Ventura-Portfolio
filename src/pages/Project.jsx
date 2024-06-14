@@ -27,7 +27,6 @@ const Project = ({ ...props }) => {
     <>
       <section
         id={props.id}
-        className=""
       >
         <div className="mt-[10vh] flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
@@ -81,7 +80,7 @@ const Project = ({ ...props }) => {
           <LgRhombusImg
             className={`shProject1 lg:pt-[0] pt-[15vh]`}
             href={ExternalPaths.cert1}
-            imgSrc={ImagePaths.html}
+            imgSrc={ImagePaths.pulprpg}
           ></LgRhombusImg>
 
           <div className="xl:w-[40vw] w-[80vw]">

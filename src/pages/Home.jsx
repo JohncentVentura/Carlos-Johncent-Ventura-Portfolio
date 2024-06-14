@@ -211,7 +211,7 @@ const Home = ({ ...props }) => {
             commit with me in Github, & criticize my Pinterest.
           </SmDiv>
 
-          <div className="flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[80vw]">
+          <div className="flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[85vw]">
             <SmRhombusIcon
               className={"shWelcomeLink pt-[5vh]"}
               href={ExternalPaths.cert1}

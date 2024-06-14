@@ -78,7 +78,7 @@ function App() {
     sfx.SetEffect(".sectionClose4", (elem) => sfx.SectionClose(elem));
   });
 
-  //Checks Breakpoints
+  //Print Breakpoints
   useEffect(() => {
     printBreakpoint();
     window.addEventListener("resize", () => printBreakpoint());

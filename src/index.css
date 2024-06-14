@@ -28,7 +28,7 @@
   clip-path: polygon(50% 5%, 95% 50%, 50% 95%, 5% 50%);
 }
 
-nav{
+.anim-glow-drop{
   animation: glowing-drop-shadow 5s infinite;
 }
 
@@ -38,7 +38,7 @@ nav{
   100% { filter: drop-shadow(1px 1px 2px var(--primaryClr))}
 }
 
-.rhombus{
+.anim-glow-box, .rhombus{
   animation: glowing-box-shadow 5s infinite;
 }
 
@@ -80,6 +80,14 @@ nav{
 
   .navlink{
     @apply text-fgClr hover:text-bgClr;
+  }
+
+  input, textarea, button{
+    @apply lg:text-3xl text-xl;
+  }
+
+  input, textarea{
+    @apply bg-fgClr text-bgClr;
   }
 
 }

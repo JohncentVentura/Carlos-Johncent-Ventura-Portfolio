@@ -55,9 +55,9 @@ const About = ({ ...props }) => {
 
   return (
     <>
-      <section id={props.id} className="">
+      <section id={props.id}>
         <LgRhombusImg
-          className={"spUL flex justify-center items-center"}
+          className={"spUL mt-[10vh] flex justify-center items-center"}
           imgSrc={ImagePaths.universityOfLuzon}
         ></LgRhombusImg>
 

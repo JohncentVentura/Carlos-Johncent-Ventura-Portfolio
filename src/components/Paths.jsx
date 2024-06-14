@@ -1,3 +1,7 @@
+export const KeyPaths = {
+    accessKey: "6d5846fd-a4b9-49be-bc1b-0290447b1dcf",
+}
+
 export const SectionPaths = {
     homeSection: "home-section",
     aboutSection: "about-section",
@@ -7,7 +11,7 @@ export const SectionPaths = {
 }
 
 export const ImagePaths = {
-    hero: "/hero.png",
+    hero: "/hero1.png",
     hero2: "/hero 2.png",
     universityOfLuzon: "/university of luzon.png",
     html: "/HTML.png",

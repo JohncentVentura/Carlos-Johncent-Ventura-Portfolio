@@ -32,9 +32,8 @@ const Skill = ({ ...props }) => {
     <>
       <section
         id={props.id}
-        className=""
       >
-        <LgDiv className={"txStagger"}>FRONT-END</LgDiv>
+        <LgDiv className={"txStagger mt-[10vh]"}>FRONT-END</LgDiv>
         <LgDiv className={"txStagger"}>DEVELOPMENT</LgDiv>
         <SkillGrid>
           <SkillDiv>
