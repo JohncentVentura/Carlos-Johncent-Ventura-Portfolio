@@ -66,28 +66,24 @@
     @apply absolute -z-50;
   }
 
-  section{
-    @apply relative pt-[100vh] pb-[10vh] w-screen h-fit flex flex-col justify-center items-center;
+  .nav-icon{
+    @apply relative text-fgClr hover:text-bgClr;
   }
 
-  a, .navlink, div, .char{
+  section{
+    @apply relative pb-[30vh] w-screen h-fit flex flex-col justify-center items-center;
+  }
+
+  a, .char, .word, div{
     @apply relative font-mainFont;
   }
 
-  a, .char{
+  a, .char, .word{
     @apply text-fgClr hover:text-primaryClr;
   }
 
-  .navlink{
-    @apply text-fgClr hover:text-bgClr;
-  }
-
-  input, textarea, button{
-    @apply lg:text-3xl text-xl;
-  }
-
   input, textarea{
-    @apply bg-fgClr text-bgClr;
+    @apply lg:text-3xl text-xl bg-fgClr text-bgClr;
   }
 
 }

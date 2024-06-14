@@ -2,17 +2,15 @@ export const KeyPaths = {
     accessKey: "6d5846fd-a4b9-49be-bc1b-0290447b1dcf",
 }
 
-export const SectionPaths = {
-    homeSection: "home-section",
-    aboutSection: "about-section",
-    skillSection: "skill-section",
-    projectSection: "project-section",
-    contactSection: "contact-section"
+export const PagePaths = {
+    home: "/",
+    about: "/about",
+    work: "/work",
+    contact: "/contact"
 }
 
 export const ImagePaths = {
     hero: "/hero1.png",
-    hero2: "/hero 2.png",
     universityOfLuzon: "/university of luzon.png",
     html: "/HTML.png",
     pulprpg: "/PULP RPG.jpg",

@@ -11,13 +11,16 @@ import {
   SmRhombusImg,
   SmRhombusIcon,
   LgRhombusImg,
+  IconLink,
+  SocialLinks
 } from "../components/Components";
 
 const Contact = ({ ...props }) => {
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
-    sfx.SetEffect(".txStagger", (elem) => sfx.TextStagger(elem));
+    sfx.SetEffect(".txStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".shContact", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
   });
 
   return (
@@ -31,7 +34,7 @@ const Contact = ({ ...props }) => {
 
         <form
           onSubmit={onSubmit}
-          className="my-[5vh] flex flex-col justify-center items-center gap-[4vh]"
+          className="mt-[5vh] flex flex-col justify-center items-center gap-[4vh]"
         >
           <input
             className="anim-glow-box ps-[0.5vw] lg:w-[40vw] w-[60vw] h-[5vh]"
@@ -61,28 +64,7 @@ const Contact = ({ ...props }) => {
           </button>
         </form>
 
-        <div className="flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[85vw]">
-          <SmRhombusIcon
-            className={"shContact pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaGithub size="50" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shContact pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaGithub size="50" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shContact pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaGithub size="50" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shContact pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaGithub size="50" />}
-          ></SmRhombusIcon>
-        </div>
+        <SocialLinks/>
       </section>
     </>
   );

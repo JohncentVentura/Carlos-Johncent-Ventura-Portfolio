@@ -11,17 +11,17 @@ git push --force origin main
 
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
 
 import { SectionDiv } from "./components/Components.jsx";
 import Navbar from "./components/Navbar.jsx";
 import ParticlesComponent from "./components/Particles.jsx";
-import { ImagePaths, SectionPaths } from "./components/Paths.jsx";
+import { PagePaths } from "./components/Paths.jsx";
 import sfx from "./components/ScrollEffects";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Skill from "./pages/Skill.jsx";
-import Project from "./pages/Project.jsx";
+import Work from "./pages/Work.jsx";
 import Contact from "./pages/Contact.jsx";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
     getComputedStyle(document.body).getPropertyValue("--primaryClr")
   );
 
-  //Color Theme
+  //Color theme
   useEffect(() => {
     if (clrTheme === "light-theme") {
       document.body.classList.add("light-theme");
@@ -57,7 +57,7 @@ function App() {
     );
   }, [clrTheme]);
 
-  //Smooth Scrolling & Section Transition Effects
+  //Smooth scrolling
   useEffect(() => {
     const lenis = new Lenis();
     //lenis.on("scroll", (e) => console.log(e));
@@ -66,19 +66,9 @@ function App() {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-
-    sfx.Init();
-    sfx.SetEffect(".sectionOpen1", (elem) => sfx.SectionOpen(elem));
-    sfx.SetEffect(".sectionClose1", (elem) => sfx.SectionClose(elem));
-    sfx.SetEffect(".sectionOpen2", (elem) => sfx.SectionOpen(elem));
-    sfx.SetEffect(".sectionClose2", (elem) => sfx.SectionClose(elem));
-    sfx.SetEffect(".sectionOpen3", (elem) => sfx.SectionOpen(elem));
-    sfx.SetEffect(".sectionClose3", (elem) => sfx.SectionClose(elem));
-    sfx.SetEffect(".sectionOpen4", (elem) => sfx.SectionOpen(elem));
-    sfx.SetEffect(".sectionClose4", (elem) => sfx.SectionClose(elem));
   });
 
-  //Print Breakpoints
+  //Log breakpoints for testing responsiveness
   useEffect(() => {
     printBreakpoint();
     window.addEventListener("resize", () => printBreakpoint());
@@ -102,32 +92,37 @@ function App() {
 
   return (
     <>
-      <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
-      <Navbar
-        clrTheme={clrTheme}
-        clrThemeOnClick={() =>
-          clrTheme === "light-theme"
-            ? setClrTheme("dark-theme")
-            : setClrTheme("light-theme")
-        }
-      />
-      <Home id={SectionPaths.homeSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />
-      <SectionDiv sfxString1={"sectionOpen1"} sfxString2={"sectionClose1"}>
-        ABOUT ME
-      </SectionDiv>
-      <About id={SectionPaths.aboutSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
-      <SectionDiv sfxString1={"sectionOpen2"} sfxString2={"sectionClose2"}>
-        MY SKILLS
-      </SectionDiv>
-      <Skill id={SectionPaths.skillSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
-      <SectionDiv sfxString1={"sectionOpen3"} sfxString2={"sectionClose3"}>
-        MY PROJECTS
-      </SectionDiv>
-      <Project id={SectionPaths.projectSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
-      <SectionDiv sfxString1={"sectionOpen4"} sfxString2={"sectionClose4"}>
-        CONTACT ME
-      </SectionDiv>
-      <Contact id={SectionPaths.contactSection} fg={fgClr} bgClr={bgClr} primaryClr={primaryClr}/>
+      <BrowserRouter>
+        <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
+        <Navbar
+          clrTheme={clrTheme}
+          clrThemeOnClick={() =>
+            clrTheme === "light-theme"
+              ? setClrTheme("dark-theme")
+              : setClrTheme("light-theme")
+          }
+        />
+        <Routes>
+          <Route
+            path={PagePaths.home}
+            element={<Home fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />}
+          ></Route>
+          <Route
+            path={PagePaths.about}
+            element={<About fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />}
+          ></Route>
+          <Route
+            path={PagePaths.work}
+            element={<Work fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />}
+          ></Route>
+          <Route
+            path={PagePaths.contact}
+            element={
+              <Contact fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />
+            }
+          ></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
