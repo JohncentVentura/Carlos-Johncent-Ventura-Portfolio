@@ -1,3 +1,5 @@
+import {useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   FaFileDownload,
   FaFacebook,
@@ -9,7 +11,7 @@ import { ExternalPaths } from "../components/Paths";
 export const SmDiv = ({ className, children }) => {
   return (
     <>
-      <div className={`${className} text-center lg:text-3xl text-xl`}>
+      <div className={`${className} text-center xl:text-3xl md:text-2xl text-xl`}>
         {children}
       </div>
     </>
@@ -20,7 +22,7 @@ export const LgDiv = ({ className, children }) => {
   return (
     <>
       <div
-        className={`${className} text-center lg:text-5xl sm:text-4xl text-3xl`}
+        className={`${className} text-center xl:text-5xl md:text-4xl text-3xl`}
       >
         {children}
       </div>
@@ -117,12 +119,16 @@ export const LgRhombusImg = ({ className, href, imgSrc }) => {
   );
 };
 
-export const SkillDiv = ({ className, skillName, skillSFX ,skillHref, skillImgSrc }) => {
+export const SkillDiv = ({
+  className,
+  skillName,
+  skillSFX,
+  skillHref,
+  skillImgSrc,
+}) => {
   return (
     <>
-      <div
-        className="flex flex-col justify-center items-center"
-      >
+      <div className="flex flex-col justify-center items-center">
         <SmDiv className={"chStagger pt-[6vh]"}>{skillName}</SmDiv>
         <SmRhombusImg
           className={`${skillSFX} pt-[3vh]`}
@@ -148,51 +154,61 @@ export const SkillGrid = ({ className, children }) => {
   );
 };
 
-export const IconLink = ({ className, href, icon }) => {
-  const sfxString = `${className}`.split(" ")[0];
-  const classString = `${className}`.replace(sfxString, "");
-
+export const SocialLinks = ({ className }) => {
   return (
     <>
-      <div className={classString}>
-        <a
-          className={`${sfxString} flex justify-center items-center`}
-          href={href || null}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {icon}
-        </a>
+      <div
+        className={`${className} flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[80vw]`}
+      >
+        <SmRhombusIcon
+          className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
+          href={ExternalPaths.cert1}
+          icon={<FaFileDownload size="40" />}
+        ></SmRhombusIcon>
+        <SmRhombusIcon
+          className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
+          href={ExternalPaths.cert1}
+          icon={<FaFacebook size="50" />}
+        ></SmRhombusIcon>
+        <SmRhombusIcon
+          className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
+          href={ExternalPaths.cert1}
+          icon={<FaGithub size="50" />}
+        ></SmRhombusIcon>
+        <SmRhombusIcon
+          className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
+          href={ExternalPaths.cert1}
+          icon={<FaPinterest size="50" />}
+        ></SmRhombusIcon>
       </div>
     </>
   );
 };
 
-export const SocialLinks = ({ className }) => {
+export const IconDiv = ({ className, iconSFX, iconHref, icon, iconName }) => {
   return (
     <>
-      <div className={`${className} flex justify-between items-center xl:w-[50vw] md:w-[60vw] w-[80vw]`}>
-          <SmRhombusIcon
-            className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaFileDownload size="35" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaFacebook size="40" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaGithub size="40" />}
-          ></SmRhombusIcon>
-          <SmRhombusIcon
-            className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-            href={ExternalPaths.cert1}
-            icon={<FaPinterest size="40" />}
-          ></SmRhombusIcon>
+      <div className={`${className}  flex justify-start items-center`}>
+        <div className="lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]">
+          <a
+            className={`${iconSFX} flex justify-center items-center`}
+            href={iconHref || null}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {icon}
+          </a>
         </div>
+
+        <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>{iconName}</SmDiv>
+      </div>
     </>
   );
+};
+
+export const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [(pathname)]);
 };

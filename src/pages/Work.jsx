@@ -12,9 +12,12 @@ import {
   SmRhombusIcon,
   LgRhombusImg,
   IconLink,
+  ScrollToTop
 } from "../components/Components";
+import Transition from "../components/Transition";
 
 const Work = ({ ...props }) => {
+  ScrollToTop();
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
@@ -99,4 +102,4 @@ const Work = ({ ...props }) => {
   );
 };
 
-export default Work;
+export default Transition(Work);

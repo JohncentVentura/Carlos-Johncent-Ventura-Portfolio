@@ -16,12 +16,15 @@ import {
   SmRhombusIcon,
   LgRhombusImg,
   IconLink,
-  SocialLinks
+  SocialLinks,
+  ScrollToTop
 } from "../components/Components";
 import { ExternalPaths, ImagePaths } from "../components/Paths";
 import sfx from "../components/ScrollEffects";
+import Transition from "../components/Transition";
 
 const Home = ({ ...props }) => {
+  ScrollToTop();
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
@@ -40,7 +43,6 @@ const Home = ({ ...props }) => {
     sfx.SetEffect(".shOtherSkill2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill3", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shWelcome", (elem) => sfx.ShapeShow(elem));
-
   });
 
   return (
@@ -148,4 +150,4 @@ const Home = ({ ...props }) => {
   );
 };
 
-export default Home;
+export default Transition(Home);

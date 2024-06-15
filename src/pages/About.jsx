@@ -12,10 +12,13 @@ import {
   SmRhombusImg,
   SmRhombusIcon,
   LgRhombusImg,
-  IconLink,
+  IconDiv,
+  ScrollToTop
 } from "../components/Components";
+import Transition from "../components/Transition";
 
 const About = ({ ...props }) => {
+  ScrollToTop();
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
@@ -55,8 +58,6 @@ const About = ({ ...props }) => {
 
     sfx.SetEffect(".spAAD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chAAD", (elem) => sfx.CharStagger(elem));
-
-   
   });
 
   return (
@@ -100,16 +101,13 @@ const About = ({ ...props }) => {
             <LgDiv className={"chBEDA lg:pt-[2vh] pt-[1vh]"}>Back End</LgDiv>
             <LgDiv className={"chBEDA"}>Development & APIs</LgDiv>
             <LgDiv className={"chBEDA"}>Developer Certificate</LgDiv>
-            <div className="flex justify-center items-center opacity-75">
-              <IconLink
-                href={ExternalPaths.freeCodeCamp}
-                className="icBEDA lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]"
-                icon={<FaFreeCodeCamp size="50" />}
-              ></IconLink>
-              <SmDiv className={`chBEDA lg:pt-[2vh] pt-[1vh]`}>
-                freeCodeCamp.org
-              </SmDiv>
-            </div>
+            <IconDiv
+              className={`opacity-75`}
+              iconSFX={`icBEDA`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaFreeCodeCamp size="50" />}
+              iconName={`freeCodeCamp.org`}
+            />
           </div>
           <LgRhombusImg
             className={"spBEDA lg:pt-[20vh] pt-[2vh]"}
@@ -124,16 +122,13 @@ const About = ({ ...props }) => {
               Relational Database
             </LgDiv>
             <LgDiv className={"chRD"}>Developer Certificate</LgDiv>
-            <div className="flex justify-center items-center opacity-75">
-              <IconLink
-                href={ExternalPaths.freeCodeCamp}
-                className="icRD lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]"
-                icon={<FaFreeCodeCamp size="50" />}
-              ></IconLink>
-              <SmDiv className={`chRD lg:pt-[2vh] pt-[1vh]`}>
-                freeCodeCamp.org
-              </SmDiv>
-            </div>
+            <IconDiv
+              className={`opacity-75`}
+              iconSFX={`icBEDA`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaFreeCodeCamp size="50" />}
+              iconName={`freeCodeCamp.org`}
+            />
           </div>
           <LgRhombusImg
             className={"spRD lg:pt-[20vh] pt-[2vh]"}
@@ -171,16 +166,13 @@ const About = ({ ...props }) => {
             <LgDiv className={"chFEDL lg:pt-[2vh] pt-[1vh]"}>Front End</LgDiv>
             <LgDiv className={"chFEDL"}>Development Libraries</LgDiv>
             <LgDiv className={"chFEDL"}>Developer Certificate</LgDiv>
-            <div className="flex justify-center items-center opacity-75">
-              <IconLink
-                href={ExternalPaths.freeCodeCamp}
-                className="icFEDL lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]"
-                icon={<FaFreeCodeCamp size="50" />}
-              ></IconLink>
-              <SmDiv className={`chFEDL lg:pt-[2vh] pt-[1vh]`}>
-                freeCodeCamp.org
-              </SmDiv>
-            </div>
+            <IconDiv
+              className={`opacity-75`}
+              iconSFX={`icBEDA`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaFreeCodeCamp size="50" />}
+              iconName={`freeCodeCamp.org`}
+            />
           </div>
           <LgRhombusImg
             className={"spFEDL lg:pt-[20vh] pt-[2vh]"}
@@ -196,16 +188,13 @@ const About = ({ ...props }) => {
             </LgDiv>
             <LgDiv className={"chJADS"}>& Data Structures</LgDiv>
             <LgDiv className={"chJADS"}>Developer Certificate</LgDiv>
-            <div className="flex justify-center items-center opacity-75">
-              <IconLink
-                href={ExternalPaths.freeCodeCamp}
-                className="icJADS lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]"
-                icon={<FaFreeCodeCamp size="50" />}
-              ></IconLink>
-              <SmDiv className={`chJADS lg:pt-[2vh] pt-[1vh]`}>
-                freeCodeCamp.org
-              </SmDiv>
-            </div>
+            <IconDiv
+              className={`opacity-75`}
+              iconSFX={`icBEDA`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaFreeCodeCamp size="50" />}
+              iconName={`freeCodeCamp.org`}
+            />
           </div>
           <LgRhombusImg
             className={"spJADS lg:pt-[20vh] pt-[2vh]"}
@@ -220,16 +209,13 @@ const About = ({ ...props }) => {
               Responsive Web Design
             </LgDiv>
             <LgDiv className={"chRWD"}>Developer Certificate</LgDiv>
-            <div className="flex justify-center items-center opacity-75">
-              <IconLink
-                href={ExternalPaths.freeCodeCamp}
-                className="icRWD lg:pt-[2vh] pt-[1vh] lg:pe-[1vw] pe-[2vw]"
-                icon={<FaFreeCodeCamp size="50" />}
-              ></IconLink>
-              <SmDiv className={`chRWD lg:pt-[2vh] pt-[1vh]`}>
-                freeCodeCamp.org
-              </SmDiv>
-            </div>
+            <IconDiv
+              className={`opacity-75`}
+              iconSFX={`icBEDA`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaFreeCodeCamp size="50" />}
+              iconName={`freeCodeCamp.org`}
+            />
           </div>
           <LgRhombusImg
             className={"spRWD lg:pt-[20vh] pt-[2vh]"}
@@ -319,4 +305,4 @@ const About = ({ ...props }) => {
   
 };
 
-export default About;
+export default Transition(About);

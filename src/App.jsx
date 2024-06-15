@@ -13,6 +13,7 @@ git push --force origin main
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
+import { AnimatePresence } from "framer-motion";
 
 import { SectionDiv } from "./components/Components.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -25,6 +26,7 @@ import Work from "./pages/Work.jsx";
 import Contact from "./pages/Contact.jsx";
 
 function App() {
+  const location = useLocation();
   const [clrTheme, setClrTheme] = useState("");
   const [fgClr, setFgClr] = useState(
     getComputedStyle(document.body).getPropertyValue("--fgClr")
@@ -92,19 +94,19 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
-        <Navbar
-          clrTheme={clrTheme}
-          clrThemeOnClick={() =>
-            clrTheme === "light-theme"
-              ? setClrTheme("dark-theme")
-              : setClrTheme("light-theme")
-          }
-        />
-        <Routes>
+      <ParticlesComponent fgClr={primaryClr} bgClr={bgClr} />
+      <Navbar
+        clrTheme={clrTheme}
+        clrThemeOnClick={() =>
+          clrTheme === "light-theme"
+            ? setClrTheme("dark-theme")
+            : setClrTheme("light-theme")
+        }
+      />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
           <Route
-            path={PagePaths.home}
+            index
             element={<Home fg={fgClr} bgClr={bgClr} primaryClr={primaryClr} />}
           ></Route>
           <Route
@@ -122,9 +124,19 @@ function App() {
             }
           ></Route>
         </Routes>
-      </BrowserRouter>
+      </AnimatePresence>
     </>
   );
 }
+
+const ScrollToTop = () => {
+  // Extracts pathname property(key) from an object
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+};
 
 export default App;

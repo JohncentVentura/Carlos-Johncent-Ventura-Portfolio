@@ -12,59 +12,97 @@ import {
   SmRhombusIcon,
   LgRhombusImg,
   IconLink,
-  SocialLinks
+  SocialLinks,
+  IconDiv,
+  ScrollToTop
 } from "../components/Components";
+import Transition from "../components/Transition";
 
 const Contact = ({ ...props }) => {
+  ScrollToTop();
   useEffect(() => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
-    sfx.SetEffect(".txStagger", (elem) => sfx.CharStagger(elem));
-    sfx.SetEffect(".shContact", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
+    sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
+    sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
     sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
+
+    sfx.SetEffect(".shForm", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".icAddress", (elem) => sfx.ShapeShow(elem));
   });
 
   return (
     <>
-      <section id={props.id} className="mb-[50vh]">
-        <LgDiv className={`txStagger mt-[10vh]`}>Now that you know me,</LgDiv>
-        <LgDiv className={`txStagger`}>or still maybe not?</LgDiv>
-        <LgDiv className={`txStagger`}>I'd love to hear your</LgDiv>
-        <LgDiv className={`txStagger`}>feedbacks, Here's how</LgDiv>
-        <LgDiv className={`txStagger`}>you can reach me...</LgDiv>
+      <section>
+        <LgDiv className="chAutoStagger pt-[50vh] pb-[20vh]">
+          My Whereabouts
+        </LgDiv>
 
-        <form
-          onSubmit={onSubmit}
-          className="mt-[5vh] flex flex-col justify-center items-center gap-[4vh]"
-        >
-          <input
-            className="anim-glow-box ps-[0.5vw] lg:w-[40vw] w-[60vw] h-[5vh]"
-            name="name"
-            type="text"
-            placeholder="Your Name" 
-            required
-          />
-          <input
-            className="anim-glow-box ps-[0.5vw] lg:w-[40vw] w-[60vw] h-[5vh]"
-            name="email"
-            type="email"
-            placeholder="Your Email"
-            required
-          />
-          <textarea
-            className="anim-glow-box ps-[0.5vw] lg:w-[40vw] w-[60vw] min-h-[15vh]"
-            name="message"
-            placeholder="Your Message"
-            required
-          />
-          <button
-            className="px-[2vw] py-[2vh] anim-glow-box bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
-            type="submit"
+        <LgDiv className={`chStagger pt-[20vh]`}>Now that you know me,</LgDiv>
+        <LgDiv className={`chStagger pt-[20vh]`}>or still maybe not?</LgDiv>
+        <LgDiv className={`woStagger pt-[20vh] lg:w-[75vw] w-[85vw]`}>
+          I'd love to hear your feedbacks, Here's how you can reach me...
+        </LgDiv>
+
+        <div className="flex xl:flex-row flex-col justify-center items-center gap-[5vw]">
+          <form
+            onSubmit={onSubmit}
+            className="shForm pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
           >
-            Submit
-          </button>
-        </form>
+            <input
+              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] h-[4vh]"
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] h-[4vh]"
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] min-h-[10vh]"
+              name="message"
+              placeholder="Your Message"
+              required
+            />
+            <button
+              className="px-[2vw] py-[2vh] anim-glow-box bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
 
-        <SocialLinks/>
+          <div className="mb-[2vh] flex flex-col justify-center items-start xl:w-[35vw] lg:w-[40vw] w-[65vw] gap-[3vh]">
+            <IconDiv
+              className={``}
+              iconSFX={`icAddress`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaGithub size="50" />}
+              iconName={`0956-419-6962`}
+            />
+            <IconDiv
+              className={``}
+              iconSFX={`icAddress`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaGithub size="50" />}
+              iconName={`johncent.ventura@gmail.com`}
+            />
+            <IconDiv
+              className={``}
+              iconSFX={`icAddress`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<FaGithub size="50" />}
+              iconName={`Pozorrubio, Pangasinan`}
+            />
+          </div>
+        </div>
+
+        <SocialLinks />
       </section>
     </>
   );
@@ -93,4 +131,4 @@ const onSubmit = async (event) => {
   }
 };
 
-export default Contact;
+export default Transition(Contact);
