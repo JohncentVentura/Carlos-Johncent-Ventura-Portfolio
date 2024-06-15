@@ -1,4 +1,4 @@
-import {useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
   FaFileDownload,
@@ -11,7 +11,9 @@ import { ExternalPaths } from "../components/Paths";
 export const SmDiv = ({ className, children }) => {
   return (
     <>
-      <div className={`${className} text-center xl:text-3xl md:text-2xl text-xl`}>
+      <div
+        className={`${className} text-center xl:text-3xl md:text-2xl text-xl`}
+      >
         {children}
       </div>
     </>
@@ -77,7 +79,7 @@ export const SmRhombusIcon = ({ className, href, download, icon }) => {
           href={href || null}
           target="_blank"
           rel="noreferrer"
-          download={download}
+          download={download || null}
         >
           <div
             className="-rotate-45 w-[75%] h-[75%] object-fill flex justify-center items-center group-hover:text-bgClr
@@ -125,16 +127,25 @@ export const SkillDiv = ({
   skillSFX,
   skillHref,
   skillImgSrc,
+  skillIcon,
 }) => {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
         <SmDiv className={"chStagger pt-[6vh]"}>{skillName}</SmDiv>
-        <SmRhombusImg
-          className={`${skillSFX} pt-[3vh]`}
-          href={skillHref}
-          imgSrc={skillImgSrc}
-        ></SmRhombusImg>
+        {skillImgSrc === undefined ? (
+          <SmRhombusIcon
+            className={`${skillSFX} pt-[3vh]`}
+            href={skillHref}
+            icon={skillIcon}
+          ></SmRhombusIcon>
+        ) : (
+          <SmRhombusImg
+            className={`${skillSFX} pt-[3vh]`}
+            href={skillHref}
+            imgSrc={skillImgSrc}
+          ></SmRhombusImg>
+        )}
       </div>
     </>
   );
@@ -210,5 +221,5 @@ export const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [(pathname)]);
+  }, [pathname]);
 };

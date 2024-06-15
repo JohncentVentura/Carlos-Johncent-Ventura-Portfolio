@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import {
-  FaFileDownload,
-  FaFacebook,
-  FaGithub,
-  FaPinterest,
+  FaNetworkWired,
+  FaServer
 } from "react-icons/fa";
+import { IoHardwareChipSharp } from "react-icons/io5";
 
 import {
   SmDiv,
@@ -38,10 +37,11 @@ const Home = ({ ...props }) => {
     sfx.SetEffect(".shFrontEndSkill3", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shBackEndSkill1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shGameDevSkill1", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".shGDandPASkill1", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shGraphicsSkill1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill3", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shOtherSkill4", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shWelcome", (elem) => sfx.ShapeShow(elem));
   });
 
@@ -77,49 +77,171 @@ const Home = ({ ...props }) => {
             skillImgSrc={ImagePaths.html}
           />
           <SkillDiv
-            skillName={`HTML`}
+            skillName={`CSS`}
             skillSFX={`shFrontEndSkill1`}
             skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.html}
+            skillImgSrc={ImagePaths.css}
           />
           <SkillDiv
-            skillName={`HTML`}
+            skillName={`JavaScript`}
             skillSFX={`shFrontEndSkill1`}
             skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.html}
+            skillImgSrc={ImagePaths.javaScript}
           />
         </SkillGrid>
         <SkillGrid>
           <SkillDiv
-            skillName={`HTML`}
+            skillName={`Sass`}
             skillSFX={`shFrontEndSkill2 `}
             skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.html}
+            skillImgSrc={ImagePaths.sass}
           />
           <SkillDiv
-            skillName={`HTML`}
+            skillName={`Bootstrap`}
             skillSFX={`shFrontEndSkill2 `}
             skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.html}
+            skillImgSrc={ImagePaths.bootstrap}
           />
           <SkillDiv
-            skillName={`HTML`}
+            skillName={`Tailwind`}
             skillSFX={`shFrontEndSkill2 `}
             skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.html}
+            skillImgSrc={ImagePaths.tailwindCSS}
+          />
+        </SkillGrid>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`React`}
+            skillSFX={`shFrontEndSkill3 `}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.react}
           />
         </SkillGrid>
 
         <LgDiv className={"chStagger pt-[20vh]"}>Back-End</LgDiv>
         <LgDiv className={"chStagger pt-[1vh]"}>Development</LgDiv>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Node`}
+            skillSFX={`shBackEndSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.nodeJS}
+          />
+          <SkillDiv
+            skillName={`Express`}
+            skillSFX={`shBackEndSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.expressJS}
+          />
+          <SkillDiv
+            skillName={`MongoDB`}
+            skillSFX={`shBackEndSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.mongoDB}
+          />
+        </SkillGrid>
 
         <LgDiv className={"chStagger pt-[20vh]"}>Game</LgDiv>
         <LgDiv className={"chStagger pt-[1vh]"}>Development</LgDiv>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Unity`}
+            skillSFX={`shGameDevSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.unity}
+          />
+          <SkillDiv
+            skillName={`C#`}
+            skillSFX={`shGameDevSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.cSharp}
+          />
+          <SkillDiv
+            skillName={`Inky`}
+            skillSFX={`shGameDevSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.inky}
+          />
+        </SkillGrid>
 
         <LgDiv className={"chStagger pt-[20vh]"}>Graphics Design</LgDiv>
         <LgDiv className={"chStagger pt-[1vh]"}>& Pixel Art</LgDiv>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Photoshop`}
+            skillSFX={`shGraphicsSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.adobePhotoshop}
+          />
+          <SkillDiv
+            skillName={`Aseprite`}
+            skillSFX={`shGraphicsSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.aseprite}
+          />
+        </SkillGrid>
 
         <LgDiv className={"chStagger pt-[20vh]"}>Others</LgDiv>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Git`}
+            skillSFX={`shOtherSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.git}
+          />
+          <SkillDiv
+            skillName={`NPM`}
+            skillSFX={`shOtherSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.npm}
+          />
+          <SkillDiv
+            skillName={`Java`}
+            skillSFX={`shOtherSkill1`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.java}
+          />
+        </SkillGrid>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Visual Basic`}
+            skillSFX={`shOtherSkill2`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.visualBasic}
+          />
+          <SkillDiv
+            skillName={`MySQL`}
+            skillSFX={`shOtherSkill2`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.mySQL}
+          />
+          <SkillDiv
+            skillName={`Postgres`}
+            skillSFX={`shOtherSkill2`}
+            skillHref={ExternalPaths.cert1}
+            skillImgSrc={ImagePaths.postgreSQL}
+          />
+        </SkillGrid>
+        <SkillGrid>
+          <SkillDiv
+            skillName={`Hardware`}
+            skillSFX={`shOtherSkill3`}
+            skillHref={ExternalPaths.cert1}
+            skillIcon={<IoHardwareChipSharp size="45"/>}
+          />
+          <SkillDiv
+            skillName={`Network`}
+            skillSFX={`shOtherSkill3`}
+            skillHref={ExternalPaths.cert1}
+            skillIcon={<FaNetworkWired size="45"/>}
+          />
+          <SkillDiv
+            skillName={`Server`}
+            skillSFX={`shOtherSkill3`}
+            skillHref={ExternalPaths.cert1}
+            skillIcon={<FaServer size="45"/>}
+          />
+        </SkillGrid>
 
         {/*Skills*******************************************************************************/}
 

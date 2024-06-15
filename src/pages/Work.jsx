@@ -32,7 +32,7 @@ const Work = ({ ...props }) => {
   return (
     <>
       <section>
-        <LgDiv className="chAutoStagger pt-[50vh] pb-[20vh]">My Websites</LgDiv>
+        <LgDiv className="chAutoStagger pt-[50vh] pb-[20vh]">My Projects</LgDiv>
 
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg

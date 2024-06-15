@@ -14,7 +14,7 @@ import {
   IconLink,
   SocialLinks,
   IconDiv,
-  ScrollToTop
+  ScrollToTop,
 } from "../components/Components";
 import Transition from "../components/Transition";
 
@@ -50,34 +50,34 @@ const Contact = ({ ...props }) => {
             className="shForm pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
           >
             <input
-              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] h-[4vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"
               name="name"
               type="text"
               placeholder="Your Name"
               required
             />
             <input
-              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] h-[4vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"
               name="email"
               type="email"
               placeholder="Your Email"
               required
             />
             <textarea
-              className="anim-glow-box ps-[0.5vw] xl:w-[35vw] lg:w-[40vw] w-[65vw] min-h-[10vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] min-h-[10vh]"
               name="message"
               placeholder="Your Message"
               required
             />
             <button
-              className="px-[2vw] py-[2vh] anim-glow-box bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
+              className="px-[2vw] lg:py-[2vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
               type="submit"
             >
               Submit
             </button>
           </form>
 
-          <div className="mb-[2vh] flex flex-col justify-center items-start xl:w-[35vw] lg:w-[40vw] w-[65vw] gap-[3vh]">
+          <div className="mb-[2vh] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
             <IconDiv
               className={``}
               iconSFX={`icAddress`}

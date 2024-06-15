@@ -111,7 +111,8 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spBEDA lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            href={ExternalPaths.freeCodeCamp}
+            imgSrc={ImagePaths.backEndDevAPI}
           ></LgRhombusImg>
         </div>
 
@@ -132,7 +133,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRD lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.relationalDB}
           ></LgRhombusImg>
         </div>
 
@@ -156,7 +157,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spTESDA lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.tesdaCSS}
           ></LgRhombusImg>
         </div>
 
@@ -176,7 +177,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spFEDL lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.frontEndDevLib}
           ></LgRhombusImg>
         </div>
 
@@ -198,7 +199,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spJADS lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.jsAlgoDS}
           ></LgRhombusImg>
         </div>
 
@@ -219,7 +220,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRWD lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.resWebDes}
           ></LgRhombusImg>
         </div>
 
@@ -242,7 +243,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spULD lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.bsitDiploma}
           ></LgRhombusImg>
         </div>
 
@@ -266,7 +267,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRCPE lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.firstRCPE}
           ></LgRhombusImg>
         </div>
 
@@ -288,16 +289,8 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spAAD lg:pt-[20vh] pt-[2vh]"}
-            imgSrc={ImagePaths.hero}
+            imgSrc={ImagePaths.androidAppDev}
           ></LgRhombusImg>
-        </div>
-
-        <div className="xl:w-[50vw] md:w-[60vw] w-[80vw]">
-          <SmDiv className={`woStagger mt-[10vh] pt-[10vh]`}>
-            Apart from my developer skills, I'm also knowledgeable in installing, configuring, and troubleshooting
-            computer hardwares and softwares, basic setup of computer networks, basic setup of computer servers, and
-            maintiain computer systems & networks.
-          </SmDiv>
         </div>
       </section>
     </>
