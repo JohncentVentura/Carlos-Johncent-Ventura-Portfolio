@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import { FaGithub } from "react-icons/fa";
+import { MdPhoneIphone } from "react-icons/md";
+import { MdAlternateEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoSchoolSharp } from "react-icons/io5";
 import { KeyPaths, ExternalPaths, ImagePaths } from "../components/Paths";
 import sfx from "../components/ScrollEffects";
 import {
@@ -26,9 +29,12 @@ const Contact = ({ ...props }) => {
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
     sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".shForm", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shBtn", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".icPhone", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".icEmail", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".icAddress", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".icAlmaMater", (elem) => sfx.ShapeShow(elem));
   });
 
   return (
@@ -70,34 +76,41 @@ const Contact = ({ ...props }) => {
               required
             />
             <button
-              className="px-[2vw] lg:py-[2vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
+              className="shBtn px-[2vw] lg:py-[2vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
               type="submit"
             >
               Submit
             </button>
           </form>
 
-          <div className="mb-[2vh] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
+          <div className="xl:pt-[10vh] pt-[0] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
             <IconDiv
               className={``}
-              iconSFX={`icAddress`}
+              iconSFX={`icPhone`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaGithub size="50" />}
+              icon={<MdPhoneIphone size="50" />}
               iconName={`0956-419-6962`}
             />
             <IconDiv
               className={``}
-              iconSFX={`icAddress`}
+              iconSFX={`icEmail`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaGithub size="50" />}
+              icon={<MdAlternateEmail size="50" />}
               iconName={`johncent.ventura@gmail.com`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAddress`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaGithub size="50" />}
+              icon={<FaLocationDot size="50" />}
               iconName={`Pozorrubio, Pangasinan`}
+            />
+            <IconDiv
+              className={``}
+              iconSFX={`icAlmaMater`}
+              iconHref={ExternalPaths.freeCodeCamp}
+              icon={<IoSchoolSharp size="50" />}
+              iconName={`University of Luzon`}
             />
           </div>
         </div>
@@ -110,6 +123,10 @@ const Contact = ({ ...props }) => {
 
 const onSubmit = async (event) => {
   event.preventDefault();
+  const submitBtn = document.querySelector(".shBtn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = `Sending...`
+
   const formData = new FormData(event.target);
 
   formData.append("access_key", `${KeyPaths.accessKey}`);
@@ -127,7 +144,19 @@ const onSubmit = async (event) => {
   }).then((res) => res.json());
 
   if (res.success) {
+    const form = document.querySelector(".shForm");
+    await form.reset();
+    submitBtn.disabled = false;
+    submitBtn.textContent = `Submit`;
     console.log("Success", res);
+    return true;
+  }
+  else{
+    const form = document.querySelector(".shForm");
+    await form.reset();
+    submitBtn.disabled = false;
+    submitBtn.textContent = `Submit`;
+    console.log("Failed", res);
   }
 };
 

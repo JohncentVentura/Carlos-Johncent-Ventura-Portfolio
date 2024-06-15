@@ -30,7 +30,6 @@ const Home = ({ ...props }) => {
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
     sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".shHero", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shFrontEndSkill1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shFrontEndSkill2", (elem) => sfx.ShapeShow(elem));
@@ -204,7 +203,7 @@ const Home = ({ ...props }) => {
         </SkillGrid>
         <SkillGrid>
           <SkillDiv
-            skillName={`Visual Basic`}
+            skillName={`VisualBasic`}
             skillSFX={`shOtherSkill2`}
             skillHref={ExternalPaths.cert1}
             skillImgSrc={ImagePaths.visualBasic}

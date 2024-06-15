@@ -13,7 +13,7 @@ import {
   SmRhombusIcon,
   LgRhombusImg,
   IconDiv,
-  ScrollToTop
+  ScrollToTop,
 } from "../components/Components";
 import Transition from "../components/Transition";
 
@@ -24,38 +24,28 @@ const About = ({ ...props }) => {
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
-
     sfx.SetEffect(".spUL", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spBEDA", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chBEDA", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icBEDA", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spRD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chRD", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icRD", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spTESDA", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chTESDA", (elem) => sfx.CharStagger(elem));
-
     sfx.SetEffect(".spFEDL", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chFEDL", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icFEDL", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spJADS", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chJADS", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icJADS", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spRWD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chRWD", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icRWD", (elem) => sfx.ShapeShow(elem));
-
     sfx.SetEffect(".spULD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chULD", (elem) => sfx.CharStagger(elem));
-
     sfx.SetEffect(".spRCPE", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chRCPE", (elem) => sfx.CharStagger(elem));
-
     sfx.SetEffect(".spAAD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".chAAD", (elem) => sfx.CharStagger(elem));
   });
@@ -84,16 +74,16 @@ const About = ({ ...props }) => {
             share the same passion, and I hope I can continue creating and
             learning more things with you.
           </SmDiv>
-          <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-            I don't have any work experience, but I always upskill and
-            compensate it with certificates to remain relevant this past months.
-          </SmDiv>
         </div>
 
+        <LgDiv className={"chStagger pt-[20vh]"}>MY EXPERIENCE</LgDiv>
+        <SmDiv className={`woStagger pt-[20vh] text-justify xl:w-[50vw] md:w-[60vw] w-[80vw]`}>
+          I don't have any work experience, so I always upskill and attain
+          certificates to be always updated and compensate with my lack of experience.
+        </SmDiv>
+
         {/*Certificates*******************************************************************************/}
-        <LgDiv className={"chStagger pt-[20vh]"}>
-          MY CERTIFICATES
-        </LgDiv>
+        <LgDiv className={"chStagger pt-[20vh]"}>MY CERTIFICATES</LgDiv>
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
@@ -295,7 +285,6 @@ const About = ({ ...props }) => {
       </section>
     </>
   );
-  
 };
 
 export default Transition(About);

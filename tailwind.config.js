@@ -12,7 +12,11 @@ export default {
         fgClr: "var(--fgClr)",
         bgClr: "var(--bgClr)",
         primaryClr: "var(--primaryClr)",
+        primaryClr1: "var(--primaryClr1)",
         primaryClr2: "var(--primaryClr2)",
+        primaryClr3: "var(--primaryClr3)",
+        primaryClr4: "var(--primaryClr4)",
+        primaryClr5: "var(--primaryClr5)",
       },
       fontFamily: {
         mainFont: "var(--mainFont)"

@@ -23,7 +23,6 @@ const Work = ({ ...props }) => {
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
-
     sfx.SetEffect(".shEA1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shEA2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shEA3", (elem) => sfx.ShapeShow(elem));
@@ -41,8 +40,8 @@ const Work = ({ ...props }) => {
             imgSrc={ImagePaths.html}
           ></LgRhombusImg>
 
-          <div className="flex flex-col justify-center items-center xl:pt-[20vh] pt-[2vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger pt-[2vh]`}>E-COMMERCE APP</LgDiv>
+          <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
+            <LgDiv className={`chStagger`}>E-COMMERCE APP</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
               nesciunt ad ducimus laudantium minima sapiente ex eligendi
@@ -54,7 +53,6 @@ const Work = ({ ...props }) => {
             </SmDiv>
           </div>
         </div>
-
         <SkillGrid>
           <SkillDiv
             skillName={`HTML`}
@@ -75,7 +73,6 @@ const Work = ({ ...props }) => {
             skillImgSrc={ImagePaths.html}
           />
         </SkillGrid>
-
         <SkillGrid>
           <SkillDiv
             skillName={`HTML`}

@@ -47,8 +47,14 @@ export const ImagePaths = {
     resWebDes: "/Certificates/Responsive Web Design.png",
     tesdaCSS: "/Certificates/TESDA CSS.png",
     
-
-    pulprpg: "/PULP RPG.jpg",
+    jourdansSnackCorner: "",
+    mernCrudApp: "",
+    pulpRpg: "/Works/PULP RPG.jpg",
+    graphicsDesign: "",
+    pixelArt: "",
+    vbStudentSystem: "",
+    //FCC
+    tributePage: "",
 }
 
 export const ExternalPaths = {
