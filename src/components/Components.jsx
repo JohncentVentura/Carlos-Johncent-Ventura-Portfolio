@@ -42,8 +42,7 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
         <a
           className={`${sfxString} rhombus rotate-45 bg-bgClr flex justify-center items-center group 
           hover:bg-primaryClr hover:transition-all hover:duration-[0.4s] hover:ease-in-out
-          xl:w-24 xl:h-24 
-          lg:w-20 lg:h-20
+          xl:w-20 xl:h-20 
           sm:w-16 sm:h-16
           w-12 h-12`}
           href={href}
@@ -72,8 +71,7 @@ export const SmRhombusIcon = ({ className, href, download, icon }) => {
         <a
           className={`${sfxString} rhombus rotate-45 bg-bgClr flex justify-center items-center group 
           hover:bg-primaryClr hover:transition-all hover:duration-[0.4s] hover:ease-in-out
-          xl:w-24 xl:h-24 
-          lg:w-20 lg:h-20
+          xl:w-20 xl:h-20 
           sm:w-16 sm:h-16
           w-12 h-12`}
           href={href || null}
@@ -173,22 +171,23 @@ export const SocialLinks = ({ className }) => {
       >
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-          href={ExternalPaths.cert1}
+          href={ExternalPaths.cv}
           icon={<FaFileDownload size="40" />}
+          download={"Carlos Johncent Ventura CV"}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-          href={ExternalPaths.cert1}
+          href={ExternalPaths.facebook}
           icon={<FaFacebook size="50" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-          href={ExternalPaths.cert1}
+          href={ExternalPaths.github}
           icon={<FaGithub size="50" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
-          href={ExternalPaths.cert1}
+          href={ExternalPaths.pinterest}
           icon={<FaPinterest size="50" />}
         ></SmRhombusIcon>
       </div>

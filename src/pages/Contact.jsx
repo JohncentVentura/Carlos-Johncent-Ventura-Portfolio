@@ -87,28 +87,28 @@ const Contact = ({ ...props }) => {
             <IconDiv
               className={``}
               iconSFX={`icPhone`}
-              iconHref={ExternalPaths.freeCodeCamp}
+              iconHref={ExternalPaths.phone}
               icon={<MdPhoneIphone size="50" />}
               iconName={`0956-419-6962`}
             />
             <IconDiv
               className={``}
               iconSFX={`icEmail`}
-              iconHref={ExternalPaths.freeCodeCamp}
+              iconHref={ExternalPaths.email}
               icon={<MdAlternateEmail size="50" />}
               iconName={`johncent.ventura@gmail.com`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAddress`}
-              iconHref={ExternalPaths.freeCodeCamp}
+              iconHref={ExternalPaths.address}
               icon={<FaLocationDot size="50" />}
               iconName={`Pozorrubio, Pangasinan`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAlmaMater`}
-              iconHref={ExternalPaths.freeCodeCamp}
+              iconHref={ExternalPaths.universityOfLuzon}
               icon={<IoSchoolSharp size="50" />}
               iconName={`University of Luzon`}
             />
