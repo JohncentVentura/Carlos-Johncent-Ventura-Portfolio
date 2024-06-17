@@ -29,7 +29,6 @@ const Contact = ({ ...props }) => {
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
     sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".shForm", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shBtn", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".icPhone", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".icEmail", (elem) => sfx.ShapeShow(elem));
@@ -45,7 +44,7 @@ const Contact = ({ ...props }) => {
         </LgDiv>
 
         <LgDiv className={`chStagger pt-[20vh]`}>Now that you know me,</LgDiv>
-        <LgDiv className={`chStagger pt-[20vh]`}>or still maybe not?</LgDiv>
+        <LgDiv className={`chStagger pt-[2vh]`}>or still maybe not?</LgDiv>
         <LgDiv className={`woStagger pt-[20vh] lg:w-[75vw] w-[85vw]`}>
           I'd love to hear your feedbacks, Here's how you can reach me...
         </LgDiv>
@@ -53,7 +52,7 @@ const Contact = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[5vw]">
           <form
             onSubmit={onSubmit}
-            className="shForm pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
+            className="pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
           >
             <input
               className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"

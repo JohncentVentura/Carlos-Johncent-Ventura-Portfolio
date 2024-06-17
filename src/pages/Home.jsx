@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import {
-  FaNetworkWired,
-  FaServer
-} from "react-icons/fa";
+import { FaNetworkWired, FaServer } from "react-icons/fa";
 import { IoHardwareChipSharp } from "react-icons/io5";
 
 import {
@@ -16,7 +13,7 @@ import {
   LgRhombusImg,
   IconLink,
   SocialLinks,
-  ScrollToTop
+  ScrollToTop,
 } from "../components/Components";
 import { ExternalPaths, ImagePaths } from "../components/Paths";
 import sfx from "../components/ScrollEffects";
@@ -59,7 +56,7 @@ const Home = ({ ...props }) => {
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
 
-        <LgDiv className={"chStagger pt-[2vh]"}>Just another fool</LgDiv>
+        <LgDiv className={"chStagger pt-[2vh]"}>Just a somebody</LgDiv>
         <LgDiv className={"chStagger pt-[1vh] mb-[20vh]"}>
           chasing the dream of...
         </LgDiv>
@@ -72,19 +69,19 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`HTML`}
             skillSFX={`shFrontEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.html}
             skillImgSrc={ImagePaths.html}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shFrontEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
           <SkillDiv
             skillName={`JavaScript`}
             skillSFX={`shFrontEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.javaScript}
             skillImgSrc={ImagePaths.javaScript}
           />
         </SkillGrid>
@@ -92,19 +89,19 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Sass`}
             skillSFX={`shFrontEndSkill2 `}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.sass}
             skillImgSrc={ImagePaths.sass}
           />
           <SkillDiv
             skillName={`Bootstrap`}
             skillSFX={`shFrontEndSkill2 `}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.bootstrap}
             skillImgSrc={ImagePaths.bootstrap}
           />
           <SkillDiv
             skillName={`Tailwind`}
             skillSFX={`shFrontEndSkill2 `}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.tailwindCSS}
             skillImgSrc={ImagePaths.tailwindCSS}
           />
         </SkillGrid>
@@ -112,7 +109,7 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`React`}
             skillSFX={`shFrontEndSkill3 `}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.react}
             skillImgSrc={ImagePaths.react}
           />
         </SkillGrid>
@@ -123,19 +120,19 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Node`}
             skillSFX={`shBackEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.nodeJS}
             skillImgSrc={ImagePaths.nodeJS}
           />
           <SkillDiv
             skillName={`Express`}
             skillSFX={`shBackEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.expressJS}
             skillImgSrc={ImagePaths.expressJS}
           />
           <SkillDiv
             skillName={`MongoDB`}
             skillSFX={`shBackEndSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.mongoDB}
             skillImgSrc={ImagePaths.mongoDB}
           />
         </SkillGrid>
@@ -146,20 +143,20 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Unity`}
             skillSFX={`shGameDevSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.unity}
             skillImgSrc={ImagePaths.unity}
           />
           <SkillDiv
             skillName={`C#`}
             skillSFX={`shGameDevSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.cSharp}
             skillImgSrc={ImagePaths.cSharp}
           />
           <SkillDiv
-            skillName={`Inky`}
+            skillName={`Ink`}
             skillSFX={`shGameDevSkill1`}
-            skillHref={ExternalPaths.cert1}
-            skillImgSrc={ImagePaths.inky}
+            skillHref={ExternalPaths.ink}
+            skillImgSrc={ImagePaths.ink}
           />
         </SkillGrid>
 
@@ -169,13 +166,13 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Photoshop`}
             skillSFX={`shGraphicsSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.adobePhotoshop}
             skillImgSrc={ImagePaths.adobePhotoshop}
           />
           <SkillDiv
             skillName={`Aseprite`}
             skillSFX={`shGraphicsSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.aseprite}
             skillImgSrc={ImagePaths.aseprite}
           />
         </SkillGrid>
@@ -185,19 +182,19 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Git`}
             skillSFX={`shOtherSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.git}
             skillImgSrc={ImagePaths.git}
           />
           <SkillDiv
             skillName={`NPM`}
             skillSFX={`shOtherSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.npm}
             skillImgSrc={ImagePaths.npm}
           />
           <SkillDiv
             skillName={`Java`}
             skillSFX={`shOtherSkill1`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.java}
             skillImgSrc={ImagePaths.java}
           />
         </SkillGrid>
@@ -205,19 +202,19 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`VisualBasic`}
             skillSFX={`shOtherSkill2`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.visualBasic}
             skillImgSrc={ImagePaths.visualBasic}
           />
           <SkillDiv
             skillName={`MySQL`}
             skillSFX={`shOtherSkill2`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.mySQL}
             skillImgSrc={ImagePaths.mySQL}
           />
           <SkillDiv
             skillName={`Postgres`}
             skillSFX={`shOtherSkill2`}
-            skillHref={ExternalPaths.cert1}
+            skillHref={ExternalPaths.postgreSQL}
             skillImgSrc={ImagePaths.postgreSQL}
           />
         </SkillGrid>
@@ -225,26 +222,26 @@ const Home = ({ ...props }) => {
           <SkillDiv
             skillName={`Hardware`}
             skillSFX={`shOtherSkill3`}
-            skillHref={ExternalPaths.cert1}
-            skillIcon={<IoHardwareChipSharp size="45"/>}
+            skillHref={ExternalPaths.hardware}
+            skillIcon={<IoHardwareChipSharp size="45" />}
           />
           <SkillDiv
             skillName={`Network`}
             skillSFX={`shOtherSkill3`}
-            skillHref={ExternalPaths.cert1}
-            skillIcon={<FaNetworkWired size="45"/>}
+            skillHref={ExternalPaths.network}
+            skillIcon={<FaNetworkWired size="45" />}
           />
           <SkillDiv
             skillName={`Server`}
             skillSFX={`shOtherSkill3`}
-            skillHref={ExternalPaths.cert1}
-            skillIcon={<FaServer size="45"/>}
+            skillHref={ExternalPaths.server}
+            skillIcon={<FaServer size="45" />}
           />
         </SkillGrid>
 
         {/*Skills*******************************************************************************/}
 
-        <LgDiv className="chStagger pt-[20vh]">& still learning more,</LgDiv>
+        <LgDiv className="chStagger pt-[20vh]">and learning more,</LgDiv>
         <LgDiv className="chStagger pt-[1vh] mb-[60vh]">but for now...</LgDiv>
 
         <div className="flex lg:flex-row-reverse flex-col justify-center items-center lg:gap-[5vw] gap-[0]">
@@ -258,14 +255,13 @@ const Home = ({ ...props }) => {
               WELCOME TO MY PORTFOLIO
             </LgDiv>
             <SmDiv className={"woStagger lg:pt-[5vh] pt-[2vh] text-justify "}>
-              Still don't know me after that introduction? Then you can download
-              my CV, stalk me on Facebook, commit with me in Github, and
-              criticize my Pinterest.
+              For more information about me, you can download my curriculum
+              vitae, visit me on Facebook, commit with me in Github, and view my Pinterest.
             </SmDiv>
           </div>
         </div>
 
-        <SocialLinks/>
+        <SocialLinks />
       </section>
     </>
   );

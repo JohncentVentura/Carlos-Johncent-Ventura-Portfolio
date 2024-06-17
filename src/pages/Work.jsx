@@ -92,7 +92,10 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>Jourdan's Snack</LgDiv>
             <LgDiv className={`chStagger`}>Corner ™</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              A local food business located in my hometown, created the website
+              for free as support for local businesses in my area. The store
+              sells a variety of goods and have a delivery service since the
+              business operates and process their products at the owner's house.
             </SmDiv>
           </div>
         </div>
@@ -101,18 +104,18 @@ const Work = ({ ...props }) => {
             skillName={`Github`}
             skillSFX={`shJSC2`}
             skillHref={ExternalPaths.gitJourdansSnackCorner}
-            skillIcon={<FaGithub size="50"/>}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`React`}
             skillSFX={`shJSC2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.react}
             skillImgSrc={ImagePaths.react}
           />
           <SkillDiv
             skillName={`Sass`}
             skillSFX={`shJSC2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.sass}
             skillImgSrc={ImagePaths.sass}
           />
         </SkillGrid>
@@ -120,7 +123,7 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Bootstrap`}
             skillSFX={`shJSC3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.bootstrap}
             skillImgSrc={ImagePaths.bootstrap}
           />
         </SkillGrid>
@@ -128,7 +131,7 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shRQM1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.randomQuoteMachine}
             imgSrc={ImagePaths.randomQuoteMachine}
           ></LgRhombusImg>
 
@@ -136,7 +139,13 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>Random Quote</LgDiv>
             <LgDiv className={`chStagger`}>Machine</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              An interactive web application that dynamically fetches and
+              displays a variety of quotes with each click. Built using React,
+              this app retrieve quotes from famous figures, books, or movies.
+              Users can enjoy a fresh dose of wisdom, humor, or motivation
+              instantly, making it a fun and engaging tool for websites or
+              personal use. Customizable and easy to integrate, it enhances user
+              experience by delivering random quotes at the click of a button.
             </SmDiv>
           </div>
         </div>
@@ -144,19 +153,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shRQM2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitRandomQuoteMachine}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`React`}
             skillSFX={`shRQM2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.react}
             skillImgSrc={ImagePaths.react}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shRQM2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
         </SkillGrid>
@@ -164,14 +173,18 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shDrumMach1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.drumMachine}
             imgSrc={ImagePaths.drumMachine}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>Drum Machine</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              The Drum Machine is a digital music instrument simulator that lets
+              users create beats and rhythms with ease. Developed using React,
+              it features an intuitive interface with clickable pads
+              representing different drum sounds like kick, snare, hi-hat, and
+              more.
             </SmDiv>
           </div>
         </div>
@@ -179,34 +192,36 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shDrumMach2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitDrumMachine}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`React`}
             skillSFX={`shDrumMach2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.react}
             skillImgSrc={ImagePaths.react}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shDrumMach2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shTodoApp1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.todoApp}
             imgSrc={ImagePaths.todoApp}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>Todo App</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              A Simple TODO application that uses local storage of the web
+              browser. This allows web apps to save data during one session,
+              then retrieve it in a later page session.
             </SmDiv>
           </div>
         </div>
@@ -214,19 +229,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shTodoApp2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitTodoApp}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`HTML`}
             skillSFX={`shTodoApp2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.html}
             skillImgSrc={ImagePaths.html}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shTodoApp2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
         </SkillGrid>
@@ -234,22 +249,25 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`JavaScript`}
             skillSFX={`shTodoApp3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.javaScript}
             skillImgSrc={ImagePaths.javaScript}
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shMusicPlayer1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.musicPlayer}
             imgSrc={ImagePaths.musicPlayer}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>Music Player</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              This project covers fundamental concepts such as handling audio
+              playback, managing a playlist, implementing play, pause, next,
+              previous, and shuffle functionalities. Also dynamically update
+              user interface based on the current song.
             </SmDiv>
           </div>
         </div>
@@ -257,19 +275,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shMusicPlayer2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitMusicPlayer}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`HTML`}
             skillSFX={`shMusicPlayer2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.html}
             skillImgSrc={ImagePaths.html}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shMusicPlayer2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
         </SkillGrid>
@@ -277,15 +295,15 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`JavaScript`}
             skillSFX={`shMusicPlayer3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.javaScript}
             skillImgSrc={ImagePaths.javaScript}
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shURLShortener1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.urlShortener}
             imgSrc={ImagePaths.urlShortener}
           ></LgRhombusImg>
 
@@ -293,7 +311,14 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>URL Shortener</LgDiv>
             <LgDiv className={`chStagger`}>Microservice</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Built using Express.js, the URL-Shortener Microservice is a
+              compact, efficient application that converts long URLs into
+              shortened, easy-to-share links. By generating unique, short
+              aliases for lengthy URLs, this microservice helps in improving the
+              readability and usability of links, especially for social media,
+              marketing campaigns, and text messages. It provides a simple API
+              endpoint where users can submit long URLs and receive shortened
+              versions in response.
             </SmDiv>
           </div>
         </div>
@@ -301,19 +326,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shURLShortener2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitUrlShortener}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`Express`}
             skillSFX={`shURLShortener2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.expressJS}
             skillImgSrc={ImagePaths.expressJS}
           />
           <SkillDiv
             skillName={`MongoDB`}
             skillSFX={`shURLShortener2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.mongoDB}
             skillImgSrc={ImagePaths.mongoDB}
           />
         </SkillGrid>
@@ -321,7 +346,7 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shExerTracker1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.exerciseTracker}
             imgSrc={ImagePaths.exerciseTracker}
           ></LgRhombusImg>
 
@@ -329,7 +354,12 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>Exercise</LgDiv>
             <LgDiv className={`chStagger`}>Tracker</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Built using Express.js, The Exercise Tracker is a versatile
+              application designed to help users monitor and manage their
+              physical activities. It allows users to log various types of
+              exercises, such as running, cycling, swimming, and weightlifting,
+              along with relevant details like duration, distance, and calories
+              burned.
             </SmDiv>
           </div>
         </div>
@@ -337,19 +367,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shExerTracker2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitExerciseTracker}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`Express`}
             skillSFX={`shExerTracker2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.expressJS}
             skillImgSrc={ImagePaths.expressJS}
           />
           <SkillDiv
             skillName={`MongoDB`}
             skillSFX={`shExerTracker2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.mongoDB}
             skillImgSrc={ImagePaths.mongoDB}
           />
         </SkillGrid>
@@ -357,14 +387,19 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shPULPRPG1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.pulpRpg}
             imgSrc={ImagePaths.pulpRpg}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>PULP RPG</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Project of University of Luzon Pozorrubio Role Playing Game or
+              “PULP RPG” is a free and educational game for Windows 10 that is
+              exclusive for both campuses. The project takes the design of a
+              merged platformer game and a role-playing game incorporated with
+              learning materials and referencing real life environments where
+              the campus is located.
             </SmDiv>
           </div>
         </div>
@@ -372,35 +407,35 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shPULPRPG2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitPulpRpg}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`Unity`}
             skillSFX={`shPULPRPG2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.unity}
             skillImgSrc={ImagePaths.unity}
           />
           <SkillDiv
             skillName={`C#`}
             skillSFX={`shPULPRPG2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.cSharp}
             skillImgSrc={ImagePaths.cSharp}
           />
         </SkillGrid>
         <SkillGrid>
           <SkillDiv
-            skillName={`Inky`}
+            skillName={`Ink`}
             skillSFX={`shPULPRPG3`}
-            skillHref={ExternalPaths.resWebDes}
-            skillImgSrc={ImagePaths.inky}
+            skillHref={ExternalPaths.ink}
+            skillImgSrc={ImagePaths.ink}
           />
         </SkillGrid>
 
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shPULPRPGDoc1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.pulpRpgDoc}
             imgSrc={ImagePaths.pulpRpgDoc}
           ></LgRhombusImg>
 
@@ -408,7 +443,10 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>PULP RPG</LgDiv>
             <LgDiv className={`chStagger`}>Documentation</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Project of University of Luzon Pozorrubio Role Playing Game or
+              “PULP RPG” is a free and educational game for Windows 10 that is
+              exclusive for both campuses that aids the declining enrollment
+              number of students at the Pozorrubio Satellite Campus.
             </SmDiv>
           </div>
         </div>
@@ -416,19 +454,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitPulpRpgDoc}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`HTML`}
             skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.html}
             skillImgSrc={ImagePaths.html}
           />
           <SkillDiv
             skillName={`CSS`}
             skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.css}
             skillImgSrc={ImagePaths.css}
           />
         </SkillGrid>
@@ -436,7 +474,7 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`JavaScript`}
             skillSFX={`shPULPRPGDoc3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.javaScript}
             skillImgSrc={ImagePaths.javaScript}
           />
         </SkillGrid>
@@ -444,14 +482,18 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shGraphics1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.graphicsDesign}
             imgSrc={ImagePaths.graphicsDesign}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>Graphics Design</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Welcome to my graphic design, where creativity meets
+              functionality. Each piece reflects my commitment to visual
+              excellence, innovative thinking, and attention to detail. Explore
+              my work to see how I transform ideas into compelling visual
+              narratives that captivate and engage audiences.
             </SmDiv>
           </div>
         </div>
@@ -459,13 +501,13 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Pinterest`}
             skillSFX={`shGraphics2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaPinterest size="50"/>}
+            skillHref={ExternalPaths.graphicsDesign}
+            skillIcon={<FaPinterest size="50" />}
           />
           <SkillDiv
             skillName={`Photoshop`}
             skillSFX={`shGraphics2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.adobePhotoshop}
             skillImgSrc={ImagePaths.adobePhotoshop}
           />
         </SkillGrid>
@@ -473,14 +515,18 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shPixelArt1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={ExternalPaths.pixelArt}
             imgSrc={ImagePaths.pixelArt}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>Pixel Artworks</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              Visit my pixel art work where each tiny pixel tells a part of a
+              larger story. This gallery features a variety of pixel art
+              projects, from intricate character designs to vibrant game
+              landscapes. My work combines classic pixel aesthetics with modern
+              creativity, resulting in unique and captivating pieces.
             </SmDiv>
           </div>
         </div>
@@ -488,13 +534,13 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Pinterest`}
             skillSFX={`shPixelArt2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaPinterest size="50"/>}
+            skillHref={ExternalPaths.pixelArt}
+            skillIcon={<FaPinterest size="50" />}
           />
           <SkillDiv
             skillName={`Aseprite`}
             skillSFX={`shPixelArt2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.aseprite}
             skillImgSrc={ImagePaths.aseprite}
           />
         </SkillGrid>
@@ -502,7 +548,7 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shVBStud1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={null}
             imgSrc={``}
           ></LgRhombusImg>
 
@@ -510,7 +556,7 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStagger`}>Student Registration</LgDiv>
             <LgDiv className={`chStagger`}>System</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              (In Development...)
             </SmDiv>
           </div>
         </div>
@@ -518,13 +564,13 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shVBStud2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitVbStudentSystem}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`Visual Basic`}
             skillSFX={`shVBStud2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.visualBasic}
             skillImgSrc={ImagePaths.visualBasic}
           />
         </SkillGrid>
@@ -532,15 +578,14 @@ const Work = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shMERNCRUDApp1 pt-[20vh]`}
-            href={ExternalPaths.resWebDes}
+            href={null}
             imgSrc={``}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
             <LgDiv className={`chStagger`}>MERN CRUD APP</LgDiv>
-            <LgDiv className={`chStagger`}>(In Development...)</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Description
+              (In Development...)
             </SmDiv>
           </div>
         </div>
@@ -548,19 +593,19 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Github`}
             skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.resWebDes}
-            skillIcon={<FaGithub size="50"/>}
+            skillHref={ExternalPaths.gitMernCrudApp}
+            skillIcon={<FaGithub size="50" />}
           />
           <SkillDiv
             skillName={`React`}
             skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.react}
             skillImgSrc={ImagePaths.react}
           />
           <SkillDiv
             skillName={`Tailwind`}
             skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.tailwindCSS}
             skillImgSrc={ImagePaths.tailwindCSS}
           />
         </SkillGrid>
@@ -568,17 +613,16 @@ const Work = ({ ...props }) => {
           <SkillDiv
             skillName={`Express`}
             skillSFX={`shMERNCRUDApp3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.expressJS}
             skillImgSrc={ImagePaths.expressJS}
           />
           <SkillDiv
             skillName={`MongoDB`}
             skillSFX={`shMERNCRUDApp3`}
-            skillHref={ExternalPaths.resWebDes}
+            skillHref={ExternalPaths.mongoDB}
             skillImgSrc={ImagePaths.mongoDB}
           />
         </SkillGrid>
-
       </section>
     </>
   );

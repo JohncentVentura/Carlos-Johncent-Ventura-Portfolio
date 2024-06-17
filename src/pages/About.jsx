@@ -56,6 +56,7 @@ const About = ({ ...props }) => {
         <LgDiv className="chAutoStagger pt-[50vh] pb-[20vh]">My Story</LgDiv>
         <LgRhombusImg
           className={"spUL pt-[20vh] flex justify-center items-center"}
+          href={ExternalPaths.universityOfLuzon}
           imgSrc={ImagePaths.universityOfLuzon}
         ></LgRhombusImg>
 
@@ -77,8 +78,8 @@ const About = ({ ...props }) => {
         </div>
 
         <LgDiv className={"chStagger pt-[20vh]"}>MY EXPERIENCE</LgDiv>
-        <SmDiv className={`woStagger pt-[20vh] text-justify xl:w-[50vw] md:w-[60vw] w-[80vw]`}>
-          I don't have any work experience, so I always upskill and attain
+        <SmDiv className={`woStagger pt-[5vh] text-justify xl:w-[50vw] md:w-[60vw] w-[80vw]`}>
+          I don't have any work experience, so I always upskill, create projects, and attain
           certificates to be always updated and compensate with my lack of experience.
         </SmDiv>
 
@@ -101,7 +102,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spBEDA lg:pt-[20vh] pt-[2vh]"}
-            href={ExternalPaths.freeCodeCamp}
+            href={ExternalPaths.backEndDevAPI}
             imgSrc={ImagePaths.backEndDevAPI}
           ></LgRhombusImg>
         </div>
@@ -123,6 +124,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRD lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.relationalDB}
             imgSrc={ImagePaths.relationalDB}
           ></LgRhombusImg>
         </div>
@@ -147,6 +149,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spTESDA lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.tesdaCSS}
             imgSrc={ImagePaths.tesdaCSS}
           ></LgRhombusImg>
         </div>
@@ -167,6 +170,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spFEDL lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.frontEndDevLib}
             imgSrc={ImagePaths.frontEndDevLib}
           ></LgRhombusImg>
         </div>
@@ -189,6 +193,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spJADS lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.jsAlgoDS}
             imgSrc={ImagePaths.jsAlgoDS}
           ></LgRhombusImg>
         </div>
@@ -210,6 +215,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRWD lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.resWebDes}
             imgSrc={ImagePaths.resWebDes}
           ></LgRhombusImg>
         </div>
@@ -233,6 +239,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spULD lg:pt-[20vh] pt-[2vh]"}
+            href={ExternalPaths.bsitDiploma}
             imgSrc={ImagePaths.bsitDiploma}
           ></LgRhombusImg>
         </div>
@@ -257,6 +264,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spRCPE lg:pt-[20vh] pt-[2vh]"}
+            href={null}
             imgSrc={ImagePaths.firstRCPE}
           ></LgRhombusImg>
         </div>
@@ -279,6 +287,7 @@ const About = ({ ...props }) => {
           </div>
           <LgRhombusImg
             className={"spAAD lg:pt-[20vh] pt-[2vh]"}
+            href={null}
             imgSrc={ImagePaths.androidAppDev}
           ></LgRhombusImg>
         </div>

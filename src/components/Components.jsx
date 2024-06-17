@@ -45,7 +45,7 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
           xl:w-20 xl:h-20 
           sm:w-16 sm:h-16
           w-12 h-12`}
-          href={href}
+          href={href || null}
           target="_blank"
           rel="noreferrer"
         >
