@@ -23,31 +23,24 @@ const About = ({ ...props }) => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
+    sfx.SetEffect(".chStaggerFromTop", (elem) => sfx.CharStaggerFromTop(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
+    sfx.SetEffect(".woStaggerOpacity", (elem) => sfx.WordStaggerOpacity(elem));
     sfx.SetEffect(".spUL", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spBEDA", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chBEDA", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icBEDA", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spRD", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chRD", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icRD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spTESDA", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chTESDA", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".spFEDL", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chFEDL", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icFEDL", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spJADS", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chJADS", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icJADS", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spRWD", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chRWD", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".icRWD", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".spULD", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chULD", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".spRCPE", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chRCPE", (elem) => sfx.CharStagger(elem));
     sfx.SetEffect(".spAAD", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".chAAD", (elem) => sfx.CharStagger(elem));
   });
 
   return (
@@ -61,14 +54,14 @@ const About = ({ ...props }) => {
         ></LgRhombusImg>
 
         <div className="xl:w-[50vw] md:w-[60vw] w-[80vw]">
-          <SmDiv className={`woStagger pt-[2vh] text-justify`}>
+          <SmDiv className={`woStaggerOpacity pt-[2vh] text-justify`}>
             I'm a graduate from the University of Luzon, Dagupan City with a
             Bachelor's Degree in Information Technology and Latin Honour of Cum
             Laude. Little did I know that playing video games since I was a kid
             will eventually led me into game development that helps me chose
             this course.
           </SmDiv>
-          <SmDiv className={`woStagger pt-[2vh] text-justify`}>
+          <SmDiv className={`woStaggerOpacity pt-[2vh] text-justify`}>
             This sparks my passion in developing and designing video games that
             makes me curious of what other things you can create using
             technology. This also creates bonds between me and the people who
@@ -88,10 +81,10 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chBEDA pt-[20vh] opacity-75`}>2024</SmDiv>
-            <LgDiv className={"chBEDA lg:pt-[2vh] pt-[1vh]"}>Back End</LgDiv>
-            <LgDiv className={"chBEDA"}>Development & APIs</LgDiv>
-            <LgDiv className={"chBEDA"}>Developer Certificate</LgDiv>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2024</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>Back End</LgDiv>
+            <LgDiv className={"chStagger"}>Development & APIs</LgDiv>
+            <LgDiv className={"chStagger"}>Developer Certificate</LgDiv>
             <IconDiv
               className={`opacity-75`}
               iconSFX={`icBEDA`}
@@ -109,14 +102,14 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chRD pt-[20vh] opacity-75`}>2024</SmDiv>
-            <LgDiv className={"chRD lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2024</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               Relational Database
             </LgDiv>
-            <LgDiv className={"chRD"}>Developer Certificate</LgDiv>
+            <LgDiv className={"chStagger"}>Developer Certificate</LgDiv>
             <IconDiv
               className={`opacity-75`}
-              iconSFX={`icBEDA`}
+              iconSFX={`icRD`}
               iconHref={ExternalPaths.freeCodeCamp}
               icon={<FaFreeCodeCamp size="50" />}
               iconName={`freeCodeCamp.org`}
@@ -131,18 +124,18 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chTESDA pt-[20vh] opacity-75`}>2024</SmDiv>
-            <LgDiv className={"chTESDA lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2024</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               TESDA Computer
             </LgDiv>
-            <LgDiv className={"chTESDA"}>Systems Servicing</LgDiv>
-            <LgDiv className={"chTESDA"}>National Certificate II</LgDiv>
+            <LgDiv className={"chStagger"}>Systems Servicing</LgDiv>
+            <LgDiv className={"chStagger"}>National Certificate II</LgDiv>
             <div className="flex flex-col justify-center items-center opacity-75">
-              <SmDiv className={`chTESDA lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 Pangasinan School of
               </SmDiv>
-              <SmDiv className={`chTESDA`}>Excellence Incorporated</SmDiv>
-              <SmDiv className={`chTESDA lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger`}>Excellence Incorporated</SmDiv>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 Urdaneta City, Pangasinan
               </SmDiv>
             </div>
@@ -156,13 +149,13 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chFEDL pt-[20vh] opacity-75`}>2024</SmDiv>
-            <LgDiv className={"chFEDL lg:pt-[2vh] pt-[1vh]"}>Front End</LgDiv>
-            <LgDiv className={"chFEDL"}>Development Libraries</LgDiv>
-            <LgDiv className={"chFEDL"}>Developer Certificate</LgDiv>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2024</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>Front End</LgDiv>
+            <LgDiv className={"chStagger"}>Development Libraries</LgDiv>
+            <LgDiv className={"chStagger"}>Developer Certificate</LgDiv>
             <IconDiv
               className={`opacity-75`}
-              iconSFX={`icBEDA`}
+              iconSFX={`icFEDL`}
               iconHref={ExternalPaths.freeCodeCamp}
               icon={<FaFreeCodeCamp size="50" />}
               iconName={`freeCodeCamp.org`}
@@ -177,15 +170,15 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chJADS pt-[20vh] opacity-75`}>2023</SmDiv>
-            <LgDiv className={"chJADS lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2023</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               JavaScript Algorithms
             </LgDiv>
-            <LgDiv className={"chJADS"}>& Data Structures</LgDiv>
-            <LgDiv className={"chJADS"}>Developer Certificate</LgDiv>
+            <LgDiv className={"chStagger"}>& Data Structures</LgDiv>
+            <LgDiv className={"chStagger"}>Developer Certificate</LgDiv>
             <IconDiv
               className={`opacity-75`}
-              iconSFX={`icBEDA`}
+              iconSFX={`icJADS`}
               iconHref={ExternalPaths.freeCodeCamp}
               icon={<FaFreeCodeCamp size="50" />}
               iconName={`freeCodeCamp.org`}
@@ -200,14 +193,14 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chRWD pt-[20vh] opacity-75`}>2023</SmDiv>
-            <LgDiv className={"chRWD lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2023</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               Responsive Web Design
             </LgDiv>
-            <LgDiv className={"chRWD"}>Developer Certificate</LgDiv>
+            <LgDiv className={"chStagger"}>Developer Certificate</LgDiv>
             <IconDiv
               className={`opacity-75`}
-              iconSFX={`icBEDA`}
+              iconSFX={`icRWD`}
               iconHref={ExternalPaths.freeCodeCamp}
               icon={<FaFreeCodeCamp size="50" />}
               iconName={`freeCodeCamp.org`}
@@ -222,17 +215,17 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chULD pt-[20vh] opacity-75`}>2023</SmDiv>
-            <LgDiv className={"chULD lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2023</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               Bachelor of Science in
             </LgDiv>
-            <LgDiv className={"chULD"}>Information Technology</LgDiv>
-            <LgDiv className={"chULD"}>Diploma (Cum Laude)</LgDiv>
+            <LgDiv className={"chStagger"}>Information Technology</LgDiv>
+            <LgDiv className={"chStagger"}>Diploma (Cum Laude)</LgDiv>
             <div className="flex flex-col justify-center items-center opacity-75">
-              <SmDiv className={`chULD lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 University of Luzon
               </SmDiv>
-              <SmDiv className={`chULD lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 Dagupan City, Pangasinan
               </SmDiv>
             </div>
@@ -246,18 +239,18 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chRCPE pt-[20vh] opacity-75`}>2023</SmDiv>
-            <LgDiv className={"chRCPE lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2023</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               1st Research Colloquium
             </LgDiv>
-            <LgDiv className={"chRCPE"}>& Project Exhibits</LgDiv>
-            <LgDiv className={"chRCPE"}>Presenter Certificate</LgDiv>
+            <LgDiv className={"chStagger"}>& Project Exhibits</LgDiv>
+            <LgDiv className={"chStagger"}>Presenter Certificate</LgDiv>
             <div className="flex flex-col justify-center items-center opacity-75">
-              <SmDiv className={`chRCPE lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 WCC Aeronautical and
               </SmDiv>
-              <SmDiv className={`chRCPE`}>Technological College</SmDiv>
-              <SmDiv className={`chRCPE lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger`}>Technological College</SmDiv>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 Binalonan City, Pangasinan
               </SmDiv>
             </div>
@@ -271,16 +264,16 @@ const About = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col lg:justify-center justify-evenly items-center lg:gap-[5vw]">
           <div className="flex flex-col justify-center items-center">
-            <SmDiv className={`chAAD pt-[20vh] opacity-75`}>2019</SmDiv>
-            <LgDiv className={"chAAD lg:pt-[2vh] pt-[1vh]"}>
+            <SmDiv className={`chStaggerFromTop pt-[20vh] opacity-75`}>2019</SmDiv>
+            <LgDiv className={"chStagger lg:pt-[2vh] pt-[1vh]"}>
               Android App Development
             </LgDiv>
-            <LgDiv className={"chAAD"}>National Certificate</LgDiv>
+            <LgDiv className={"chStagger"}>National Certificate</LgDiv>
             <div className="flex flex-col justify-center items-center opacity-75">
-              <SmDiv className={`chAAD lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 University of the Philippines
               </SmDiv>
-              <SmDiv className={`chAAD lg:pt-[2vh] pt-[1vh]`}>
+              <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>
                 Diliman, Quezon City
               </SmDiv>
             </div>

@@ -22,6 +22,7 @@ const Work = ({ ...props }) => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
+    sfx.SetEffect(".chStaggerFromBot", (elem) => sfx.CharStaggerFromBot(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
 
     sfx.SetEffect(".shJSC1", (elem) => sfx.ShapeShow(elem));
@@ -89,8 +90,8 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Jourdan's Snack</LgDiv>
-            <LgDiv className={`chStagger`}>Corner ™</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Jourdan's Snack</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Corner ™</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               A local food business located in my hometown, created the website
               for free as support for local businesses in my area. The store
@@ -136,8 +137,8 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Random Quote</LgDiv>
-            <LgDiv className={`chStagger`}>Machine</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Random Quote</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Machine</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               An interactive web application that dynamically fetches and
               displays a variety of quotes with each click. Built using React,
@@ -178,7 +179,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Drum Machine</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Drum Machine</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               The Drum Machine is a digital music instrument simulator that lets
               users create beats and rhythms with ease. Developed using React,
@@ -217,7 +218,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Todo App</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Todo App</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               A Simple TODO application that uses local storage of the web
               browser. This allows web apps to save data during one session,
@@ -262,7 +263,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Music Player</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Music Player</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               This project covers fundamental concepts such as handling audio
               playback, managing a playlist, implementing play, pause, next,
@@ -308,8 +309,8 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>URL Shortener</LgDiv>
-            <LgDiv className={`chStagger`}>Microservice</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>URL Shortener</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Microservice</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Built using Express.js, the URL-Shortener Microservice is a
               compact, efficient application that converts long URLs into
@@ -351,8 +352,8 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Exercise</LgDiv>
-            <LgDiv className={`chStagger`}>Tracker</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Exercise</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Tracker</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Built using Express.js, The Exercise Tracker is a versatile
               application designed to help users monitor and manage their
@@ -392,7 +393,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>PULP RPG</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>PULP RPG</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Project of University of Luzon Pozorrubio Role Playing Game or
               “PULP RPG” is a free and educational game for Windows 10 that is
@@ -434,60 +435,13 @@ const Work = ({ ...props }) => {
 
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
-            className={`shPULPRPGDoc1 pt-[20vh]`}
-            href={ExternalPaths.pulpRpgDoc}
-            imgSrc={ImagePaths.pulpRpgDoc}
-          ></LgRhombusImg>
-
-          <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>PULP RPG</LgDiv>
-            <LgDiv className={`chStagger`}>Documentation</LgDiv>
-            <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              Project of University of Luzon Pozorrubio Role Playing Game or
-              “PULP RPG” is a free and educational game for Windows 10 that is
-              exclusive for both campuses that aids the declining enrollment
-              number of students at the Pozorrubio Satellite Campus.
-            </SmDiv>
-          </div>
-        </div>
-        <SkillGrid>
-          <SkillDiv
-            skillName={`Github`}
-            skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.gitPulpRpgDoc}
-            skillIcon={<FaGithub size="50" />}
-          />
-          <SkillDiv
-            skillName={`HTML`}
-            skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.html}
-            skillImgSrc={ImagePaths.html}
-          />
-          <SkillDiv
-            skillName={`CSS`}
-            skillSFX={`shPULPRPGDoc2`}
-            skillHref={ExternalPaths.css}
-            skillImgSrc={ImagePaths.css}
-          />
-        </SkillGrid>
-        <SkillGrid>
-          <SkillDiv
-            skillName={`JavaScript`}
-            skillSFX={`shPULPRPGDoc3`}
-            skillHref={ExternalPaths.javaScript}
-            skillImgSrc={ImagePaths.javaScript}
-          />
-        </SkillGrid>
-
-        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
-          <LgRhombusImg
             className={`shGraphics1 pt-[20vh]`}
             href={ExternalPaths.graphicsDesign}
             imgSrc={ImagePaths.graphicsDesign}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Graphics Design</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Graphics Design</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Welcome to my graphic design, where creativity meets
               functionality. Each piece reflects my commitment to visual
@@ -512,7 +466,7 @@ const Work = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shPixelArt1 pt-[20vh]`}
             href={ExternalPaths.pixelArt}
@@ -520,7 +474,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Pixel Artworks</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Pixel Artworks</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               Visit my pixel art work where each tiny pixel tells a part of a
               larger story. This gallery features a variety of pixel art
@@ -545,7 +499,7 @@ const Work = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shVBStud1 pt-[20vh]`}
             href={null}
@@ -553,8 +507,8 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>Student Registration</LgDiv>
-            <LgDiv className={`chStagger`}>System</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>Student Registration</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>System</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               (In Development...)
             </SmDiv>
@@ -575,7 +529,7 @@ const Work = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <div className="flex xl:flex-row flex-col justify-center items-center gap-[2vw]">
+        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
           <LgRhombusImg
             className={`shMERNCRUDApp1 pt-[20vh]`}
             href={null}
@@ -583,7 +537,7 @@ const Work = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStagger`}>MERN CRUD APP</LgDiv>
+            <LgDiv className={`chStaggerFromBot`}>MERN CRUD APP</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
               (In Development...)
             </SmDiv>

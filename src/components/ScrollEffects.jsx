@@ -63,6 +63,36 @@ const sfx = {
       }
     );
   },
+  CharStaggerFromTop(elem) {
+    this.CreateGsapTimeline({ trigger: elem, markers: false }).fromTo(
+      new SplitType(elem, { types: "chars" }).chars,
+      {
+        opacity: 0,
+        y: -50,
+        transformOrigin: 'top',
+      },
+      {
+        opacity: 1,
+        stagger: 0.5,
+        y: 0,
+      }
+    );
+  },
+  CharStaggerFromBot(elem) {
+    this.CreateGsapTimeline({ trigger: elem, markers: false }).fromTo(
+      new SplitType(elem, { types: "chars" }).chars,
+      {
+        opacity: 0,
+        y: 50,
+        transformOrigin: 'bottom',
+      },
+      {
+        opacity: 1,
+        stagger: 0.5,
+        y: 0,
+      }
+    );
+  },
   WordStagger(elem) {
     this.CreateGsapTimeline({ trigger: elem, markers: false }).fromTo(
       new SplitType(elem, { types: "words" }).words,
@@ -71,6 +101,18 @@ const sfx = {
       },
       {
         opacity: 1,
+        stagger: 0.5,
+      }
+    );
+  },
+  WordStaggerOpacity(elem) {
+    this.CreateGsapTimeline({ trigger: elem, markers: false }).fromTo(
+      new SplitType(elem, { types: "words" }).words,
+      {
+        opacity: 0.2,
+      },
+      {
+        opacity: 1, 
         stagger: 0.5,
       }
     );

@@ -25,9 +25,9 @@ const Home = ({ ...props }) => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
+    sfx.SetEffect(".chStaggerFromTop", (elem) => sfx.CharStaggerFromTop(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
-    sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".shHero", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shIntroHero", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shFrontEndSkill1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shFrontEndSkill2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shFrontEndSkill3", (elem) => sfx.ShapeShow(elem));
@@ -38,7 +38,8 @@ const Home = ({ ...props }) => {
     sfx.SetEffect(".shOtherSkill2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill3", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shOtherSkill4", (elem) => sfx.ShapeShow(elem));
-    sfx.SetEffect(".shWelcome", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shWelcomeHero", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
   });
 
   return (
@@ -51,7 +52,7 @@ const Home = ({ ...props }) => {
         </LgDiv>
 
         <LgRhombusImg
-          className={"shHero pt-[2vh]"}
+          className={"shIntroHero pt-[2vh]"}
           href={ExternalPaths.cert1}
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
@@ -63,8 +64,8 @@ const Home = ({ ...props }) => {
 
         {/*Skills*******************************************************************************/}
 
-        <LgDiv className={"chStagger pt-[20vh]"}>Front-End</LgDiv>
-        <LgDiv className={"chStagger pt-[1vh]"}>Development</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[20vh]"}>Front-End</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[1vh]"}>Development</LgDiv>
         <SkillGrid>
           <SkillDiv
             skillName={`HTML`}
@@ -114,8 +115,8 @@ const Home = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <LgDiv className={"chStagger pt-[20vh]"}>Back-End</LgDiv>
-        <LgDiv className={"chStagger pt-[1vh]"}>Development</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[20vh]"}>Back-End</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[1vh]"}>Development</LgDiv>
         <SkillGrid>
           <SkillDiv
             skillName={`Node`}
@@ -137,8 +138,8 @@ const Home = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <LgDiv className={"chStagger pt-[20vh]"}>Game</LgDiv>
-        <LgDiv className={"chStagger pt-[1vh]"}>Development</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[20vh]"}>Game</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[1vh]"}>Development</LgDiv>
         <SkillGrid>
           <SkillDiv
             skillName={`Unity`}
@@ -160,8 +161,8 @@ const Home = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <LgDiv className={"chStagger pt-[20vh]"}>Graphics Design</LgDiv>
-        <LgDiv className={"chStagger pt-[1vh]"}>& Pixel Art</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[20vh]"}>Graphics Design</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[1vh]"}>& Pixel Art</LgDiv>
         <SkillGrid>
           <SkillDiv
             skillName={`Photoshop`}
@@ -177,7 +178,7 @@ const Home = ({ ...props }) => {
           />
         </SkillGrid>
 
-        <LgDiv className={"chStagger pt-[20vh]"}>Others</LgDiv>
+        <LgDiv className={"chStaggerFromTop pt-[20vh]"}>Others</LgDiv>
         <SkillGrid>
           <SkillDiv
             skillName={`Git`}
@@ -246,12 +247,12 @@ const Home = ({ ...props }) => {
 
         <div className="flex lg:flex-row-reverse flex-col justify-center items-center lg:gap-[5vw] gap-[0]">
           <LgRhombusImg
-            className={"shWelcome pt-[2vh]"}
+            className={"shWelcomeHero pt-[2vh]"}
             imgSrc={ImagePaths.hero}
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:w-[30vw] lg:w-[50vw] w-[70vw]">
-            <LgDiv className={"woStagger pt-[2vh]"}>
+            <LgDiv className={"chStaggerFromTop pt-[2vh]"}>
               WELCOME TO MY PORTFOLIO
             </LgDiv>
             <SmDiv className={"woStagger lg:pt-[5vh] pt-[2vh] text-justify "}>

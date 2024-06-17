@@ -210,7 +210,7 @@ export const IconDiv = ({ className, iconSFX, iconHref, icon, iconName }) => {
           </a>
         </div>
 
-        <SmDiv className={`chStagger lg:pt-[2vh] pt-[1vh]`}>{iconName}</SmDiv>
+        <SmDiv className={`chStaggerFromTop lg:pt-[2vh] pt-[1vh]`}>{iconName}</SmDiv>
       </div>
     </>
   );

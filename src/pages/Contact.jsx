@@ -27,6 +27,7 @@ const Contact = ({ ...props }) => {
     sfx.Init(props.fgClr, props.bgClr, props.primaryClr);
     sfx.SetEffect(".chAutoStagger", (elem) => sfx.CharAutoStagger(elem));
     sfx.SetEffect(".chStagger", (elem) => sfx.CharStagger(elem));
+    sfx.SetEffect(".chStaggerFromTop", (elem) => sfx.CharStaggerFromTop(elem));
     sfx.SetEffect(".woStagger", (elem) => sfx.WordStagger(elem));
     sfx.SetEffect(".shSocialLink", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shBtn", (elem) => sfx.ShapeShow(elem));
@@ -44,8 +45,8 @@ const Contact = ({ ...props }) => {
         </LgDiv>
 
         <LgDiv className={`chStagger pt-[20vh]`}>Now that you know me,</LgDiv>
-        <LgDiv className={`chStagger pt-[2vh]`}>or still maybe not?</LgDiv>
-        <LgDiv className={`woStagger pt-[20vh] lg:w-[75vw] w-[85vw]`}>
+        <LgDiv className={`chStagger pt-[2vh] opacity-25`}>or still maybe not?</LgDiv>
+        <LgDiv className={`woStagger pt-[50vh] lg:w-[75vw] w-[85vw]`}>
           I'd love to hear your feedbacks, Here's how you can reach me...
         </LgDiv>
 
