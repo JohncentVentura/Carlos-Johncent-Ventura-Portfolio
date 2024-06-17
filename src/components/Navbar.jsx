@@ -13,7 +13,7 @@ import { PagePaths } from "./Paths";
 const Navbar = ({...props}) => {
   return (
     <>
-      <nav className="anim-glow-drop fixed z-50 top-0 left-0 w-screen h-16 bg-bgClr opacity-90 flex justify-center items-center">
+      <nav className="anim-glow-drop fixed z-50 top-0 left-0 w-screen sm:h-16 h-12 bg-bgClr opacity-90 flex justify-center items-center">
         <NavLink to={PagePaths.home} icon={<FaHouse size="30"/>} name={`Home`}/>
         <NavLink to={PagePaths.about} icon={<FaUserGraduate size="30"/>} name={`About`}/>
         <NavLink to={PagePaths.work} icon={<FaBriefcase size="30" />} name={`Work`}/>
