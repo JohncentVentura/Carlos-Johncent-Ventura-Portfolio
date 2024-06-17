@@ -53,7 +53,7 @@ const Contact = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[5vw]">
           <form
             onSubmit={onSubmit}
-            className="shForm pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
+            className="shForm xl:pt-[10vh] pt-[5vh] flex flex-col justify-center items-center gap-[4vh]"
           >
             <input
               className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"
@@ -76,40 +76,40 @@ const Contact = ({ ...props }) => {
               required
             />
             <button
-              className="shBtn px-[2vw] lg:py-[2vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
+              className="shBtn px-[2vw] lg:py-[1.5vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
               type="submit"
             >
               Submit
             </button>
-          </form>
+          </form> 
 
           <div className="xl:pt-[10vh] pt-[0] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
             <IconDiv
               className={``}
               iconSFX={`icPhone`}
               iconHref={ExternalPaths.phone}
-              icon={<MdPhoneIphone size="50" />}
+              icon={<MdPhoneIphone size="45"/>}
               iconName={`0956-419-6962`}
             />
             <IconDiv
               className={``}
               iconSFX={`icEmail`}
               iconHref={ExternalPaths.email}
-              icon={<MdAlternateEmail size="50" />}
+              icon={<MdAlternateEmail size="45"/>}
               iconName={`johncent.ventura@gmail.com`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAddress`}
               iconHref={ExternalPaths.address}
-              icon={<FaLocationDot size="50" />}
+              icon={<FaLocationDot size="45"/>}
               iconName={`Pozorrubio, Pangasinan`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAlmaMater`}
               iconHref={ExternalPaths.universityOfLuzon}
-              icon={<IoSchoolSharp size="50" />}
+              icon={<IoSchoolSharp size="45"/>}
               iconName={`University of Luzon`}
             />
           </div>

@@ -36,7 +36,7 @@ const NavLink = ({...props}) => {
         to={props.to}
       >
         {props.icon}
-        <div className="md:block hidden ps-[0.8rem] text-2xl">{props.name}</div>
+        <div className="md:block hidden ps-[0.8rem] text-xl">{props.name}</div>
       </Link>
     </>
   );

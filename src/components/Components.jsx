@@ -12,7 +12,7 @@ export const SmDiv = ({ className, children }) => {
   return (
     <>
       <div
-        className={`${className} text-center xl:text-3xl md:text-2xl text-xl`}
+        className={`${className} text-center xl:text-2xl md:text-xl text-lg`}
       >
         {children}
       </div>
@@ -24,7 +24,7 @@ export const LgDiv = ({ className, children }) => {
   return (
     <>
       <div
-        className={`${className} text-center xl:text-5xl md:text-4xl text-3xl`}
+        className={`${className} text-center xl:text-4xl md:text-3xl text-2xl`}
       >
         {children}
       </div>
@@ -49,7 +49,7 @@ export const SmRhombusImg = ({ className, href, imgSrc }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img
+          <img  
             src={imgSrc}
             alt={imgSrc}
             className="-rotate-45 w-[75%] h-[75%] object-fill 
@@ -178,17 +178,17 @@ export const SocialLinks = ({ className }) => {
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.facebook}
-          icon={<FaFacebook size="50" />}
+          icon={<FaFacebook size="45" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.github}
-          icon={<FaGithub size="50" />}
+          icon={<FaGithub size="45" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.pinterest}
-          icon={<FaPinterest size="50" />}
+          icon={<FaPinterest size="45" />}
         ></SmRhombusIcon>
       </div>
     </>
