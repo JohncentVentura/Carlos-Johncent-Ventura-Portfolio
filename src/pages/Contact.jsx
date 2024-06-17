@@ -53,7 +53,7 @@ const Contact = ({ ...props }) => {
         <div className="flex xl:flex-row flex-col justify-center items-center gap-[5vw]">
           <form
             onSubmit={onSubmit}
-            className="pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
+            className="shForm pt-[10vh] flex flex-col justify-center items-center gap-[3vh]"
           >
             <input
               className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"

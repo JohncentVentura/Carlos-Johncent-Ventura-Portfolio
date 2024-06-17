@@ -13,15 +13,15 @@ import { PagePaths } from "./Paths";
 const Navbar = ({...props}) => {
   return (
     <>
-      <nav className="anim-glow-drop fixed z-50 top-0 left-0 w-screen sm:h-20 h-16 bg-bgClr opacity-90 flex justify-center items-center">
-        <NavLink to={PagePaths.home} icon={<FaHouse size="35"/>} name={`Home`}/>
-        <NavLink to={PagePaths.about} icon={<FaUserGraduate size="35"/>} name={`About`}/>
-        <NavLink to={PagePaths.work} icon={<FaBriefcase size="35" />} name={`Work`}/>
-        <NavLink to={PagePaths.contact} icon={<FaEnvelope size="35" />} name={`Contact`}/>
+      <nav className="anim-glow-drop fixed z-50 top-0 left-0 w-screen h-16 bg-bgClr opacity-90 flex justify-center items-center">
+        <NavLink to={PagePaths.home} icon={<FaHouse size="30"/>} name={`Home`}/>
+        <NavLink to={PagePaths.about} icon={<FaUserGraduate size="30"/>} name={`About`}/>
+        <NavLink to={PagePaths.work} icon={<FaBriefcase size="30" />} name={`Work`}/>
+        <NavLink to={PagePaths.contact} icon={<FaEnvelope size="30" />} name={`Contact`}/>
         {(props.clrTheme === "light-theme") ? (
-          <NavButton onClick={props.clrThemeOnClick} icon={<FaMoon size="35"/>} />
+          <NavButton onClick={props.clrThemeOnClick} icon={<FaMoon size="30"/>} />
         ) : (
-          <NavButton onClick={props.clrThemeOnClick} icon={<FaSun size="35"/>} />
+          <NavButton onClick={props.clrThemeOnClick} icon={<FaSun size="30"/>} />
         )}  
       </nav>
     </>
