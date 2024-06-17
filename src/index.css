@@ -91,7 +91,7 @@
   }
 
   input, textarea{
-    @apply xl:text-3xl md:text-2xl text-xl bg-fgClr text-bgClr;
+    @apply xl:text-2xl md:text-xl text-lg bg-fgClr text-bgClr;
   }
 
   .slide-in{

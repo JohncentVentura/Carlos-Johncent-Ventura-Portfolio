@@ -45,7 +45,7 @@ const Contact = ({ ...props }) => {
         </LgDiv>
 
         <LgDiv className={`chStagger pt-[20vh]`}>Now that you know me,</LgDiv>
-        <LgDiv className={`chStagger pt-[2vh] opacity-25`}>or still maybe not?</LgDiv>
+        <LgDiv className={`chStagger pt-[2vh] opacity-40`}>or still maybe not?</LgDiv>
         <LgDiv className={`woStagger pt-[50vh] lg:w-[75vw] w-[85vw]`}>
           I'd love to hear your feedbacks, Here's how you can reach me...
         </LgDiv>
@@ -76,7 +76,7 @@ const Contact = ({ ...props }) => {
               required
             />
             <button
-              className="shBtn px-[2vw] lg:py-[1.5vh] py-[1vh] anim-glow-box xl:text-3xl md:text-2xl text-xl bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
+              className="shBtn px-[2vw] lg:py-[1.5vh] py-[1vh] anim-glow-box xl:text-2xl md:text-xl text-lg bg-primaryClr text-[#191d2b] hover:text-[#e6e6e6]"
               type="submit"
             >
               Submit
