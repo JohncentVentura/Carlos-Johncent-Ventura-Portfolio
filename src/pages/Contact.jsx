@@ -45,8 +45,8 @@ const Contact = ({ ...props }) => {
         </LgDiv>
 
         <LgDiv className={`chStagger pt-[20vh]`}>Now that you know me,</LgDiv>
-        <LgDiv className={`chStagger pt-[2vh] opacity-40`}>or still maybe not?</LgDiv>
-        <LgDiv className={`woStagger pt-[50vh] lg:w-[75vw] w-[85vw]`}>
+        <LgDiv className={`chStagger pt-[2vh] opacity-50`}>or still maybe not?</LgDiv>
+        <LgDiv className={`woStagger pt-[30vh] lg:w-[75vw] w-[85vw]`}>
           I'd love to hear your feedbacks, Here's how you can reach me...
         </LgDiv>
 
@@ -88,28 +88,28 @@ const Contact = ({ ...props }) => {
               className={``}
               iconSFX={`icPhone`}
               iconHref={ExternalPaths.phone}
-              icon={<MdPhoneIphone size="45"/>}
+              icon={<MdPhoneIphone size="40"/>}
               iconName={`0956-419-6962`}
             />
             <IconDiv
               className={``}
               iconSFX={`icEmail`}
               iconHref={ExternalPaths.email}
-              icon={<MdAlternateEmail size="45"/>}
+              icon={<MdAlternateEmail size="40"/>}
               iconName={`johncent.ventura@gmail.com`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAddress`}
               iconHref={ExternalPaths.address}
-              icon={<FaLocationDot size="45"/>}
+              icon={<FaLocationDot size="40"/>}
               iconName={`Pozorrubio, Pangasinan`}
             />
             <IconDiv
               className={``}
               iconSFX={`icAlmaMater`}
               iconHref={ExternalPaths.universityOfLuzon}
-              icon={<IoSchoolSharp size="45"/>}
+              icon={<IoSchoolSharp size="40"/>}
               iconName={`University of Luzon`}
             />
           </div>

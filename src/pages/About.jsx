@@ -73,7 +73,7 @@ const About = ({ ...props }) => {
         <LgDiv className={"chStagger pt-[20vh]"}>MY EXPERIENCE</LgDiv>
         <SmDiv className={`woStagger pt-[5vh] text-justify xl:w-[50vw] md:w-[60vw] w-[80vw]`}>
           I don't have any work experience, so I always upskill, create projects, and attain
-          certificates to be always updated and compensate with my lack of experience.
+          certificates to be always updated and also compensate my lack of experience.
         </SmDiv>
 
         {/*Certificates*******************************************************************************/}
@@ -89,7 +89,7 @@ const About = ({ ...props }) => {
               className={`opacity-75`}
               iconSFX={`icBEDA`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaFreeCodeCamp size="50" />}
+              icon={<FaFreeCodeCamp size="45" />}
               iconName={`freeCodeCamp.org`}
             />
           </div>
@@ -111,7 +111,7 @@ const About = ({ ...props }) => {
               className={`opacity-75`}
               iconSFX={`icRD`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaFreeCodeCamp size="50" />}
+              icon={<FaFreeCodeCamp size="45" />}
               iconName={`freeCodeCamp.org`}
             />
           </div>
@@ -157,7 +157,7 @@ const About = ({ ...props }) => {
               className={`opacity-75`}
               iconSFX={`icFEDL`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaFreeCodeCamp size="50" />}
+              icon={<FaFreeCodeCamp size="45" />}
               iconName={`freeCodeCamp.org`}
             />
           </div>
@@ -180,7 +180,7 @@ const About = ({ ...props }) => {
               className={`opacity-75`}
               iconSFX={`icJADS`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaFreeCodeCamp size="50" />}
+              icon={<FaFreeCodeCamp size="45" />}
               iconName={`freeCodeCamp.org`}
             />
           </div>
@@ -202,7 +202,7 @@ const About = ({ ...props }) => {
               className={`opacity-75`}
               iconSFX={`icRWD`}
               iconHref={ExternalPaths.freeCodeCamp}
-              icon={<FaFreeCodeCamp size="50" />}
+              icon={<FaFreeCodeCamp size="45" />}
               iconName={`freeCodeCamp.org`}
             />
           </div>

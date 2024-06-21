@@ -57,7 +57,7 @@ const Home = ({ ...props }) => {
           imgSrc={ImagePaths.hero}
         ></LgRhombusImg>
 
-        <LgDiv className={"chStagger pt-[2vh]"}>Just a somebody</LgDiv>
+        <LgDiv className={"chStagger pt-[2vh]"}>Just somebody</LgDiv>
         <LgDiv className={"chStagger pt-[1vh] mb-[20vh]"}>
           chasing the dream of...
         </LgDiv>
