@@ -252,12 +252,11 @@ const Home = ({ ...props }) => {
           ></LgRhombusImg>
 
           <div className="flex flex-col justify-center items-center xl:w-[30vw] lg:w-[50vw] w-[70vw]">
-            <LgDiv className={"chStaggerFromTop pt-[2vh]"}>
+            <LgDiv className={"woStagger pt-[2vh]"}>
               WELCOME TO MY PORTFOLIO
             </LgDiv>
             <SmDiv className={"woStagger lg:pt-[5vh] pt-[2vh] text-justify "}>
-              For more information about me, you can download my curriculum
-              vitae, visit me on Facebook, commit with me in Github, and view my Pinterest.
+              For more details about me, you can download my CV, visit me on Facebook, commit with me in Github, and view my Pinterest.
             </SmDiv>
           </div>
         </div>

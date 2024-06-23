@@ -178,17 +178,17 @@ export const SocialLinks = ({ className }) => {
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.facebook}
-          icon={<FaFacebook size="45" />}
+          icon={<FaFacebook size="40" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.github}
-          icon={<FaGithub size="45" />}
+          icon={<FaGithub size="40" />}
         ></SmRhombusIcon>
         <SmRhombusIcon
           className={"shSocialLink lg:pt-[10vh] pt-[5vh]"}
           href={ExternalPaths.pinterest}
-          icon={<FaPinterest size="45" />}
+          icon={<FaPinterest size="40" />}
         ></SmRhombusIcon>
       </div>
     </>
@@ -210,7 +210,7 @@ export const IconDiv = ({ className, iconSFX, iconHref, icon, iconName }) => {
           </a>
         </div>
 
-        <SmDiv className={`chStaggerFromTop lg:pt-[2vh] pt-[1vh]`}>{iconName}</SmDiv>
+        <SmDiv className={`woStagger lg:pt-[2vh] pt-[1vh]`}>{iconName}</SmDiv>
       </div>
     </>
   );

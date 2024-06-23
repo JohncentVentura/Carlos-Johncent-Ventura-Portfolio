@@ -56,21 +56,21 @@ const Contact = ({ ...props }) => {
             className="shForm xl:pt-[10vh] pt-[5vh] flex flex-col justify-center items-center gap-[4vh]"
           >
             <input
-              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] sm:w-[60vw] w-[80vw] h-[4vh]"
               name="name"
               type="text"
               placeholder="Your Name"
               required
             />
             <input
-              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] h-[4vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] sm:w-[60vw] w-[80vw] h-[4vh]"
               name="email"
               type="email"
               placeholder="Your Email"
               required
             />
             <textarea
-              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] w-[60vw] min-h-[10vh]"
+              className="anim-glow-box ps-[0.5vw] xl:w-[30vw] sm:w-[60vw] w-[80vw] min-h-[10vh]"
               name="message"
               placeholder="Your Message"
               required
@@ -83,7 +83,7 @@ const Contact = ({ ...props }) => {
             </button>
           </form> 
 
-          <div className="xl:pt-[10vh] pt-[0] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
+          <div className="xl:pt-[10vh] pt-[5vh] sm:pb-[0] pb-[5vh] flex flex-col justify-center items-start xl:w-[30vw] w-[60vw] gap-[3vh]">
             <IconDiv
               className={``}
               iconSFX={`icPhone`}
