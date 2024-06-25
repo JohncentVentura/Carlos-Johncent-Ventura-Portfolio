@@ -119,7 +119,7 @@ const Home = ({ ...props }) => {
         <LgDiv className={"chStaggerFromTop pt-[1vh]"}>Development</LgDiv>
         <SkillGrid>
           <SkillDiv
-            skillName={`Node`}
+            skillName={`Node.js`}
             skillSFX={`shBackEndSkill1`}
             skillHref={ExternalPaths.nodeJS}
             skillImgSrc={ImagePaths.nodeJS}

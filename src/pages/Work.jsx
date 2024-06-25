@@ -28,6 +28,7 @@ const Work = ({ ...props }) => {
     sfx.SetEffect(".shJSC1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shJSC2", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shJSC3", (elem) => sfx.ShapeShow(elem));
+    sfx.SetEffect(".shJSC4", (elem) => sfx.ShapeShow(elem));
 
     sfx.SetEffect(".shRQM1", (elem) => sfx.ShapeShow(elem));
     sfx.SetEffect(".shRQM2", (elem) => sfx.ShapeShow(elem));
@@ -93,10 +94,11 @@ const Work = ({ ...props }) => {
             <LgDiv className={`chStaggerFromBot`}>Jourdan's Snack</LgDiv>
             <LgDiv className={`chStaggerFromBot`}>Corner ™</LgDiv>
             <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              A local food business located in my hometown, created the website
-              for free as support for local businesses in my area. The store
-              sells a variety of goods and have a delivery service since the
-              business operates and process their products at the owner's house.
+              Still in development, a local food business located in my
+              hometown, created the website for free as support for local
+              businesses in my area. The store sells a variety of goods and have
+              a delivery service since the business operates and process their
+              products at the owner's house.
             </SmDiv>
           </div>
         </div>
@@ -114,18 +116,38 @@ const Work = ({ ...props }) => {
             skillImgSrc={ImagePaths.react}
           />
           <SkillDiv
-            skillName={`Sass`}
+            skillName={`Bootstrap`}
             skillSFX={`shJSC2`}
-            skillHref={ExternalPaths.sass}
-            skillImgSrc={ImagePaths.sass}
+            skillHref={ExternalPaths.bootstrap}
+            skillImgSrc={ImagePaths.bootstrap}
           />
         </SkillGrid>
         <SkillGrid>
           <SkillDiv
-            skillName={`Bootstrap`}
+            skillName={`Sass`}
             skillSFX={`shJSC3`}
-            skillHref={ExternalPaths.bootstrap}
-            skillImgSrc={ImagePaths.bootstrap}
+            skillHref={ExternalPaths.sass}
+            skillImgSrc={ImagePaths.sass}
+          />
+          <SkillDiv
+            skillName={`Express`}
+            skillSFX={`shJSC3`}
+            skillHref={ExternalPaths.expressJS}
+            skillImgSrc={ImagePaths.expressJS}
+          />
+          <SkillDiv
+            skillName={`MongoDB`}
+            skillSFX={`shJSC3`}
+            skillHref={ExternalPaths.mongoDB}
+            skillImgSrc={ImagePaths.mongoDB}
+          />
+        </SkillGrid>
+        <SkillGrid>
+        <SkillDiv
+            skillName={`Node.js`}
+            skillSFX={`shJSC4`}
+            skillHref={ExternalPaths.nodeJS}
+            skillImgSrc={ImagePaths.nodeJS}
           />
         </SkillGrid>
 
@@ -526,55 +548,6 @@ const Work = ({ ...props }) => {
             skillSFX={`shVBStud2`}
             skillHref={ExternalPaths.visualBasic}
             skillImgSrc={ImagePaths.visualBasic}
-          />
-        </SkillGrid>
-
-        <div className="flex xl:flex-row-reverse flex-col justify-center items-center gap-[2vw]">
-          <LgRhombusImg
-            className={`shMERNCRUDApp1 pt-[20vh]`}
-            href={null}
-            imgSrc={``}
-          ></LgRhombusImg>
-
-          <div className="flex flex-col justify-center items-center xl:pt-[20vh] xl:w-[40vw] w-[80vw]">
-            <LgDiv className={`chStaggerFromBot`}>MERN CRUD APP</LgDiv>
-            <SmDiv className={`woStagger pt-[2vh] text-justify`}>
-              (In Development...)
-            </SmDiv>
-          </div>
-        </div>
-        <SkillGrid>
-          <SkillDiv
-            skillName={`Github`}
-            skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.gitMernCrudApp}
-            skillIcon={<FaGithub size="50" />}
-          />
-          <SkillDiv
-            skillName={`React`}
-            skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.react}
-            skillImgSrc={ImagePaths.react}
-          />
-          <SkillDiv
-            skillName={`Tailwind`}
-            skillSFX={`shMERNCRUDApp2`}
-            skillHref={ExternalPaths.tailwindCSS}
-            skillImgSrc={ImagePaths.tailwindCSS}
-          />
-        </SkillGrid>
-        <SkillGrid>
-          <SkillDiv
-            skillName={`Express`}
-            skillSFX={`shMERNCRUDApp3`}
-            skillHref={ExternalPaths.expressJS}
-            skillImgSrc={ImagePaths.expressJS}
-          />
-          <SkillDiv
-            skillName={`MongoDB`}
-            skillSFX={`shMERNCRUDApp3`}
-            skillHref={ExternalPaths.mongoDB}
-            skillImgSrc={ImagePaths.mongoDB}
           />
         </SkillGrid>
       </section>
